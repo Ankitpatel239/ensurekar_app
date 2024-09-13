@@ -1,34 +1,37 @@
-"use client"
+"use client";
 
-import React, { useEffect } from 'react';
-import Odometer from 'odometer'; 
+import React, { useEffect, useState } from 'react';
 import counter_bg from '../../images/counter_bg.png'; // Background image
-import "../../styles/odometer.css"
+
 const CounterSection = () => {
+  const [hours, setHours] = useState(0);
+  const [savings, setSavings] = useState(0);
+  const [weeks, setWeeks] = useState(0);
+
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      const odometer1 = new Odometer({
-        el: document.querySelector('#odometer1')!,
-        value: 0,
-        format: '(ddd).dd',
-      });
+    // Simulate the incremental update of the numbers
+    const hoursTarget = 63;
+    const savingsTarget = 264589;
+    const weeksTarget = 8;
 
-      const odometer2 = new Odometer({
-        el: document.querySelector('#odometer2')!,
-        value: 0,
-        format: '(,ddd)',
-      });
+    const incrementValue = (currentValue: number, targetValue: number, setValue: React.Dispatch<React.SetStateAction<number>>) => {
+      if (currentValue < targetValue) {
+        const step = Math.ceil((targetValue - currentValue) / 20); // Adjust the step size
+        const interval = setInterval(() => {
+          setValue((prev) => {
+            if (prev + step >= targetValue) {
+              clearInterval(interval);
+              return targetValue;
+            }
+            return prev + step;
+          });
+        }, 100); // Adjust the speed of the increment
+      }
+    };
 
-      const odometer3 = new Odometer({
-        el: document.querySelector('#odometer3')!,
-        value: 0,
-      });
-
-      // Update the values (you can trigger this dynamically if needed)
-      odometer1.update(63); // For hours
-      odometer2.update(264589); // For savings
-      odometer3.update(8); // For weeks
-    }
+    incrementValue(0, hoursTarget, setHours);
+    incrementValue(0, savingsTarget, setSavings);
+    incrementValue(0, weeksTarget, setWeeks);
   }, []);
 
   return (
@@ -44,7 +47,7 @@ const CounterSection = () => {
         {/* Counter 1 */}
         <div className="text-center max-w-[280px]">
           <p className="display-4 pb-3 flex justify-center items-center">
-            <span id="odometer1" className="odometer">0</span>
+            <span>{hours}</span>
             <span>hrs</span>
           </p>
           <p>
@@ -58,7 +61,7 @@ const CounterSection = () => {
         <div className="text-center max-w-[280px]">
           <p className="display-4 pb-3 counters flex justify-center items-center">
             <span>$</span>
-            <span id="odometer2" className="odometer">0</span>
+            <span>{savings.toLocaleString()}</span>
           </p>
           <p>
             Average savings made per year running payroll and HR after switching to Accupay.
@@ -70,7 +73,7 @@ const CounterSection = () => {
         {/* Counter 3 */}
         <div className="text-center max-w-[280px]">
           <p className="display-4 pb-3 counters flex justify-center items-center">
-            <span id="odometer3" className="odometer">0</span>
+            <span>{weeks}</span>
             <span>Weeks</span>
           </p>
           <p>
