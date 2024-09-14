@@ -4,11 +4,15 @@ import React from "react";
 import Image from "next/image";
 import logo_white from "../images/ensure_logo.png";
 import {
+  EnvelopeSimpleOpen,
   FacebookLogo,
+  PaperPlaneTilt,
+  PhoneCall,
   PinterestLogo,
   RedditLogo,
   YoutubeLogo,
 } from "phosphor-react";
+import Link from "next/link";
 const footer = () => {
   return (
     <footer className="bg-mainTextColor text-white/60">
@@ -63,40 +67,40 @@ const footer = () => {
           </h4>
           <ul className="flex flex-col gap-4 md:gap-5">
             <li>
-              <a
-                href="./index.html"
+              <Link
+                href="/"
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="./about.html"
+              <Link
+                href="/About"
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 About Page
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="./faq.html"
+              <Link
+                href="/FAQs"
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 FAQs Page
-              </a>
+              </Link>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="./blog.html"
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 Blog
               </a>
-            </li>
+            </li> */}
             <li>
               <a
-                href="./contact.html"
+                href="/Contact"
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 Contact Us
@@ -110,44 +114,44 @@ const footer = () => {
           </h4>
           <ul className="flex flex-col gap-4 md:gap-5">
             <li>
-              <a
-                href="./dentist-services.html"
+              <Link
+                href="/Dentist-Services"
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 Dentist Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="./healthcare-services.html"
+              <Link
+                href="/Healthcare-Services"
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 Healthcare Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="./taxation-services.html"
+              <Link
+                href="/Taxation-Services"
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 Taxations Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="./accounting-services.html"
+              <Link
+                href="/Accounting-Services"
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 Accounting Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="./payroll-processing.html"
+              <Link
+                href="/Payroll-Processing"
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 Payroll Processing
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -163,7 +167,7 @@ const footer = () => {
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 <span className="text-2xl pt-2">
-                  <i className="ph ph-envelope-simple-open"></i>
+                  <EnvelopeSimpleOpen/>
                 </span>
                 info@mail.com
               </a>
@@ -174,7 +178,7 @@ const footer = () => {
                 className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500"
               >
                 <span className="text-2xl pt-2">
-                  <i className="ph ph-phone-call"></i>
+                  <PhoneCall/>
                 </span>
                 +112 1254 124
               </a>
@@ -182,7 +186,7 @@ const footer = () => {
             <li>
               <p className="flex justify-start items-center gap-2 hover:text-white hover:translate-x-2 duration-500">
                 <span className="text-2xl pt-2">
-                  <i className="ph ph-paper-plane-tilt"></i>
+                  <PaperPlaneTilt/>
                 </span>
                 255 Sheet, City Name Home Land, NY
               </p>
@@ -196,18 +200,18 @@ const footer = () => {
             Accupay © Copyright 2024. All Rights Reserved.
           </p>
           <div className="flex justify-end items-center">
-            <a
-              href="./privacy-policy.html"
+            <Link
+              href="/Privacy-Policy"
               className="border-r-2 border-white/60 pr-3 hover:text-white duration-500 leading-none"
             >
               Privacy Policy
-            </a>
-            <a
-              href="./terms-conditions.html"
+            </Link>
+            <Link
+              href="/Terms-Conditions"
               className="pl-3 hover:text-white duration-500 leading-none"
             >
               Terms & Conditions
-            </a>
+            </Link>
           </div>
         </div>
       </div>

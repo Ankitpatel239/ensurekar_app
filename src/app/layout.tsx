@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Footer from "./components/footer";
 import ScrollTotop from "./components/Scroll-To-top";
 import CTASection from "./components/Section/CTA-Section";
+import { Suspense } from "react";
+import CoolLoading from "./loading";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -33,8 +35,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-
+<Suspense fallback={<CoolLoading/>}>
         {children}
+        </Suspense>
         <CTASection/>
         <Footer />
         <ScrollTotop/>

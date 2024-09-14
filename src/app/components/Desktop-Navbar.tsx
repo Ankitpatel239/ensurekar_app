@@ -56,55 +56,55 @@ const DesktopNavbar: React.FC = () => {
       subOptions: [
         {
           title: "Appointment",
-          link: "/",
+          link: "/Appointment",
         },
         {
           title: "Case Study",
-          link: "/",
+          link: "/Case-Study",
         },
         {
           title: "Case Study Details",
-          link: "/",
+          link: "/Case-Study/Case-Study-Details",
         },
         {
           title: "Our Team",
-          link: "/",
+          link: "/Our-Team",
         },
         {
           title: "Team Details",
-          link: "/",
+          link: "/Our-Team/Team-Details",
         },
         {
           title: "About",
-          link: "/",
+          link: "/About",
         },
         {
           title: "Pricing",
-          link: "/",
+          link: "/Pricing",
         },
         {
           title: "FAQ Page",
-          link: "/",
+          link: "/FAQs",
         },
         {
           title: "Login",
-          link: "/",
+          link: "/Login",
         },
         {
           title: "Register",
-          link: "/",
+          link: "/Register",
         },
         {
           title: "Privacy Policy",
-          link: "/",
+          link: "/Privacy-Policy",
         },
         {
           title: "Terms & Conditions",
-          link: "/",
+          link: "/Terms-Conditions",
         },
         {
           title: "404 Page",
-          link: "/",
+          link: "/404-Page",
         },
       ],
     },
