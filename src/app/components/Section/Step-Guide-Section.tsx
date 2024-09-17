@@ -203,7 +203,7 @@ export default function Component() {
               {!event.label && (
                 <div
                 
-                  className="bg-white p-6 mr-5 rounded-lg min-w-[300px] shadow-lg transition-all duration-300 relative"
+                  className="bg-white p-6 mr-5 rounded-lg w-[300px] shadow-lg transition-all duration-300 relative"
                 >
                   <h3 className="text-xl font-bold mb-2">{event.title}</h3>
                   <p className="text-gray-600 mb-4">{event.description}</p>
