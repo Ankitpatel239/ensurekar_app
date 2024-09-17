@@ -30,7 +30,8 @@ const SolutionsSection = () => {
               </p>
 
               <h1 className="display-4 pt-4 pb-4 lg:pb-6 wow animate__animated animate__fadeInDown">
-                The global payroll solution
+              The Indian Finance, tax , and legal Solution
+
               </h1>
 
               <p className="text-bodyText wow animate__animated animate__fadeInDown">
@@ -53,8 +54,10 @@ const SolutionsSection = () => {
           <div className="col-span-12 lg:col-start-8 lg:col-span-5 flex justify-center items-start flex-col">
             <h1 className="heading-1 pb-5">Consolidate Payroll Processing</h1>
             <p className="text-bodyText">
-              We have designed a fast and effective payroll system that
-              streamlines your payment process.
+              {/* We have designed a fast and effective payroll system that
+              streamlines your payment process. */}
+              We Verified CA, CS and Leagal Experts ready to streamline your business Opertaions.
+
             </p>
             <div className="grid grid-cols-2 gap-4 lg:gap-6 py-6 lg:py-10 w-full">
               <div className="group col-span-2 sm:col-span-1 flex justify-start items-center gap-5">
@@ -64,7 +67,8 @@ const SolutionsSection = () => {
                   className="rounded-full border border-strokeColor p-5 bg-softBg w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] text-4xl text-s1 group-hover:text-mainTextColor group-hover:bg-s2 group-hover:border-mainTextColor transition-all duration-500 ease-in-out"
                 />
                 <p className="text-lg font-medium group-hover:text-s1 duration-500">
-                  Tax Preparation
+                  {/* Tax Preparation */}
+                  Talk to a lawyer
                 </p>
               </div>
               <div className="group col-span-2 sm:col-span-1 flex justify-start items-center gap-5">
@@ -80,7 +84,8 @@ const SolutionsSection = () => {
                 </svg>
 
                 <p className="text-lg font-medium group-hover:text-s1 duration-500">
-                  Payroll Processing
+                  {/* Payroll Processing */}
+                  Talk to a Charted accountant
                 </p>
               </div>
               <div className="group col-span-2 sm:col-span-1 flex justify-start items-center gap-5">
@@ -91,7 +96,8 @@ const SolutionsSection = () => {
                 />
          
                 <p className="text-lg font-medium group-hover:text-s1 duration-500">
-                  Cost Effective
+                  {/* Cost Effective */}
+                  Talk to the Company secretary
                 </p>
               </div>
               <div className="group col-span-2 sm:col-span-1 flex justify-start items-center gap-5">
@@ -101,8 +107,9 @@ const SolutionsSection = () => {
                   className=" p-5 rounded-full border border-strokeColor bg-softBg w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] text-4xl text-s1 group-hover:text-mainTextColor group-hover:bg-s2 group-hover:border-mainTextColor duration-500 !leading-[0] flex justify-center items-center"
                 />
                 
-                <p className="text-lg font-medium group-hover:text-s1 duration-500">
-                  Scale Rapidly
+                <p className="text-lg font-medium group-hover:text-s1 duration-500 ">
+                  {/* Scale Rapidly */}
+                  Talk to an intellectual Property lawyer
                 </p>
               </div>
             </div>

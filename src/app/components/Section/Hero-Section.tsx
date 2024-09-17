@@ -35,14 +35,15 @@ const HeroSection = () => {
             Efficiency Payroll and workforce mastery
           </p>
           <div className="display-2">
-            We Make
-            <div className="text-s3 inline-flex">Payroll</div>
+          We Make Your Legal,  
+            <div className="text-s3 inline-flex">Finance</div>
             <br />
-            Painless.
+            & Taxes Easy.
           </div>
           <p className="max-w-[550px]">
-            We get your employees paid while providing online access to
-            paystubs, tax reports & payroll tax filings.
+          We get your Finance, Legal, and Taxes
+online While providing online access to
+everyone.
           </p>
           <div className="flex justify-start items-center gap-4 pt-6 lg:pt-8 pb-15">
             <a

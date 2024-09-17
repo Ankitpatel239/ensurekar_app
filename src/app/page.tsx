@@ -1,6 +1,5 @@
 import React,{lazy} from "react";
 
-
 const HeroSection = lazy(()=>import("./components/Section/Hero-Section"))
 const CompanySlider = lazy(()=>import("./components/Section/Company-Slider"))
 const SolutionsSection = lazy(()=>import("./components/Section/Solutions-Section"))
