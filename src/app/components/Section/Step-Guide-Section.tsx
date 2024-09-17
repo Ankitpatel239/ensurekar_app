@@ -184,27 +184,27 @@ export default function Component() {
       <div className="relative ml-5">
         <div className="flex md:space-y-0 md:flex-row md:justify-between md:items-end">
           {events.map((event, index) => (
-            <div>
-              <div>
+            <div className="flex justify-end">
+       
                 {event.label && (
-                  <div className="mr-5 ml-5">
+                  <div className="mr-10 ml-5">
                     <span className="bg-blue-500 absolute text-white text-xs flex py-4 my-5 flex-end font-bold py-1 px-2 rounded bottom-3 transform -translate-x-1/2 rotate-90 whitespace-nowrap">
                       {event.label}
                       <div className="absolute align-center flex items-center top-5 -right-[22px] -rotate-90 -translate-x-1/2 w-0 h-0 border-l-[10px] border-r-[10px] border-t-[10px] border-t-blue border-blue-500  border-l-transparent border-r-transparent"></div>
                     </span>
                     <div className="absolute -bottom-[80px]  transform -translate-x-1/2 text-center">
                       <div className="w-4 h-4 rounded-full z-10 cursor-pointer bg-gray-300 mx-auto"></div>
-                      <div className="text-center">
+                      <div className="text-center text-nowrap">
                         {event.date} {event.year}
                       </div>
                     </div>
                   </div>
                 )}
-              </div>
+          
               {!event.label && (
                 <div
                   key={index}
-                  className={`bg-white p-6 m-5 rounded-lg min-w-[300px] shadow-lg transition-all duration-300 relative ${
+                  className={`bg-white p-6 mr-5 rounded-lg min-w-[300px] shadow-lg transition-all duration-300 relative ${
                     activeIndex === index ? "ring-2 ring-blue-500" : ""
                   }`}
                 >
@@ -215,9 +215,9 @@ export default function Component() {
                     <ChevronRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </button>
                   <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-r-[10px] border-b-[10px] border-b-white shadow-2xl border-l-transparent border-r-transparent rotate-180"></div>
-                  <div className="absolute -bottom-[100px] left-1/2 transform -translate-x-1/2 text-center">
+                  <div className="absolute -bottom-[80px] left-1/2 transform -translate-x-1/2 text-center">
                     <div className="w-4 h-4 rounded-full z-10 cursor-pointer bg-gray-300 mx-auto"></div>
-                    <div className="text-center">
+                    <div className="text-center text-nowrap">
                       {event.date} {event.year}
                     </div>
                   </div>
@@ -225,7 +225,7 @@ export default function Component() {
               )}
             </div>
           ))}
-          <div className="absolute ml-3 -z-10 -bottom-[51px] left-4 w-full  h-1 bg-gray-200 rounded-full"></div>
+          <div className="absolute ml-3 -z-10 -bottom-[51px] left-4 w-full h-1 bg-gray-200 rounded-full"  ></div>
         </div>
       </div>
       </div>
