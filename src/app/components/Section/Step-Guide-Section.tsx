@@ -180,10 +180,11 @@ export default function Component() {
   return (
     <section className="container mx-auto min-h-[600px] px-4 py-16">
       <h1 className="text-center font-bold text- heading-1 pb-5 my-5">Our Life Story</h1>
-      <div className="relative">
+      <div className="overflow-y-auto min-h-[400px]">
+      <div className="relative ml-5">
         <div className="flex md:space-y-0 md:flex-row md:justify-between md:items-end">
           {events.map((event, index) => (
-            <>
+            <div>
               <div>
                 {event.label && (
                   <div className="mr-5 ml-5">
@@ -203,7 +204,7 @@ export default function Component() {
               {!event.label && (
                 <div
                   key={index}
-                  className={`bg-white p-6 m-5 rounded-lg min-w-11 shadow-lg transition-all duration-300 relative ${
+                  className={`bg-white p-6 m-5 rounded-lg min-w-[300px] shadow-lg transition-all duration-300 relative ${
                     activeIndex === index ? "ring-2 ring-blue-500" : ""
                   }`}
                 >
@@ -214,7 +215,7 @@ export default function Component() {
                     <ChevronRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </button>
                   <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-r-[10px] border-b-[10px] border-b-white shadow-2xl border-l-transparent border-r-transparent rotate-180"></div>
-                  <div className="absolute -bottom-[80px] left-1/2 transform -translate-x-1/2 text-center">
+                  <div className="absolute -bottom-[100px] left-1/2 transform -translate-x-1/2 text-center">
                     <div className="w-4 h-4 rounded-full z-10 cursor-pointer bg-gray-300 mx-auto"></div>
                     <div className="text-center">
                       {event.date} {event.year}
@@ -222,10 +223,11 @@ export default function Component() {
                   </div>
                 </div>
               )}
-            </>
+            </div>
           ))}
-          <div className="absolute -z-10 -bottom-[51px] left-0 w-full h-1 bg-gray-200 rounded-full"></div>
+          <div className="absolute ml-3 -z-10 -bottom-[51px] left-4 w-full  h-1 bg-gray-200 rounded-full"></div>
         </div>
+      </div>
       </div>
     </section>
   );
