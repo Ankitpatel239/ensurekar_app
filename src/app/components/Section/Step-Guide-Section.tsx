@@ -115,9 +115,8 @@
 // }
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
-import { div } from "framer-motion/client";
+
 
 interface TimelineEvent {
   date: string;
@@ -184,10 +183,10 @@ export default function Component() {
       <div className="relative ml-5">
         <div className="flex md:space-y-0 md:flex-row md:justify-between md:items-end">
           {events.map((event, index) => (
-            <div className="flex justify-end">
+            <div className="flex justify-end" key={index}>
        
                 {event.label && (
-                  <div className="mr-10 ml-5">
+                  <div className="mr-10 ml-5" >
                     <span className="bg-blue-500 absolute text-white text-xs flex py-4 my-5 flex-end font-bold py-1 px-2 rounded bottom-3 transform -translate-x-1/2 rotate-90 whitespace-nowrap">
                       {event.label}
                       <div className="absolute align-center flex items-center top-5 -right-[22px] -rotate-90 -translate-x-1/2 w-0 h-0 border-l-[10px] border-r-[10px] border-t-[10px] border-t-blue border-blue-500  border-l-transparent border-r-transparent"></div>
@@ -203,10 +202,8 @@ export default function Component() {
           
               {!event.label && (
                 <div
-                  key={index}
-                  className={`bg-white p-6 mr-5 rounded-lg min-w-[300px] shadow-lg transition-all duration-300 relative ${
-                    activeIndex === index ? "ring-2 ring-blue-500" : ""
-                  }`}
+                
+                  className="bg-white p-6 mr-5 rounded-lg min-w-[300px] shadow-lg transition-all duration-300 relative"
                 >
                   <h3 className="text-xl font-bold mb-2">{event.title}</h3>
                   <p className="text-gray-600 mb-4">{event.description}</p>
