@@ -14,14 +14,14 @@ const PricingSection = () => {
   const monthlyPrice = [10, 20, 40];
   const yearlyPrice = [120, 240, 480];
 
-  const handlePricingToggle = (value:string) => {
+  const handlePricingToggle = (value: string) => {
     setIsYearly(value === "yearly");
   };
 
   return (
     <section className="bg-softBg1 stp-30 sbp-30 overflow-hidden">
       <div className="container">
-      <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center">
           <div className="text-center flex justify-center items-center flex-col">
             <div className="flex justify-center items-center">
               <div className="flex justify-center items-center">
@@ -42,17 +42,23 @@ const PricingSection = () => {
 
             <div className="bg-mainTextColor mt-8 py-3 px-6 rounded-full relative">
               <div
-                className={`absolute top-0 bottom-0 left-0 w-1/2 rounded-full bg-yellow-500 duration-500 ${isYearly ? 'translate-x-full' : 'translate-x-0'}`}
-                />
+                className={`absolute top-0 bottom-0 left-0 w-1/2 rounded-full bg-yellow-500 duration-500 ${
+                  isYearly ? "translate-x-full" : "translate-x-0"
+                }`}
+              />
               <div className="relative z-10 flex gap-14 text-white">
                 <button
-                  className={`duration-500 pricingTabLinks ${!isYearly ? 'pricingButtonActive' : ''}`}
+                  className={`duration-500 pricingTabLinks ${
+                    !isYearly ? "pricingButtonActive" : ""
+                  }`}
                   onClick={() => handlePricingToggle("monthly")}
                 >
                   Monthly
                 </button>
                 <button
-                  className={`duration-500 pricingTabLinks ${isYearly ? 'pricingButtonActive' : ''}`}
+                  className={`duration-500 pricingTabLinks ${
+                    isYearly ? "pricingButtonActive" : ""
+                  }`}
                   onClick={() => handlePricingToggle("yearly")}
                 >
                   Yearly
@@ -82,8 +88,10 @@ const PricingSection = () => {
 
             <h3 className="heading-3 pt-5 pb-4">Basic Plan</h3>
             <p className="text-bodyText pb-8">
-{"              Hire employees in 100+ countries where you don't have entities"}       
-     </p>
+              {
+                "              Hire employees in 100+ countries where you don't have entities"
+              }
+            </p>
             <p className="pb-6">
               <span className="display-4">
                 ${isYearly ? yearlyPrice[0] : monthlyPrice[0]}
@@ -151,19 +159,31 @@ const PricingSection = () => {
             </p>
             <ul className="text-bodyText flex flex-col gap-5 pb-8">
               <li className="inline-flex gap-3">
-                <CheckCircle weight="fill" className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl" />
+                <CheckCircle
+                  weight="fill"
+                  className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl"
+                />
                 Payroll Processing
               </li>
               <li className="inline-flex gap-3">
-                <CheckCircle weight="fill" className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl" />
+                <CheckCircle
+                  weight="fill"
+                  className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl"
+                />
                 Tax Compliance
               </li>
               <li className="inline-flex gap-3">
-                <CheckCircle weight="fill" className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl" />
+                <CheckCircle
+                  weight="fill"
+                  className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl"
+                />
                 Customizable Reports
               </li>
               <li className="inline-flex gap-3">
-                <CheckCircle weight="fill" className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl" />
+                <CheckCircle
+                  weight="fill"
+                  className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl"
+                />
                 Starting at $X per month
               </li>
             </ul>
@@ -184,8 +204,8 @@ const PricingSection = () => {
             </div>
             <h3 className="heading-3 pt-5 pb-4">Premium Plan</h3>
             <p className="text-bodyText pb-8">
-              All-in-one solution for all your payroll needs with full compliance
-              and more.
+              All-in-one solution for all your payroll needs with full
+              compliance and more.
             </p>
             <p className="pb-6">
               <span className="display-4">
@@ -197,19 +217,31 @@ const PricingSection = () => {
             </p>
             <ul className="text-bodyText flex flex-col gap-5 pb-8">
               <li className="inline-flex gap-3">
-                <CheckCircle weight="fill" className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl" />
+                <CheckCircle
+                  weight="fill"
+                  className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl"
+                />
                 Comprehensive Benefits
               </li>
               <li className="inline-flex gap-3">
-                <CheckCircle weight="fill" className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl" />
+                <CheckCircle
+                  weight="fill"
+                  className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl"
+                />
                 Global Payroll Support
               </li>
               <li className="inline-flex gap-3">
-                <CheckCircle weight="fill" className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl" />
+                <CheckCircle
+                  weight="fill"
+                  className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl"
+                />
                 Advanced Reporting Tools
               </li>
               <li className="inline-flex gap-3">
-                <CheckCircle weight="fill" className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl" />
+                <CheckCircle
+                  weight="fill"
+                  className="text-p1 group-hover:text-mainTextColor duration-500 leading-[0] flex justify-center items-center text-2xl"
+                />
                 Starting at $X per month
               </li>
             </ul>

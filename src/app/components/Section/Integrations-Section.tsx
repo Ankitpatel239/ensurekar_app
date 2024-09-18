@@ -1,5 +1,6 @@
 
 "use client"
+import Link from 'next/link'
 import { ArrowRight, CurrencyCircleDollar, Handshake, Money, Timer, UsersThree } from 'phosphor-react'
 import React from 'react'
 
@@ -35,16 +36,16 @@ const IntegrationsSection = () => {
         <div className="text-4xl rounded-full text-s1 leading-[0] p-4 bg-white">
             <CurrencyCircleDollar weight='fill'/>
         </div>
-        <h4 className="heading-4 pt-6 w-[200px]">Payment Gateways</h4>
+        <h4 className="heading-4 pt-6 w-[200px]">Business Steup</h4>
         <div
           className="flex justify-end items-end w-full pt-10 lg:pt-15 text-xl font-medium"
         >
-          <a
-            href="./all-services.html"
+          <Link
+            href="/All-Services"
             className="bg-white p-2 rounded-full shadow2 leading-[0]"
           >
             <ArrowRight/>
-          </a>
+          </Link>
         </div>
       </div>
       <div
@@ -53,16 +54,16 @@ const IntegrationsSection = () => {
         <div className="text-4xl rounded-full text-s1 leading-[0] p-4 bg-softBg1">
             <Money weight='fill'/>
         </div>
-        <h4 className="heading-4 pt-6 w-[200px]">Tax Software Integration</h4>
+        <h4 className="heading-4 pt-6 w-[200px]">Tax Compliances</h4>
         <div
           className="flex justify-end items-end w-full pt-10 lg:pt-15 text-xl font-medium"
         >
-          <a
-            href="./all-services.html"
+          <Link
+            href="/All-Services"
             className="bg-white p-2 rounded-full shadow2 leading-[0]"
           >
             <ArrowRight/>
-            </a>
+            </Link>
         </div>
       </div>
       <div
@@ -71,16 +72,16 @@ const IntegrationsSection = () => {
         <div className="text-4xl rounded-full text-s1 leading-[0] p-4 bg-white">
           <UsersThree weight="fill"/>
         </div>
-        <h4 className="heading-4 pt-6 w-[200px]">Expense Management</h4>
+        <h4 className="heading-4 pt-6 w-[200px]">Trade mark and IP </h4>
         <div
           className="flex justify-end items-end w-full pt-10 lg:pt-15 text-xl font-medium"
         >
-          <a
-            href="./all-services.html"
+          <Link
+            href="/All-Services"
             className="bg-white p-2 rounded-full shadow2 leading-[0]"
           >
             <ArrowRight/>
-            </a>
+            </Link>
         </div>
       </div>
       <div
@@ -89,16 +90,16 @@ const IntegrationsSection = () => {
         <div className="text-4xl rounded-full text-s1 leading-[0] p-4 bg-softBg1">
           <Timer weight="fill"/>
         </div>
-        <h4 className="heading-4 pt-6 w-[200px]">Time Tracking Systems</h4>
+        <h4 className="heading-4 pt-6 w-[200px]">Documentation </h4>
         <div
           className="flex justify-end items-end w-full pt-10 lg:pt-15 text-xl font-medium"
         >
-          <a
-            href="./all-services.html"
+          <Link
+            href="/All-Services"
             className="bg-white p-2 rounded-full shadow2 leading-[0]"
           >
             <ArrowRight/>
-            </a>
+            </Link>
         </div>
       </div>
       <div
@@ -107,7 +108,7 @@ const IntegrationsSection = () => {
         <div className="text-4xl rounded-full text-s1 leading-[0] p-4 bg-white">
           <Handshake weight='fill'/>
         </div>
-        <h4 className="heading-4 pt-6 w-[200px]">Customer Relationship</h4>
+        <h4 className="heading-4 pt-6 w-[200px]">CFO Service</h4>
         <div
           className="flex justify-end items-end w-full pt-10 lg:pt-15 text-xl font-medium"
         >

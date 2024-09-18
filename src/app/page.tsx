@@ -1,10 +1,12 @@
 import React,{lazy} from "react";
+import OurServices from "./components/Section/Our-Services-Section";
 
 const HeroSection = lazy(()=>import("./components/Section/Hero-Section"))
 const CompanySlider = lazy(()=>import("./components/Section/Company-Slider"))
 const SolutionsSection = lazy(()=>import("./components/Section/Solutions-Section"))
 const FeaturesSection = lazy(()=>import("./components/Section/Features-Section"))
 const CounterSection = lazy(()=>import("./components/Section/Counter-Section"))
+const OurStorySection = lazy(()=>import("./components/Section/Our-Story-Section"))
 const StepGuideSection = lazy(()=>import("./components/Section/Step-Guide-Section"))
 const WhyEnsurekarSection = lazy(()=>import("./components/Section/Why-Ensurekar-Section"))
 const IntegrationsSection = lazy(()=>import("./components/Section/Integrations-Section"))
@@ -23,12 +25,14 @@ export default function Home() {
       <SolutionsSection />
       <FeaturesSection />
       <CounterSection />
-      <StepGuideSection />
+      <OurStorySection />
+      {/* <StepGuideSection /> */}
       <WhyEnsurekarSection />
       <IntegrationsSection />
       <ExperienceAccupaySection />
-      <TestimonialSection />
-      <PricingSection />
+      {/* <TestimonialSection /> */}
+      {/* <PricingSection /> */}
+      <OurServices/>
       <BlogSection />
       <GotQuestionsSection />
     
