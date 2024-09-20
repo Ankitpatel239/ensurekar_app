@@ -7,54 +7,75 @@ import Image from "next/image";
 import Logo from "../images/ensure_logo.png";
 
 const MobileNavbar = ({ Sidebar, setOpenSidebar }: { Sidebar: boolean, setOpenSidebar: React.Dispatch<React.SetStateAction<boolean>> }) => {
-  const options = [
-    {
-      title: "Home",
-      link: "/",
-    },
-    {
-      title: "About",
-      link: "/about",
-    },
-    {
-      title: "Services",
-      link: "",
-      subOptions: [
-        { title: "Payroll Processing", link: "/" },
-        { title: "Accounting Services", link: "/" },
-        { title: "Taxation Services", link: "/" },
-        { title: "Real Estate Services", link: "/" },
-        { title: "Healthcare Services", link: "/" },
-        { title: "Dentist Services", link: "/" },
-      ],
-    },
-    {
-      title: "Shop",
-      link: "",
-      subOptions: [
-        { title: "Shop Page", link: "/" },
-        { title: "Shop Details", link: "/" },
-        { title: "Cart", link: "/" },
-        { title: "Checkout", link: "/" },
-      ],
-    },
-    { title: "Blog", link: "", subOptions: [{ title: "Blog Page", link: "/" }, { title: "Blog Details", link: "/" }] },
-    { title: "Contact", link: "/contact" },
-    {
-      title: "Pages",
-      link: "",
-      subOptions: [
-        { title: "Appointment", link: "/" },
-        { title: "Case Study", link: "/" },
-        { title: "Our Team", link: "/" },
-        { title: "Pricing", link: "/" },
-        { title: "Login", link: "/" },
-        { title: "Privacy Policy", link: "/" },
-        { title: "404 Page", link: "/" },
-      ],
-    },
-  ];
+  // const options = [
+  //   {
+  //     title: "Home",
+  //     link: "/",
+  //   },
+  //   {
+  //     title: "About",
+  //     link: "/about",
+  //   },
+  //   {
+  //     title: "Services",
+  //     link: "",
+  //     subOptions: [
+  //       { title: "Payroll Processing", link: "/" },
+  //       { title: "Accounting Services", link: "/" },
+  //       { title: "Taxation Services", link: "/" },
+  //       { title: "Real Estate Services", link: "/" },
+  //       { title: "Healthcare Services", link: "/" },
+  //       { title: "Dentist Services", link: "/" },
+  //     ],
+  //   },
+  //   {
+  //     title: "Shop",
+  //     link: "",
+  //     subOptions: [
+  //       { title: "Shop Page", link: "/" },
+  //       { title: "Shop Details", link: "/" },
+  //       { title: "Cart", link: "/" },
+  //       { title: "Checkout", link: "/" },
+  //     ],
+  //   },
+  //   { title: "Blog", link: "", subOptions: [{ title: "Blog Page", link: "/" }, { title: "Blog Details", link: "/" }] },
+  //   { title: "Contact", link: "/contact" },
+  //   {
+  //     title: "Pages",
+  //     link: "",
+  //     subOptions: [
+  //       { title: "Appointment", link: "/" },
+  //       { title: "Case Study", link: "/" },
+  //       { title: "Our Team", link: "/" },
+  //       { title: "Pricing", link: "/" },
+  //       { title: "Login", link: "/" },
+  //       { title: "Privacy Policy", link: "/" },
+  //       { title: "404 Page", link: "/" },
+  //     ],
+  //   },
+  // ];
 
+  const options: any[] =[
+    {title:'Business Steup',
+      link:'/'
+    },
+    {title:'Talk to Expert',
+      link:'/'
+    },
+    {title:'Tax Compliances',
+      link:'/'
+    },
+    {title:'Trade Mark and IP',
+      link:'/'
+    },
+    {title:'Documentation',
+      link:'/'
+    },
+    {title:'Others',
+      link:'/'
+    },
+
+]
   const [openSubMenu, setOpenSubMenu] = useState<number | null>(null);
 
   const toggleSubMenu = (index: number) => {
@@ -93,7 +114,7 @@ const MobileNavbar = ({ Sidebar, setOpenSidebar }: { Sidebar: boolean, setOpenSi
                   {openSubMenu === index && (
                     <div className="pl-4 flex justify-start items-start flex-col gap-2 pt-2">
                       <ul>
-                        {option.subOptions.map((subOption, subIndex) => (
+                        {option.subOptions.map((subOption:any, subIndex:any) => (
                           <li key={subIndex}>
                             <Link href={subOption.link}  onClick={() => setOpenSidebar(false)} className="text-base">
                               <span>-</span> {subOption.title}

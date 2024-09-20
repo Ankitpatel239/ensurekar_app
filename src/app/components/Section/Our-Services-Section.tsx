@@ -1,7 +1,8 @@
 "use client";
-import { p } from "framer-motion/client";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
+
+import Link from "next/link";
+
 
 const OurServices = () => {
   const Data = {
@@ -28,7 +29,7 @@ const OurServices = () => {
               "&more",
             ],
             plan_type: "month",
-            know_more: "/private-limited-incoporation",
+            know_more: "/digital-signature",
           },
           {
             title: "Limited Liability Partnership",
@@ -104,7 +105,7 @@ const OurServices = () => {
             priceNote: "please enquire for pricing",
             tax: "Government fees + applicable taxes and charges extra",
             plan_type: undefined,
-            know_more: "/fssai-",
+            know_more: "",
             description: [
               "Every business operating in the food industry must register under FSSAI. You get guidance in choosing the right type of license for your business. Our experts will take care of the filing process and explain how to run your business as per the FSSAI rules to avoid being penalised.",
             ],
@@ -116,7 +117,7 @@ const OurServices = () => {
             tax: "Government fees + applicable taxes and charges extra",
 
             plan_type: undefined,
-            know_more: undefined,
+            know_more: "",
             description: [
               "ISO certification assists every business with a mark of quality and high standards. With us, you get assistance with picking the right type of ISO certification for your business and we work with you on connecting with a trustworthy vendor and walking you through the entire process.",
             ],
@@ -166,7 +167,7 @@ const OurServices = () => {
             priceNote: "please enquire for pricing",
             tax: "Government fees + applicable taxes and charges extra",
             plan_type: undefined,
-            know_more: undefined,
+            know_more: "",
             description: [
               "Your work is your pride, but today it is easier than ever for people to steal your work and use it without your permission. Many creators don't copyright their work because of the hassle. With Vakilsearch you get the protection without the hassle as we take care of the entire process for you.",
             ],
@@ -177,7 +178,7 @@ const OurServices = () => {
             priceNote: "please enquire for pricing",
             tax: "*Price depends on the scope of work",
             plan_type: undefined,
-            know_more: undefined,
+            know_more: "",
             description: [
               "Inventing something is hard, but protecting your invention can be harder! Registering and getting a patent is difficult, but not with Vakilsearch. From patent search and listing the different uses of your invention to filing for patent protection, our experts take care of the complicated processes so that you get the due credit for your invention.",
             ],
@@ -230,7 +231,7 @@ const OurServices = () => {
             plan_type: undefined,
             know_more: "/tcs-e-filing",
             description: [
-              "An employer or company that has valid TAN - Tax Collection and Deduction Account Number can file for TDS return. Any individual or business who makes a particular payment which is stated under the I-T Act needs to deduct tax at source.",
+              "An employer or company that has valid TAN - Tax Collection and Deduction Account Number can file for TDS return. Any individual or business who makes a particular payment which is stated under the I-T Act needs to deduct tax at source.",
             ],
           },
         ],
@@ -244,7 +245,7 @@ const OurServices = () => {
             priceNote: "please enquire for pricing",
             tax: "*Price depends on the scope of work",
             plan_type: undefined,
-            know_more: undefined,
+            know_more: "",
             description: [
               "The book-keeping and accounting service includes basic financial consultation, bookkeeping, preparation of accurate annual financial statements and monthly reports, assistance in designing invoices, and taxation advice by financial experts. A steal-deal for the price we offer!",
             ],
@@ -255,7 +256,7 @@ const OurServices = () => {
             priceNote: "please enquire for pricing",
             tax: "*Price depends on the scope of work",
             plan_type: undefined,
-            know_more: undefined,
+            know_more: "",
             description: [
               "The annual compliance tasks call for 9 different (and tedious) tasks which you would require different professionals to handle. We have consolidated the professionals so you can get it all done at a nominal price through a single package with Vakilsearch!",
             ],
@@ -266,7 +267,7 @@ const OurServices = () => {
             priceNote: "please enquire for pricing",
             tax: "*Price depends on the scope of work",
             plan_type: undefined,
-            know_more: undefined,
+            know_more: "",
             description: [
               "Due diligence involves assessing major aspects like business, legal, or/and financial aspects of a company. You can get it done easily using Vakilsearch's due diligence package instead of going through the hassle of engaging multiple professionals.",
             ],
@@ -277,7 +278,7 @@ const OurServices = () => {
             priceNote: "please enquire for pricing",
             tax: "*Price depends on the scope of work",
             plan_type: undefined,
-            know_more: undefined,
+            know_more: "",
             description: [
               "A secretarial audit is conducted to check if the company is compliant with all the relevant Acts including the Companies Act, 2013. This is mandatory for certain companies and can be a hectic task. Let our experts take up the audit for you!",
             ],
@@ -320,7 +321,7 @@ const OurServices = () => {
     setSubServices(subServices);
   };
 
-  useEffect(() => setServicesData(Data), []);
+  useEffect(() => {setServicesData(Data)}, []);
 
   return (
     <section className="bg-softBg1 stp-30 sbp-30 overflow-hidden">
@@ -333,10 +334,10 @@ const OurServices = () => {
                   <p className="bg-p1 py-2 sm:py-3 px-5 rounded-full text-white wow animate__animated animate__fadeInUp">
                     Services
                   </p>
-                  <h4 className="display-4 pt-4 pb-4 lg:pb-6  heading-4 animate__animated animate__fadeInDown">
+                  <h4 className="display-4 py-5 lg:pb-6 wow animate__animated animate__fadeInDown">
                     Our Services at a Glance
                   </h4>
-                  <div className="flex flex-wrap flex-row gap-3 my-5 font-bold justify-center items-center">
+                  <div className="flex flex-wrap flex-row my-5 font-bold justify-center items-center">
                     {servicesData?.Service_options?.map(
                       (service: any, index: number) => (
                         <button
@@ -347,7 +348,7 @@ const OurServices = () => {
                               service?.subServices
                             )
                           }
-                          className={`text-lg font-semibold mx-2 hover:underline underline-offset-[8px] decoration-2  ${
+                          className={`text-lg font-semibold mr-5 mb-2 hover:underline underline-offset-[8px] decoration-2  ${
                             tabs === service.name_of_service
                               ? "underline opacity-50"
                               : ""
@@ -359,7 +360,7 @@ const OurServices = () => {
                     )}
                   </div>
                 </div>
-                <div className="my-5 flex flex-wrap justify-between gap-5 items-center ">
+                <div className="my-5 flex flex-wrap justify-center items-center  gap-5 items-center ">
                   {subServices.map((service: any, index: number) => (
                     <div
                       key={index}
@@ -400,14 +401,14 @@ const OurServices = () => {
                           </ul>
                         </div>
                       </div>
-                      {service.know_more && (
+                       
                         <Link
                           href={service.know_more}
-                          className="text-blue-700 hover:underline "
+                          className="text-blue-700 hover:underline flex justify-center" 
                         >
                           Know More
                         </Link>
-                      )}
+                      
                     </div>
                   ))}
                 </div>
