@@ -8,10 +8,7 @@ import dentist_section_img from '../../../images/dentist_section_img.png'
 import save_time_money_section from '../../../images/save_time_money_section.png'
 import RegisterSteps from '@/app/components/Section/Register-Steps';
 import FAQsSection from '@/app/components/other-page-sections/FAQs-Section';
-import { Head } from 'next/document';
 import { Headphones } from 'phosphor-react';
-import { PiWebhooksLogo } from 'react-icons/pi';
-import OurStorySection from '@/app/components/Section/Step-Guide-Section';
 import TestimonialSection from '@/app/components/Section/Testimonial-Section';
 const DigitalSignature = () => {
   return (

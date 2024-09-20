@@ -69,7 +69,7 @@ const CompaniesAct = () => {
 
   useEffect(() => {
     setBenefits(BenefitsData);
-  }, []);
+  }, [BenefitsData]);
 
   return (
     <div className="container stp-30 sbp-10">
