@@ -1,14 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-
 import Link from "next/link";
-
 
 const OurServices = () => {
   const Data = {
     title: "Our Services at a Glance",
-    sub_title:
-      "Complete the entire process and chat with us from your dashboard!",
+    sub_title: "Complete the entire process and chat with us from your dashboard!",
     Service_options: [
       {
         name_of_service: "Register Your Business",
@@ -64,7 +61,6 @@ const OurServices = () => {
               "Company Incorporation Certificate",
               "&more",
             ],
-
             plan_type: "month",
             know_more: "/one-persone-company",
           },
@@ -79,7 +75,6 @@ const OurServices = () => {
               "Two rounds of iterations",
               "&more",
             ],
-
             plan_type: "month",
             know_more: "/partnership-firm",
           },
@@ -105,7 +100,7 @@ const OurServices = () => {
             priceNote: "please enquire for pricing",
             tax: "Government fees + applicable taxes and charges extra",
             plan_type: undefined,
-            know_more: "",
+            know_more: "/fssai-food-license",
             description: [
               "Every business operating in the food industry must register under FSSAI. You get guidance in choosing the right type of license for your business. Our experts will take care of the filing process and explain how to run your business as per the FSSAI rules to avoid being penalised.",
             ],
@@ -115,9 +110,8 @@ const OurServices = () => {
             price: "1499",
             priceNote: "please enquire for pricing",
             tax: "Government fees + applicable taxes and charges extra",
-
             plan_type: undefined,
-            know_more: "",
+            know_more: "/iso-certification",
             description: [
               "ISO certification assists every business with a mark of quality and high standards. With us, you get assistance with picking the right type of ISO certification for your business and we work with you on connecting with a trustworthy vendor and walking you through the entire process.",
             ],
@@ -128,7 +122,7 @@ const OurServices = () => {
             priceNote: "please enquire for pricing",
             tax: "Government fees + applicable taxes and charges extra",
             plan_type: undefined,
-            know_more: "/iec-(import-export-code)-registration",
+            know_more: "/import-export-code",
             description: [
               "Want to be involved in an import/export business? You need an Import and Export Code for it. Get your IEC at the earliest with Vakilsearch. Our support team will guide you through the process and hand you your IEC on a silver platter",
             ],
@@ -154,7 +148,6 @@ const OurServices = () => {
             price: "499",
             priceNote: "please enquire for pricing",
             tax: "Government fees + applicable taxes and charges extra",
-
             plan_type: undefined,
             know_more: "/trade-mark-name-search",
             description: [
@@ -287,6 +280,7 @@ const OurServices = () => {
       },
     ],
   };
+
   interface Service {
     title: string;
     price: string | undefined;
@@ -310,18 +304,21 @@ const OurServices = () => {
   const [servicesData, setServicesData] = useState<DataStructure | null>(null);
   const [subServices, setSubServices] = useState<Service[]>([]);
   const [tabs, setTabs] = useState("Register Your Business");
-  
-  useEffect(()=>{
-    setSubServices(servicesData?.Service_options[0].subServices || [])
-    setTabs(servicesData?.Service_options[0].name_of_service || "")
-  },[servicesData])
+
+  useEffect(() => {
+    setSubServices(servicesData?.Service_options[0].subServices || []);
+    setTabs(servicesData?.Service_options[0].name_of_service || "");
+  }, [servicesData]);
 
   const toggleTabs = (name: string, subServices: any) => {
     setTabs(name);
     setSubServices(subServices);
   };
 
-  useEffect(() => {setServicesData(Data)}, []);
+  useEffect(() => {
+    setServicesData(Data);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section className="bg-softBg1 stp-30 sbp-30 overflow-hidden">

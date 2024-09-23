@@ -6,7 +6,7 @@ import stepArrow2 from "../../images/stepArrow2.png";
 import Image from "next/image";
 import { FilePlus, User } from "phosphor-react";
 
-const RegisterSteps = () => {
+const RegisterSteps = ({RegisterSteps}:{RegisterSteps:{heading:string,title:string,description:string}}) => {
   return (
     <section className="stp-30 bg-softBg1 sbp-30">
       <div className="container">
@@ -19,17 +19,11 @@ const RegisterSteps = () => {
 
               <h4 className="display-4 pt-4 my-5  pb-4 lg:pb-6 wow animate__animated animate__fadeInDown">
                 <span className="text-blue-600">Steps to Register </span>
-                Your Private Limited Company
+                Your { RegisterSteps?.heading} 
               </h4>
 
               <p className="text-bodyText wow animate__animated animate__fadeInUp text-start md:text-center">
-                To register a private limited company in India, you need to
-                obtain a Digital Signature Certificate (DSC) and Director
-                Identification Number (DIN) for the proposed directors, and then
-                file the incorporation documents with the Ministry of Corporate
-                Affairs (MCA) through the online SPICE+ (Simplified Proforma for
-                Incorporating Company Electronically Plus) form. Vakilsearch
-                offers an easy, three step process for business registering:
+                { RegisterSteps?.description}
               </p>
             </div>
           </div>

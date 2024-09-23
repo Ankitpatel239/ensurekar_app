@@ -128,9 +128,33 @@ const DesktopNavbar: React.FC = () => {
           title: "MSME Registration",
           link: "/msme-registration",
         },
+        {
+          title: "ISO Certification",
+          link: "/iso-certification",
+        },
+        {
+          title: "FSSAI [Food License]",
+          link: "/fssai-food-license",
+        },
+        {
+          title: "IEC [Import/Export Code]",
+          link: "/import-export-code",
+        },
+        {
+          title: "Private Limited Incorporation Registration",
+          link: "/pvt-ltd-incorporation",
+        },
+        {
+          title: "IEC [Import/Export Code]",
+          link: "/import-export-code",
+        },
+        {
+          title: "test",
+          link: `/services/digital-signature`,
+        },
       ],
     },
-    { title: "Talk to Expert", link: "/" },
+    { title: "Talk to Expert", link: `/` },
     { title: "Tax Compliances", link: "/" },
     { title: "Trade Mark and IP", link: "/" },
     { title: "Documentation", link: "/" },

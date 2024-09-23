@@ -1,9 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import logo1 from "../../images/logo1.png";
+
 const CompaniesAct = () => {
-  const BenefitsData = [
+  const BenefitsData = useMemo(() => [
     {
       imageUrl: "",
       title: "Limited Liability Protection",
@@ -64,7 +65,8 @@ const CompaniesAct = () => {
       description:
         "Private limited companies, when registered, have better access to funding from banks and other financial institutions. This enables the company to fund itself and operate as a separate legal entity in the future.",
     },
-  ];
+  ], []);
+
   const [benefits, setBenefits] = useState<any[]>([]);
 
   useEffect(() => {
