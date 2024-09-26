@@ -50,7 +50,7 @@ const BreadcrumbSection = () => {
           <h1 className="display-3 pt-4">Taxations Services</h1>
 
           <p className="text-bodyText pt-6">
-            AccuPay takes the complexity out of taxes, offering a range of
+            Ensurekar takes the complexity out of taxes, offering a range of
             services to ensure your business stays compliant and maximizes.
           </p>
         </div>

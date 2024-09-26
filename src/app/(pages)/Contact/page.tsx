@@ -25,7 +25,7 @@ const Contact = () => {
               <Envelope weight='fill'/>
             </div>
             <h4 className="heading-4 pt-5 pb-2">Chat to Sales</h4>
-            <a href="mailto:accupay@gmail.com">accupay@gmail.com</a>
+            <a href="mailto:Ensurekar@gmail.com">Ensurekar@gmail.com</a>
           </div>
           <div
             className="flex flex-col justify-start items-start p-4 lg:p-8 bg-p1 text-white w-full col-span-12 sm:col-span-4 border border-p1 hover:bg-s2 hover:text-mainTextColor hover:border-mainTextColor duration-500 group"
@@ -36,7 +36,7 @@ const Contact = () => {
               <PhoneCall weight='fill'/>
             </div>
             <h4 className="heading-4 pt-5 pb-2">Contact Us</h4>
-            <a href="tel:accupay@gmail.com">+9190-8687-3345-120</a>
+            <a href="tel:Ensurekar@gmail.com">+9190-8687-3345-120</a>
           </div>
           <div
             className="flex flex-col justify-start items-start p-4 lg:p-8 bg-p1 text-white w-full col-span-12 sm:col-span-4 border border-p1 hover:bg-s2 hover:text-mainTextColor hover:border-mainTextColor duration-500 group"

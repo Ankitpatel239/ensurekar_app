@@ -33,7 +33,7 @@ const PricingSection = () => {
                     Our Pricing
                   </h1>
                   <p className="text-bodyText wow animate__animated animate__fadeInUp">
-                    At Accupay, we believe in providing clear and flexible
+                    At Ensurekar, we believe in providing clear and flexible
                     pricing options tailored to your business needs.
                   </p>
                 </div>

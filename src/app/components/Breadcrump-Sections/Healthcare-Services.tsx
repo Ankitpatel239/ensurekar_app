@@ -51,7 +51,7 @@ const BreadcrumbSection = () => {
         <h1 className="display-3 pt-4">Healthcare Services</h1>
 
         <p className="text-bodyText pt-6">
-          AccuPay's Healthcare Services are designed to support the financial
+          Ensurekar's Healthcare Services are designed to support the financial
           health of your medical practice or healthcare facility
         </p>
       </div>

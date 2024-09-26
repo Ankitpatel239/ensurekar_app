@@ -212,7 +212,7 @@ const Team = () => {
                   className="rounded-lg object-cover w-full"
                 />
                 <div className="absolute z-30 text-white bottom-6 right-6 left-6 linear-gradient-bg-team flex justify-center items-center flex-col py-6 invisible opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 duration-500 group-hover:visible">
-                  <p className="font-medium">CEO, Accupay</p>
+                  <p className="font-medium">CEO, Ensurekar</p>
                   <Link href="/Our-Team/Team-Details" className="heading-4">
                     Verna Gutierrez
                   </Link>

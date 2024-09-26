@@ -26,7 +26,7 @@ const TeamDetails = () => {
               <p className="bg-p1 py-3 px-5 rounded-full text-white">Our Team</p>
               <h2 className="display-4 pt-3 pb-6">Rifat Warner</h2>
               <p className="text-bodyText">
-                Welcome to the heart of Accupay. Our dedicated team of
+                Welcome to the heart of Ensurekar. Our dedicated team of
                 accounting and payroll professionals is committed to providing
                 unparalleled services to meet your financial needs. Get to know
                 the individuals who make up our dynamic team
@@ -79,7 +79,7 @@ const TeamDetails = () => {
       <section className="container stp-15 lg:max-xxl:-mt-20 xxl:pt-15 sbp-30">
         <h2 className="heading-1">Personal experience</h2>
         <p className="text-bodyText pt-6 pb-6 lg:pb-10">
-          Each team member at Accupay brings a unique blend of professional
+          Each team member at Ensurekar brings a unique blend of professional
           expertise and personal commitment to our clients. With a shared
           passion for accounting and payroll excellence, we understand the
           intricacies of financial management. Our collaborative approach
@@ -139,7 +139,7 @@ const TeamDetails = () => {
           >
             <h3 className="heading-2">Why Chooses Our Team</h3>
             <p className="text-bodyText pt-6">
-              Choosing our team at Accupay means partnering with a dedicated
+              Choosing our team at Ensurekar means partnering with a dedicated
               group of accounting and payroll professionals committed to your
               financial success.
             </p>
@@ -154,7 +154,7 @@ const TeamDetails = () => {
 
         <h4 className="heading-3">Why Chooses Our Team</h4>
         <p className="text-bodyText pt-6">
-          Choosing our team at Accupay means partnering with a dedicated group
+          Choosing our team at Ensurekar means partnering with a dedicated group
           of accounting and payroll professionals committed to your financial
           success. With years of collective experience, we bring a deep
           understanding of industry intricacies and stay at the forefront of

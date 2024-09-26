@@ -12,17 +12,15 @@ const WhyEnsurekarSection = () => {
       <div className="container">
         <div className="flex justify-between items-end gap-6 max-lg:flex-col max-lg:items-start">
           <div className="max-w-[600px] flex justify-center items-start flex-col">
-            <p className="bg-p1 py-3 px-5 rounded-full text-white">
-              Why Accupay
-            </p>
+            {/* <p className="bg-p1 py-3 px-5 rounded-full text-white">
+              Why Ensurekar
+            </p> */}
             <h1 className="display-4 pt-4">
-              A Platform for Your All Legal finance and tax's.
+            A Platform for Your All Legal Finance And Tax's
             </h1>
           </div>
           <p className="text-bodyText max-w-[500px]">
-            Your dependable guide to achieving freedom from manual HR work and
-            building that perfect workplace you have always aspired to build.
-            Your dependable guide to achieving freedom.
+          Achieve operational excellence with our expert guidance in legal, financial, and tax matters. Build the ideal workplace while ensuring compliance and efficiency.
           </p>
         </div>
         <div className="grid grid-cols-12 gap-6 stp-15">

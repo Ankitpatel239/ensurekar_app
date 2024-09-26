@@ -22,7 +22,7 @@ const CTASection = () => {
           className="absolute -top-4 sm:-top-6 lg:top-0 right-0 h-[60px] sm:h-[80px] lg:h-[120px] -rotate-90"
         />
         <p className="display-3 text-center text-white !leading-[130%]">
-          Make Accupay Part Of Your Work And Get Daily Update
+        Make Ensurekar Part of your Business and Get updated
         </p>
         <form onSubmit={handleSubmit} className="pt-6 sm:pt-10 relative">
           <div

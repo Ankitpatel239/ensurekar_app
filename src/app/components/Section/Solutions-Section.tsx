@@ -30,13 +30,12 @@ const SolutionsSection = () => {
               </p>
 
               <h1 className="display-4 pt-4 pb-4 lg:pb-6 wow animate__animated animate__fadeInDown">
-              The Indian Finance, tax , and legal Solution
+               Finance, Tax and Legal Solution
 
               </h1>
 
               <p className="text-bodyText wow animate__animated animate__fadeInDown">
-                When it comes to payroll solutions, we have a variety of options
-                that benefit both your company and your contractor.
+              When it comes to LTF solu on Ensurekar is here for you. 
               </p>
             </div>
           </div>
@@ -52,12 +51,9 @@ const SolutionsSection = () => {
             </div>
           </div>
           <div className="col-span-12 lg:col-start-8 lg:col-span-5 flex justify-center items-start flex-col">
-            <h1 className="heading-1 pb-5">Consolidate Payroll Processing</h1>
+            <h1 className="heading-1 pb-5">Consolidate Platform of Experts</h1>
             <p className="text-bodyText">
-              {/* We have designed a fast and effective payroll system that
-              streamlines your payment process. */}
-              We Verified CA, CS and Leagal Experts ready to streamline your business Opertaions.
-
+             Connect anytime with CA, CS, Lawyers and Experts
             </p>
             <div className="grid grid-cols-2 gap-4 lg:gap-6 py-6 lg:py-10 w-full">
               <div className="group col-span-2 sm:col-span-1 flex justify-start items-center gap-5">
@@ -67,8 +63,8 @@ const SolutionsSection = () => {
                   className="rounded-full border border-strokeColor p-5 bg-softBg w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] text-4xl text-s1 group-hover:text-mainTextColor group-hover:bg-s2 group-hover:border-mainTextColor transition-all duration-500 ease-in-out"
                 />
                 <p className="text-lg font-medium group-hover:text-s1 duration-500">
-                  {/* Tax Preparation */}
-                  Talk to a lawyer
+                  Tax Preparation
+                 
                 </p>
               </div>
               <div className="group col-span-2 sm:col-span-1 flex justify-start items-center gap-5">
@@ -84,8 +80,8 @@ const SolutionsSection = () => {
                 </svg>
 
                 <p className="text-lg font-medium group-hover:text-s1 duration-500">
-                  {/* Payroll Processing */}
-                  Talk to a Charted accountant
+                  Payroll Management
+                  {/* Talk to a Charted accountant */}
                 </p>
               </div>
               <div className="group col-span-2 sm:col-span-1 flex justify-start items-center gap-5">
@@ -97,7 +93,8 @@ const SolutionsSection = () => {
          
                 <p className="text-lg font-medium group-hover:text-s1 duration-500">
                   {/* Cost Effective */}
-                  Talk to the Company secretary
+                  {/* Talk to the Company secretary */}
+                  Business Registrations
                 </p>
               </div>
               <div className="group col-span-2 sm:col-span-1 flex justify-start items-center gap-5">
@@ -109,7 +106,8 @@ const SolutionsSection = () => {
                 
                 <p className="text-lg font-medium group-hover:text-s1 duration-500 ">
                   {/* Scale Rapidly */}
-                  Talk to an intellectual Property lawyer
+                  {/* Talk to an intellectual Property lawyer */}
+                  Funding Support 
                 </p>
               </div>
             </div>

@@ -10,7 +10,7 @@ const OurStorySection = lazy(()=>import("./components/Section/Our-Story-Section"
 const StepGuideSection = lazy(()=>import("./components/Section/Step-Guide-Section"))
 const WhyEnsurekarSection = lazy(()=>import("./components/Section/Why-Ensurekar-Section"))
 const IntegrationsSection = lazy(()=>import("./components/Section/Integrations-Section"))
-const ExperienceAccupaySection = lazy(()=>import("./components/Section/Experience-Accupay-Section"))
+const ExperienceEnsurekarSection = lazy(()=>import("./components/Section/Experience-Ensurekar-Section"))
 const TestimonialSection = lazy(()=>import("./components/Section/Testimonial-Section"))
 const PricingSection = lazy(()=>import("./components/Section/Pricing-Section"))
 const BlogSection = lazy(()=>import("./components/Section/Blog-Section"))
@@ -29,7 +29,7 @@ export default function Home() {
       {/* <StepGuideSection /> */}
       <WhyEnsurekarSection />
       <IntegrationsSection />
-      <ExperienceAccupaySection />
+      <ExperienceEnsurekarSection />
       {/* <TestimonialSection /> */}
       {/* <PricingSection /> */}
       <OurServices/>

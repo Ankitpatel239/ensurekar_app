@@ -197,7 +197,7 @@ const footer = () => {
       <div className="border-t border-white/10">
         <div className="container py-6 flex justify-between items-center max-md:flex-col gap-6">
           <p className="max-sm:text-center">
-            Accupay © Copyright 2024. All Rights Reserved.
+            Ensurekar © Copyright 2024. All Rights Reserved.
           </p>
           <div className="flex justify-end items-center">
             <Link
@@ -220,3 +220,6 @@ const footer = () => {
 };
 
 export default footer;
+
+
+

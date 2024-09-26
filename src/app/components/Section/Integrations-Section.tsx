@@ -12,20 +12,21 @@ const IntegrationsSection = () => {
         className="flex justify-start items-start col-span-12 lg:col-span-5 max-lg:sbp-15"
       >
         <div className="max-w-[600px] flex justify-start items-start flex-col">
-          <p
+          {/* <p
             className="bg-p1 py-3 px-5 rounded-full text-white wow animate__animated animate__fadeInUp"
           >
             Integrations
-          </p>
+          </p> */}
           <h1
             className="display-4 pt-4 pb-6 wow animate__animated animate__fadeInDown"
           >
-            All in One Place All in Sync.
+           All In one place
           </h1>
           <p className="text-bodyText wow animate__animated animate__fadeInUp">
-            Experience seamless coordination with our comprehensive services.
+            {/* Experience seamless coordination with our comprehensive services.
             From accounting to payroll, we bring everything together in one
-            place,
+            place, */}
+            Experience seamless coordination with our comprehensive services. From accounting to compliances to each and everything, we bring everything together in one place.
           </p>
         </div>
       </div>

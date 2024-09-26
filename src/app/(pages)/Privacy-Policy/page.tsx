@@ -77,7 +77,7 @@ const PrivacyPolicy = () => {
         <div className="">
           <h3 className="heading-3 py-6">Data security</h3>
           <p className="text-bodyText">
-            At Accupay, we prioritize the security of your data. Rigorous
+            At Ensurekar, we prioritize the security of your data. Rigorous
             measures are in place to safeguard the confidentiality and integrity
             of the information entrusted to us. This includes robust encryption
             protocols, access controls, and regular security audits. We are
@@ -109,7 +109,7 @@ const PrivacyPolicy = () => {
         <div className="">
           <h3 className="heading-3 py-6">Data retention</h3>
           <p className="text-bodyText">
-            At [Accupay], we value your privacy and adhere to responsible data
+            At [Ensurekar], we value your privacy and adhere to responsible data
             practices. Your data, collected for Accounting & Payroll Processing
             Services, is retained only for as long as necessary to fulfill the
             purposes outlined in our services. We follow clear retention
@@ -147,7 +147,7 @@ const PrivacyPolicy = () => {
         <div className="">
           <h3 className="heading-3 py-6">Cookies and tracking technologies</h3>
           <p className="text-bodyText">
-            At [Accupay], we utilize cookies and tracking technologies to
+            At [Ensurekar], we utilize cookies and tracking technologies to
             enhance your experience with our Accounting & Payroll Processing
             Services. These technologies help us improve service functionality,
             personalize content, and analyze usage patterns. Cookies may be used
@@ -162,7 +162,7 @@ const PrivacyPolicy = () => {
         <div className="">
           <h3 className="heading-3 py-6">Children's privacy</h3>
           <p className="text-bodyText">
-            At Accupay, we are committed to protecting the privacy of all users,
+            At Ensurekar, we are committed to protecting the privacy of all users,
             including children. Our Accounting & Payroll Processing Services are
             not intended for individuals under the age of 18. We do not
             knowingly collect or process personal information from children. If
@@ -175,7 +175,7 @@ const PrivacyPolicy = () => {
         <div className="">
           <h3 className="heading-3 py-6">Changes to the privacy policy</h3>
           <p className="text-bodyText">
-            At [Accupay], we are committed to maintaining transparency in our
+            At [Ensurekar], we are committed to maintaining transparency in our
             data practices. As we continually strive to enhance our Accounting &
             Payroll Processing Services, updates to our Privacy Policy may
             occur. Any changes made will be communicated to you through
@@ -194,7 +194,7 @@ const PrivacyPolicy = () => {
           <p className="text-bodyText">
             If you have any questions or concerns regarding our Privacy Policy
             or the handling of your personal information, please contact us at
-            <span className="text-p1">accupay@gmail.com</span>
+            <span className="text-p1">Ensurekar@gmail.com</span>
           </p>
         </div>
       </section>

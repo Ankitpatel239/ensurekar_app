@@ -40,7 +40,7 @@ const BreadcrumpSection = () => {
           <h1 className="display-3 pt-4">Appointment</h1>
 
           <p className="text-bodyText pt-6">
-            At AccuPay, we understand the importance of personalized service.
+            At Ensurekar, we understand the importance of personalized service.
             Book an appointment with our experts to discuss your accounting.
           </p>
         </div>

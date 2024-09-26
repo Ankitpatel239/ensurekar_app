@@ -4,16 +4,16 @@ import React, { useEffect, useState } from 'react';
 import counter_bg from '../../images/counter_bg.png'; // Background image
 
 const CounterSection = () => {
-  const [hours, setHours] = useState(0);
-  const [savings, setSavings] = useState(0);
-  const [weeks, setWeeks] = useState(0);
+  const [clients, setClients] = useState(0);
+  const [startups, setStartups] = useState(0);
+  const [cities, setCities] = useState(0);
 
   useEffect(() => {
     // Simulate the incremental update of the numbers
-    const hoursTarget = 63;
-    const savingsTarget = 264589;
-    const weeksTarget = 8;
-
+    const clientServed = 5000;
+    const startupGuidanceAndSupport = 200; 
+    const  totalCities = 10;
+     
     const incrementValue = (currentValue: number, targetValue: number, setValue: React.Dispatch<React.SetStateAction<number>>) => {
       if (currentValue < targetValue) {
         const step = Math.ceil((targetValue - currentValue) / 20); // Adjust the step size
@@ -29,9 +29,9 @@ const CounterSection = () => {
       }
     };
 
-    incrementValue(0, hoursTarget, setHours);
-    incrementValue(0, savingsTarget, setSavings);
-    incrementValue(0, weeksTarget, setWeeks);
+    incrementValue(0, clientServed, setClients);
+    incrementValue(0, startupGuidanceAndSupport, setStartups);
+    incrementValue(0,  totalCities, setCities);
   }, []);
 
   return (
@@ -47,11 +47,12 @@ const CounterSection = () => {
         {/* Counter 1 */}
         <div className="text-center max-w-[280px]">
           <p className="display-4 pb-3 flex justify-center items-center">
-            <span>{hours}</span>
-            <span>hrs</span>
+            <span>{clients}</span>
+            <span>+</span>
           </p>
-          <p>
-            Average time saved per month running payroll and HR after switching to Accupay.
+          <p className='text-2xl font-bold text-wrap md:text-nowrap'>
+          Client Served
+            {/* Average time saved per month running payroll and HR after switching to Ensurekar. */}
           </p>
         </div>
 
@@ -60,11 +61,12 @@ const CounterSection = () => {
         {/* Counter 2 */}
         <div className="text-center max-w-[280px]">
           <p className="display-4 pb-3 counters flex justify-center items-center">
-            <span>$</span>
-            <span>{savings.toLocaleString()}</span>
+            <span>{startups.toLocaleString()}</span>
+            <span>+</span>
           </p>
-          <p>
-            Average savings made per year running payroll and HR after switching to Accupay.
+          <p className='text-2xl font-bold text-wrap md:text-nowrap'>
+          startup guidance and support
+            {/* Average startups made per year running payroll and HR after switching to Ensurekar. */}
           </p>
         </div>
 
@@ -73,11 +75,12 @@ const CounterSection = () => {
         {/* Counter 3 */}
         <div className="text-center max-w-[280px]">
           <p className="display-4 pb-3 counters flex justify-center items-center">
-            <span>{weeks}</span>
-            <span>Weeks</span>
+            <span>{cities}</span>
+            <span>+</span>
           </p>
-          <p>
-            Average time it takes to switch to Accupay - and often less.
+          <p className='text-2xl font-bold text-wrap md:text-nowrap'>
+          cities at present
+            {/* Average time it takes to switch to Ensurekar - and often less. */}
           </p>
         </div>
       </div>

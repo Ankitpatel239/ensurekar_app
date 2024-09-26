@@ -44,10 +44,10 @@ const BreadcrumbSection = () => {
           className="max-w-[600px] text-center flex justify-center items-center flex-col"
         >
           <p className="bg-p1 py-3 px-5 rounded-full text-white">About</p>
-          <h1 className="display-4 pt-4 pb-6">Work with AccuPay</h1>
+          <h1 className="display-4 pt-4 pb-6">Work with Ensurekar</h1>
           <p className="text-bodyText">
-            Welcome to AccuPay, where financial excellence meets personalized
-            service. At AccuPay, we understand the intricacies of accounting
+            Welcome to Ensurekar, where financial excellence meets personalized
+            service. At Ensurekar, we understand the intricacies of accounting
             and payroll processing.
           </p>
         </div>

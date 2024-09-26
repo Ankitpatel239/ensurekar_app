@@ -26,9 +26,9 @@ const TermsConditions = () => {
         <div className="">
           <h3 className="heading-1 py-6">Introduction</h3>
           <p className="text-bodyText">
-            Welcome to [accupay], where we are dedicated to providing
+            Welcome to [Ensurekar], where we are dedicated to providing
             exceptional Accounting & Payroll Processing Services. These Terms &
-            Conditions outline the mutual agreement between [accupay] and our
+            Conditions outline the mutual agreement between [Ensurekar] and our
             valued clients. By accessing and using our services, you acknowledge
             and agree to comply with the terms set forth herein.
           </p>
@@ -47,7 +47,7 @@ const TermsConditions = () => {
         <div className="">
           <h3 className="heading-2 py-6">Service Description</h3>
           <p className="text-bodyText">
-            [Accupay] is pleased to offer comprehensive Accounting & Payroll
+            [Ensurekar] is pleased to offer comprehensive Accounting & Payroll
             Processing Services tailored to meet the financial needs of
             businesses. Our services encompass a range of professional
             accounting and payroll solutions designed to streamline and optimize
@@ -103,7 +103,7 @@ const TermsConditions = () => {
         <div className="">
           <h3 className="heading-3 py-6">Client Responsibilities</h3>
           <p className="text-bodyText">
-            As a valued client of [accupay], your cooperation is essential for
+            As a valued client of [Ensurekar], your cooperation is essential for
             the success of our Accounting & Payroll Processing Services. Please
             ensure the timely and accurate provision of all necessary financial
             information. Collaborate with us in addressing queries promptly to
@@ -119,7 +119,7 @@ const TermsConditions = () => {
         <div className="">
           <h3 className="heading-3 py-6">Payment Terms</h3>
           <p className="text-bodyText">
-            At [accupay], we strive to provide transparent and fair payment
+            At [Ensurekar], we strive to provide transparent and fair payment
             terms for our Accounting & Payroll Processing Services. Invoices
             will be issued in accordance with the agreed-upon billing cycle.
             Payment is due [insert number of days] days from the invoice date.
@@ -135,7 +135,7 @@ const TermsConditions = () => {
         <div className="">
           <h3 className="heading-3 py-6">Service Delivery and Timelines</h3>
           <p className="text-bodyText">
-            At [accupay], we are committed to delivering timely and efficient
+            At [Ensurekar], we are committed to delivering timely and efficient
             Accounting & Payroll Processing Services. Our aim is to ensure that
             all tasks are completed within agreed-upon timelines. The specific
             delivery schedules for various services will be communicated upon
@@ -168,7 +168,7 @@ const TermsConditions = () => {
         <div className="">
           <h3 className="heading-3 py-6">Confidentiality</h3>
           <p className="text-bodyText">
-            At [accupay], we prioritize the confidentiality of your sensitive
+            At [Ensurekar], we prioritize the confidentiality of your sensitive
             information. Our commitment to safeguarding your data is unwavering.
             During the provision of our Accounting & Payroll Processing
             Services, all client-related information is treated with the utmost
@@ -185,7 +185,7 @@ const TermsConditions = () => {
         <div className="">
           <h3 className="heading-3 py-6">Intellectual Property</h3>
           <p className="text-bodyText">
-            At [Accupay], we are committed to maintaining transparency in our
+            At [Ensurekar], we are committed to maintaining transparency in our
             data practices. As we continually strive to enhance our Accounting &
             Payroll Processing Services, updates to our Privacy Policy may
             occur. Any changes made will be communicated to you through
@@ -217,7 +217,7 @@ const TermsConditions = () => {
                 Any intellectual property, including but not limited to
                 software, tools, and proprietary methodologies developed by
                 [Your Company] during the provision of services, shall remain
-                the exclusive property of [accupay].
+                the exclusive property of [Ensurekar].
               </p>
             </li>
             <li>
@@ -239,7 +239,7 @@ const TermsConditions = () => {
                 Clients agree to treat all intellectual property and proprietary
                 information as confidential, refraining from disclosing or
                 reproducing such materials without explicit written consent from
-                [Accupay].
+                [Ensurekar].
               </p>
             </li>
           </ul>

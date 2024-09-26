@@ -15,7 +15,7 @@ const BlogSection = () => {
       <div className="flex justify-between items-end">
         <div className="max-w-[600px] flex justify-end items-start flex-col">
           <p className="bg-p1 py-3 px-5 rounded-full text-white">News & Blog</p>
-          <h1 className="display-4 pt-4 pb-6">Stay updates with Accupay News</h1>
+          <h1 className="display-4 pt-4 pb-6">Stay updates with Ensurekar News</h1>
           <p className="text-">
             Stay informed and empowered with our latest articles on
             accounting, payroll processing, and financial management.

@@ -1,220 +1,164 @@
 "use client";
+
 import Link from "next/link";
 import { CaretDown } from "phosphor-react";
 import React, { useState } from "react";
+
+interface SubOption {
+  title: string;
+  link: string;
+}
+
+interface SubMenu {
+  title: string;
+  options: SubOption[];
+}
+
 const DesktopNavbar: React.FC = () => {
-  // const options = [
-  //   {
-  //     title: "Home",
-  //     link: "/",
-  //   },
-  //   {
-  //     title: "About",
-  //     link: "/About",
-  //   },
-  //   {
-  //     title: "Services",
-  //     link: "",
-  //     subOptions: [
-  //       {
-  //         title: "All Services",
-  //         link: "/All-Services",
-  //       },
-  //       {
-  //         title: "Payroll Processing",
-  //         link: "/Payroll-Processing",
-  //       },
-  //       {
-  //         title: "Accounting Services",
-  //         link: "/Accounting-Services",
-  //       },
-  //       {
-  //         title: "Taxation Services",
-  //         link: "/Taxation-Services",
-  //       },
-  //       {
-  //         title: "Real State Services",
-  //         link: "/Real-State-Services",
-  //       },
-  //       {
-  //         title: "Healthcare Services",
-  //         link: "/Healthcare-Services",
-  //       },
-  //       {
-  //         title: "Dentist Services",
-  //         link: "/Dentist-Services",
-  //       },
-  //     ],
-  //   },
-
-  //   {
-  //     title: "Contact",
-  //     link: "/Contact",
-  //   },
-  //   {
-  //     title: "Pages",
-  //     link: "",
-  //     subOptions: [
-  //       {
-  //         title: "Appointment",
-  //         link: "/Appointment",
-  //       },
-  //       {
-  //         title: "Case Study",
-  //         link: "/Case-Study",
-  //       },
-  //       {
-  //         title: "Case Study Details",
-  //         link: "/Case-Study/Case-Study-Details",
-  //       },
-  //       {
-  //         title: "Our Team",
-  //         link: "/Our-Team",
-  //       },
-  //       {
-  //         title: "Team Details",
-  //         link: "/Our-Team/Team-Details",
-  //       },
-  //       {
-  //         title: "About",
-  //         link: "/About",
-  //       },
-  //       {
-  //         title: "Pricing",
-  //         link: "/Pricing",
-  //       },
-  //       {
-  //         title: "FAQ Page",
-  //         link: "/FAQs",
-  //       },
-  //       {
-  //         title: "Login",
-  //         link: "/Login",
-  //       },
-  //       {
-  //         title: "Register",
-  //         link: "/Register",
-  //       },
-  //       {
-  //         title: "Privacy Policy",
-  //         link: "/Privacy-Policy",
-  //       },
-  //       {
-  //         title: "Terms & Conditions",
-  //         link: "/Terms-Conditions",
-  //       },
-  //       {
-  //         title: "404 Page",
-  //         link: "/404-Page",
-  //       },
-  //     ],
-  //   },
-  // ];
-
   const options: any[] = [
     {
-      title: "Business Steup",
-      link: "",
-      subOptions: [
+      title: "Business Setup",
+      subMenu: [
         {
-          title: "Digital Signature",
-          link: "/digital-signature",
+          title: "Business Registration",
+          options: [
+            { title: "Private Limited Company", link: "/private-limited-company" },
+            { title: "Limited Liability Partnership", link: "/limited-liability-partnership" },
+            { title: "One Person Company", link: "/one-person-company" },
+            { title: "Sole Proprietorship", link: "/sole-proprietorship" },
+            { title: "Nidhi Company", link: "/nidhi-company" },
+            { title: "Producer Company", link: "/producer-company" },
+            { title: "Partnership Firm", link: "/partnership-firm" },
+          ],
         },
         {
-          title: "Udyam Registration",
-          link: "/udyam-registration",
-        },
-        {
-          title: "MSME Registration",
-          link: "/msme-registration",
-        },
-        {
-          title: "ISO Certification",
-          link: "/iso-certification",
-        },
-        {
-          title: "FSSAI [Food License]",
-          link: "/fssai-food-license",
-        },
-        {
-          title: "IEC [Import/Export Code]",
-          link: "/import-export-code",
-        },
-        {
-          title: "Private Limited Incorporation Registration",
-          link: "/pvt-ltd-incorporation",
-        },
-        {
-          title: "IEC [Import/Export Code]",
-          link: "/import-export-code",
-        },
-        {
-          title: "test",
-          link: `/services/digital-signature`,
+          title: "Licenses & Registration",
+          options: [
+            { title: "Digital Signature Certificate", link: "/digital-signature" },
+            { title: "Udyam Registration", link: "/udyam-registration" },
+            { title: "MSME Registration", link: "/msme-registration" },
+            { title: "ISO Certification", link: "/iso-certification" },
+            { title: "FSSAI [Food License]", link: "/fssai-registration" },
+            { title: "IEC [Import/Export Code]", link: "/iec-registration" },
+          ],
         },
       ],
     },
-    { title: "Talk to Expert", link: `/` },
-    { title: "Tax Compliances", link: "/" },
-    { title: "Trade Mark and IP", link: "/" },
+    {
+      title: "Talk to Expert",
+      link: "/",
+    },
+    {
+      title: "Tax Compliances",
+      link: "",
+      mircoOptions: [
+        { title: "Income tax filings", link: "/" },
+        { title: "GST Filings", link: "/" },
+        { title: "Accounting", link: "/" },
+        { title: "MCA Compliance", link: "/" },
+        { title: "Labour Law Compliance", link: "/" },
+        { title: "TDS/TCS E-Filing", link: "/" },
+      ],
+    },
+    {
+      title: "Trade Mark and IP",
+      link: "",
+      mircoOptions: [
+        { title: "Trade Mark Name Search", link: "/" },
+        { title: "Trademark Registrations", link: "/" },
+        { title: "Trademark Renewal", link: "/" },
+        { title: "Trademark objection response", link: "" },
+        { title: "Copyright Registration", link: "/" },
+        { title: "Patent Registration", link: "/" },
+      ],
+    },
     { title: "Documentation", link: "/" },
-    { title: "Others", link: "/" },
+    {
+      title: "Others",
+      link: "",
+      mircoOptions: [
+        { title: "Private Limited Incorporation", link: "/" },
+        { title: "Virtual CFO", link: "/" },
+        { title: "Digital Signature", link: "/digital-signature" },
+        { title: "Udyam Registration", link: "/udyam-registration" },
+        { title: "MSME Registration", link: "/msme-registration" },
+      ],
+    },
   ];
-  const [border, setBorder] = useState("Home");
 
-  const handleBottomBorder = (title: string) => {
-    setBorder(title);
-  };
+  const [hoveredMainMenu, setHoveredMainMenu] = useState<number | null>(null);
+  const [hoveredSubMenu, setHoveredSubMenu] = useState<number | null>(null);
+  const [active, setActive] = useState<string>("");
+
   return (
     <nav className="max-lg:hidden">
-      <ul className="flex justify-center mx-3 items-center gap-3">
-        {options.map((option, index) => (
-          <li key={index}>
-            {option.subOptions ? (
-              <div className="group cursor-pointer relative">
-                <div
-                  className={`flex text-nowrap justify-center items-center gap-1 relative px-2 py-3 rounded-lg duration-700 px-2 py-3 rounded-lg men hover:shadow-[0px_2px_0px_0px_#FFBF3F]
-                 subMenuTitle  ${
-                   border === option.title
-                     ? "shadow-[0px_2px_0px_0px_#FFBF3F]"
-                     : ""
-                 }`}
-                >
+      <ul className="flex justify-center mx-3 items-center gap-6">
+        {options.map((option, index: number) => (
+          <li
+            key={index}
+            className={`relative group menu ${
+              active === option.title ? "border-b-2 border-[#FFBF3F]" : ""
+            } hover:cursor-pointer duration-700  rounded-lg`}
+            onMouseEnter={() => setHoveredMainMenu(index)}
+            onMouseLeave={() => setHoveredMainMenu(null)}
+          >
+            {/* Main Menu Title */}
+            {option && option.link ? (
+              <Link href={option.link} onClick={() => setActive(option.title)}>
+                <p className="flex justify-center items-center gap-1 text-nowrap relative px-2 py-2 rounded-lg">
                   {option.title}
-                  <CaretDown className="icon pt-0.5 block group-hover:rotate-180 ml-0.5 duration-700"/>
-                 
-                </div>
-                <ul className="absolute top-12 left-0 pointer-events-auto group-hover:eventunset flex justify-start items-start flex-col w-[200px] py-6 gap-3 opacity-0 invisible bg-[#005151] group-hover:visible group-hover:opacity-100 group-hover:z-50 bg-s1 text-white/80 rounded-lg group-hover:translate-y-0 group-hover:scale-100 translate-y-8 scale-75 duration-500">
-                  {option.subOptions.map(
-                    (
-                      subOption: { title: string; link: string },
-                      index: number
-                    ) => (
-                      <li key={index}>
-                        <Link
-                          href={subOption?.link}
-                          className="px-6 hover:ml-2 duration-500 text-nowrap hover:text-yellow-400 hover:text-s2 subMenuItem transition-all"
-                          onClick={() => handleBottomBorder(option.title)}
-                        >
-                          {subOption.title}
-                        </Link>
-                      </li>
-                    )
-                  )}
-                </ul>
-              </div>
+                </p>
+              </Link>
             ) : (
-              <Link
-                href={option.link}
-                className={`header_menu_shadow text-nowrap  duration-700 px-2 py-3 rounded-lg men hover:shadow-[0px_2px_0px_0px_#FFBF3F] ${
-                  border === option.title
-                    ? "shadow-[0px_2px_0px_0px_#FFBF3F] "
-                    : ""
-                }`}
-                onClick={() => handleBottomBorder(option.title)}
+              <div
+                className="flex justify-center items-center gap-1 text-nowrap relative px-2 py-2 rounded-lg"
+                onClick={() => setActive(option.title)}
               >
                 {option.title}
-              </Link>
+                <CaretDown className="ml-2 inline-block pt-0.5 block group-hover:rotate-180 duration-700" />
+              </div>
+            )}
+
+            {/* Show SubMenu Titles on Hover */}
+            {hoveredMainMenu === index && (option.subMenu || option.mircoOptions) && (
+              <ul
+                className="absolute px-2 top-10 left-0 pointer-events-none group-hover:pointer-events-auto flex justify-start items-start flex-col py-6 gap-3 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:z-50 bg-s1 text-white/80 rounded-lg group-hover:translate-y-0 group-hover:scale-100 translate-y-8 scale-75 duration-500"
+              >
+                {option.subMenu &&
+                  option.subMenu.map((sub: SubMenu, subIndex: number) => (
+                    <li
+                      key={subIndex}
+                      className="cursor-pointer px-2 text-start text-nowrap relative duration-500 subMenuItem"
+                      onMouseEnter={() => setHoveredSubMenu(subIndex)}
+                      onMouseLeave={() => setHoveredSubMenu(null)}
+                    >
+                      <p className="hover:text-s2 w-[200px]">{sub.title}</p>
+
+                      {hoveredSubMenu === subIndex && (
+                        <ul className="absolute left-full bg-s1 top-0 z-50 shadow-lg rounded-lg py-3 w-56 transition-all duration-300 transform -translate-x-2">
+                          {sub.options.map((subOption: SubOption, subOptionIndex: number) => (
+                            <li
+                              key={subOptionIndex}
+                              className="px-6 py-1.5 hover:ml-1 duration-500 hover:text-s2 subMenuItem"
+                            >
+                              <Link href={subOption.link}>{subOption.title}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+
+                {option.mircoOptions &&
+                  option.mircoOptions.map((mircoOption: SubOption, mircoOptionIndex: number) => (
+                    <li
+                      key={mircoOptionIndex}
+                      className="px-6 py-1.5 hover:ml-1 text-nowrap duration-500 hover:text-s2 subMenuItem"
+                    >
+                      <Link href={mircoOption.link}>{mircoOption.title}</Link>
+                    </li>
+                  ))}
+              </ul>
             )}
           </li>
         ))}

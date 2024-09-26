@@ -18,12 +18,12 @@ const ServicePage = async ({
     `${baseUrl}/api/services/${params.serviceRoute}`,
     { cache: "no-store" }
   );
-
+ 
   if (!response.ok) {
     return <div>Failed to load service data</div>;
   }
   const data = await response.json();
-const {title,heading,} = data;
+
   return (
     <div className="">
       <BreadcrumbSection BreadcrumbData={data.BreadcrumbSectionInfo} />
@@ -37,7 +37,7 @@ const {title,heading,} = data;
               Tailored Solutions for {data.heading}
             </h2>
             <p className="text-bodyText pb-6 lg:pb-10">
-              AccuPay is dedicated to supporting the financial health of your
+              Ensurekar is dedicated to supporting the financial health of your
               dental practice. From payroll solutions for dental professionals
               to compliance management,
             </p>
@@ -140,11 +140,11 @@ const {title,heading,} = data;
                 </p>
 
                 <h1 className="display-4 pt-4 pb-4 lg:pb-6">
-                  Why Choose AccuPay for Dentist Services?
+                  Why Choose Ensurekar for Dentist Services?
                 </h1>
 
                 <p className="text-bodyText">
-                  AccuPay is dedicated to supporting the financial health of
+                  Ensurekar is dedicated to supporting the financial health of
                   your dental practice. From payroll solutions for dental
                   professionals to compliance management.
                 </p>

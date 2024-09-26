@@ -361,7 +361,7 @@ const OurServices = () => {
                   {subServices.map((service: any, index: number) => (
                     <div
                       key={index}
-                      className="max-w-[290px] flex flex-col gap-5 min-h-[550px] bg-white justify-between p-5 rounded-lg shadow-lg"
+                      className="max-w-[290px] flex flex-col gap-5 min-h-[550px] bg-white justify-between p-5 rounded-lg shadow-lg border border-white group hover:border-mainTextColor duration-700 hover:bg-s2 wow animate__animated animate__fadeInUp"
                     >
                       <div className="flex flex-col justify-between">
                         <h5 className="text-lg font-semibold min-h-[50px]">

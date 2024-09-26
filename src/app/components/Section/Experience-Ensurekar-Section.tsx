@@ -3,7 +3,7 @@ import React from 'react'
 import contact_illus from '../../images/contact_illus.png';
 import Image from 'next/image';
 import { ArrowUpRight } from 'phosphor-react';
-const ExperienceAccupaySection = () => {
+const ExperienceEnsurekarSection = () => {
   return (
     <div className="bg-p1 pt-15 overflow-hidden">
       <div
@@ -15,7 +15,7 @@ const ExperienceAccupaySection = () => {
           <p
             className="text-lg font-medium underline wow animate__animated animate__fadeInUp"
           >
-            Experience AccuPay
+            Experience Ensurekar
           </p>
 
           <h1
@@ -55,4 +55,4 @@ const ExperienceAccupaySection = () => {
   )
 }
 
-export default ExperienceAccupaySection
+export default ExperienceEnsurekarSection

@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link'
 import { Binoculars, ChatCentered, Desktop } from 'phosphor-react'
 import React from 'react'
 
@@ -26,7 +27,7 @@ const GotQuestionsSection = () => {
               <p
                 className="text-bodyText wow animate__animated animate__fadeInDown"
               >
-                Startups thrive with AccuPay. Their flexible payroll solutions
+                Startups thrive with Ensurekar. Their flexible payroll solutions
                 have been instrumental in our journey, providing the support
               </p>
             </div>
@@ -42,13 +43,13 @@ const GotQuestionsSection = () => {
               <div className="text-7xl text-s1">
                 <Binoculars weight="fill"/>
               </div>
-              <h4 className="heading-4 pb-4 pt-3">Compare Accupay</h4>
+              <h4 className="heading-4 pb-4 pt-3">Compare Ensurekar</h4>
               <p className="pb-5 text-center">
-                Explore how AccuPay stands out. Check our comparison.
+              Why Company Registration Required
               </p>
-              <a href="../contact.html" className="text-s1 underline font-medium">
-                Compare Accupay
-              </a>
+              <Link href="/" className="text-s1 underline font-medium">
+                Compare Ensurekar
+              </Link>
             </div>
           </div>
           <div
@@ -62,12 +63,11 @@ const GotQuestionsSection = () => {
               </div>
               <h4 className="heading-4 pb-4 pt-3">Explore The Demo</h4>
               <p className="pb-5 text-center">
-                Curious about our services? Request a demo to experience
-                firsthand
+              When you need Startup India Registration
               </p>
-              <a href="../contact.html" className="text-s1 underline font-medium">
+              <Link href="/" className="text-s1 underline font-medium">
                 See Demo
-              </a>
+              </Link>
             </div>
           </div>
           <div
@@ -81,11 +81,11 @@ const GotQuestionsSection = () => {
               </div>
               <h4 className="heading-4 pb-4 pt-3">Give Us a Ring</h4>
               <p className="pb-5 text-center">
-                Monday through Friday from 6AM - 6PM MST
+              How to get MSME certification
               </p>
-              <a href="../contact.html" className="text-s1 underline font-medium">
+              <Link href="/" className="text-s1 underline font-medium">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
           <div
@@ -99,11 +99,10 @@ const GotQuestionsSection = () => {
               </div>
               <h4 className="heading-4 pb-4 pt-3">Help Centre</h4>
               <p className="pb-5 text-center">
-                Looking for answers? Visit our Help Center for detailed guides
-              </p>
-              <a href="../contact.html" className="text-s1 underline font-medium">
+              How Many Compliance Required for Company              </p>
+              <Link href="/" className="text-s1 underline font-medium">
                 Help Center
-              </a>
+              </Link>
             </div>
           </div>
         </div>

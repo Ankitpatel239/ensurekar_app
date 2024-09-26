@@ -56,7 +56,7 @@ const DigitalSignature = () => {
     title: "Digital Signature",
     heading: "Digital Signature Certificate",
     description:
-      "AccuPay is dedicated to supporting the financial health of your dental practice. From payroll solutions for dental professionals to compliance management.",
+      "Ensurekar is dedicated to supporting the financial health of your dental practice. From payroll solutions for dental professionals to compliance management.",
     image: "",
     component: Component,
   };
@@ -78,7 +78,7 @@ const DigitalSignature = () => {
               Tailored Solutions for Digital Signature Certificate
             </h2>
             <p className="text-bodyText pb-6 lg:pb-10">
-              AccuPay is dedicated to supporting the financial health of your
+              Ensurekar is dedicated to supporting the financial health of your
               dental practice. From payroll solutions for dental professionals
               to compliance management,
             </p>
@@ -165,7 +165,7 @@ const DigitalSignature = () => {
             <p className="text-bodyText">
               Hire effortlessly with automation-assisted job listings, applicant
               tracking, and popular job board integrations. Then, give your new
-              hires a delightfully smooth and paperless onboarding. Accupay will
+              hires a delightfully smooth and paperless onboarding. Ensurekar will
               send forms, training modules,
             </p>
           </div>
@@ -184,11 +184,11 @@ const DigitalSignature = () => {
                 </p>
 
                 <h1 className="display-4 pt-4 pb-4 lg:pb-6">
-                  Why Choose AccuPay for Dentist Services?
+                  Why Choose Ensurekar for Dentist Services?
                 </h1>
 
                 <p className="text-bodyText">
-                  AccuPay is dedicated to supporting the financial health of
+                  Ensurekar is dedicated to supporting the financial health of
                   your dental practice. From payroll solutions for dental
                   professionals to compliance management.
                 </p>

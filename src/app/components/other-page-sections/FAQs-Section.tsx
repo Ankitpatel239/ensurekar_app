@@ -20,12 +20,12 @@ const FAQsSection = () => {
 
   const faq = [
     {
-      question: "What services does AccuPay offer?",
-      answer: "AccuPay offers a comprehensive suite of services, including accounting, payroll processing, tax preparation, financial advisory, and global payroll solutions."
+      question: "What services does Ensurekar offer?",
+      answer: "Ensurekar offers a comprehensive suite of services, including accounting, payroll processing, tax preparation, financial advisory, and global payroll solutions."
     },
     {
       question: "How does the accounting process work?",
-      answer: "AccuPay’s accounting process starts with gathering financial data, processing it for accuracy, and generating detailed reports for decision-making."
+      answer: "Ensurekar’s accounting process starts with gathering financial data, processing it for accuracy, and generating detailed reports for decision-making."
     }
     // Add more FAQ items similarly
   ];
@@ -53,11 +53,11 @@ const FAQsSection = () => {
                 <h1
                   className="display-4 pt-4 pb-4 lg:pb-6 wow animate__animated animate__fadeInDown"
                 >
-                  What services does AccuPay offer?
+                  What services does Ensurekar offer?
                 </h1>
 
                 <p className="text-bodyText wow animate__animated animate__fadeInUp">
-                  AccuPay offers a comprehensive suite of services, including
+                  Ensurekar offers a comprehensive suite of services, including
                   accounting, payroll processing, tax preparation, financial
                   advisory, and global payroll solutions.
                 </p>

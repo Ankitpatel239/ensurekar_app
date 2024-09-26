@@ -28,10 +28,10 @@ const TestimonialSection = () => {
             <p className="bg-p1 py-3 px-5 rounded-full text-white">
               Testimonial
             </p>
-            <h1 className="display-4 pt-4">Accupay Customer Stories</h1>
+            <h1 className="display-4 pt-4">Ensurekar Customer Stories</h1>
           </div>
           <p className="text-bodyText max-w-[500px]">
-            Startups thrive with AccuPay. Their flexible payroll solutions have
+            Startups thrive with Ensurekar. Their flexible payroll solutions have
             been instrumental in our journey, providing the support
           </p>
         </div>
@@ -59,7 +59,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -82,7 +82,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -105,7 +105,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing.
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -128,7 +128,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing."
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -151,7 +151,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -174,7 +174,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing.
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -197,7 +197,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing."
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -220,7 +220,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -243,7 +243,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -266,7 +266,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -289,7 +289,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing.
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -312,7 +312,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing."
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -335,7 +335,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -358,7 +358,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing.
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -381,7 +381,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing."
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -404,7 +404,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -427,7 +427,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -450,7 +450,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -473,7 +473,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing.
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -496,7 +496,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing."
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -519,7 +519,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -542,7 +542,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing.
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -565,7 +565,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing."
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -588,7 +588,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -633,7 +633,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -656,7 +656,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -679,7 +679,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing.
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -702,7 +702,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing."
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -725,7 +725,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -748,7 +748,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing.
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -771,7 +771,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's personalized service has been a game-changer
+                      "Ensurekar's personalized service has been a game-changer
                       for my small business. Efficient payroll processing."
                     </p>
                     <div className="flex gap-3 pt-3">
@@ -794,7 +794,7 @@ const TestimonialSection = () => {
                 <div className="swiper-slide">
                   <div className="border border-strokeColor p-12 flex flex-col justify-center items-center hover:bg-s2 hover:border-mainTextColor duration-700">
                     <p className="text-bodyText text-center">
-                      "AccuPay's payroll solutions have transformed HR processes
+                      "Ensurekar's payroll solutions have transformed HR processes
                       at Retail Innovations Ltd. The user-friendly platform"
                     </p>
                     <div className="flex gap-3 pt-3">

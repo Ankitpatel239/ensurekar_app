@@ -175,7 +175,7 @@ const CaseStudyDetails = () => {
         </p>
         <p className="bg-s2 border border-mainTextColor p-10 font-medium text-xl">
           "David has seen a remarkable transformation in our accounting and
-          payroll processes. Accupay tailored solutions have not only saved us
+          payroll processes. Ensurekar tailored solutions have not only saved us
           time but also enhanced accuracy, providing a level of efficiency we
           didn't think possible."
         </p>

@@ -3,7 +3,7 @@ import BreadcrumbSection from "@/app/components/Breadcrump-Sections/About";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import accupay_developer from "../../images/accupay_developer.png";
+import Ensurekar_developer from "../../images/accupay_developer.png";
 import award_element from "../../images/award_element.png";
 import {
   ArrowUpRight,
@@ -31,7 +31,7 @@ const About = () => {
         <div className="container grid grid-cols-12 max-lg:gap-6">
           <div className="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col justify-center items-start">
             <p className="bg-p1 py-3 px-5 rounded-full text-white">
-              Accupay Story
+              Ensurekar Story
             </p>
             <h1 className="display-4 pt-4 pb-6">
               In 2012, an exciting journey began with a daring vision.
@@ -45,13 +45,13 @@ const About = () => {
             </p>
             <div className="flex justify-start items-center gap-3">
               <Image
-                src={accupay_developer}
+                src={Ensurekar_developer}
                 alt="image"
                 className="rounded-full"
               />
               <div className="">
                 <p>Sa Kibb</p>
-                <p className="text-bodyText text-sm">CEO Accupay</p>
+                <p className="text-bodyText text-sm">CEO Ensurekar</p>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ const About = () => {
             <div className="border-b pb-6 lg:pb-10">
               <h4 className="heading-4 pb-6">Who We Are</h4>
               <p className="text-bodyText">
-                AccuPay has been at the forefront of delivering innovative
+                Ensurekar has been at the forefront of delivering innovative
                 financial solutions. Our journey began with a vision to simplify
                 financial processes for businesses of all sizes. Today, we stand
                 proud as a trusted partner,
@@ -69,7 +69,7 @@ const About = () => {
             <div className="border-b pb-6 lg:pb-10">
               <h4 className="heading-4 pb-6">Our Mission</h4>
               <p className="text-bodyText">
-                AccuPay is on a mission to empower businesses by providing
+                Ensurekar is on a mission to empower businesses by providing
                 reliable, efficient, and innovative financial services. We
                 strive to be your go-to partner for all your accounting and
                 payroll needs, enabling you to focus on what you do best.
@@ -100,7 +100,7 @@ const About = () => {
                 <h1 className="display-4 pt-4 pb-4 lg:pb-6">Our Values</h1>
 
                 <p className="text-bodyText">
-                  At AccuPay, our values are the foundation of everything we do.
+                  At Ensurekar, our values are the foundation of everything we do.
                   They reflect our commitment to excellence, integrity, and
                   client success.
                 </p>
@@ -318,7 +318,7 @@ const About = () => {
               </h1>
 
               <p className="text-bodyText">
-                Startups thrive with AccuPay. Their flexible payroll solutions
+                Startups thrive with Ensurekar. Their flexible payroll solutions
                 have been instrumental in our journey, providing the support
               </p>
             </div>
@@ -331,12 +331,12 @@ const About = () => {
               <div className="text-7xl text-s1">
                 <Binoculars weight="fill"/>
               </div>
-              <h4 className="heading-4 pb-4 pt-3">Compare Accupay</h4>
+              <h4 className="heading-4 pb-4 pt-3">Compare Ensurekar</h4>
               <p className="pb-5 text-center">
-                Explore how AccuPay stands out. Check our comparison.
+                Explore how Ensurekar stands out. Check our comparison.
               </p>
               <Link href="" className="text-s1 underline font-medium">
-                Compare Accupay
+                Compare Ensurekar
               </Link>
             </div>
           </div>

@@ -50,7 +50,7 @@ const BreadcrumbSection = () => {
           <h1 className="display-3 pt-4">Payroll Processing</h1>
 
           <p className="text-bodyText pt-6">
-            Welcome to AccuPay, your trusted partner for comprehensive financial
+            Welcome to Ensurekar, your trusted partner for comprehensive financial
             solutions. Explore our range of services tailored to meet your
             business needs.
           </p>

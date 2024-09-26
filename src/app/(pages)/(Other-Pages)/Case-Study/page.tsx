@@ -86,7 +86,7 @@ const CaseStudy = () => {
             </h1>
 
             <p className="text-bodyText">
-              Explore how AccuPay has partnered with businesses like yours to
+              Explore how Ensurekar has partnered with businesses like yours to
               deliver tailored accounting and payroll solutions.
             </p>
           </div>

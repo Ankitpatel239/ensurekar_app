@@ -51,7 +51,7 @@ const BreadcrumbSection = () => {
           <h1 className="display-3 pt-4">Real-estate Services</h1>
 
           <p className="text-bodyText pt-6">
-            AccuPay's Real Estate Services are designed to simplify the
+            Ensurekar's Real Estate Services are designed to simplify the
             complexities of real estate transactions, investments, and property
             management.
           </p>

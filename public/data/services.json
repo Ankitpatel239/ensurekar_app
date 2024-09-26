@@ -7,11 +7,11 @@
             "subServices": [
                 {
                     "title": "Digital Signature Certificate",
-
                     "price": "999",
                     "heading":"Digital Signature Certificate Registration",
                     "priceNote": "please enquire for pricing",
                     "tax": "GST and Govt. fees extra.",
+                    "key":"digital-signature",
                     "description": [
                         "DIN and DSC for two Directors",
                         "Name Approval Certificate",
@@ -24,8 +24,7 @@
                     ],
                     "plan_type": "month",
                     "know_more": "/digital-signature",
-                    "key":"digital-signature",
-                    "BreadcrumbSectionInfo":{
+                     "BreadcrumbSectionInfo":{
                         "heading":"Digital Signature Certificate",
                         "title":"Digital Signature",
                         "description":"Digital Signature Certificate (DSC) is a secure digital key that certifies the identity of the holder, issued by a Certifying Authority (CA). It typically contains your identity (name, email, country, APNIC account name and your public key). Digital Signatures are used in India for online transactions such as Income Tax E-Filing, Company or LLP Incorporation, Filing Annual Return, E-Tenders, etc., to prove the identity of the sender. ",
@@ -321,3 +320,5 @@
         }
     ]
 }
+
+
