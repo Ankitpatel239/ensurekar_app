@@ -92,13 +92,16 @@ const DesktopNavbar: React.FC = () => {
 
   return (
     <nav className="max-lg:hidden">
-      <ul className="flex justify-center mx-3 items-center gap-6">
-        {options.map((option, index: number) => (
+      <ul className="flex justify-center mx-3 items-center gap-1">
+        {options.map((option:any, index: number) => (
           <li
             key={index}
-            className={`relative group menu ${
-              active === option.title ? "border-b-2 border-[#FFBF3F]" : ""
-            } hover:cursor-pointer duration-700  rounded-lg`}
+            className={`flex text-nowrap group menu justify-center items-center gap-1 relative  rounded-lg duration-700  rounded-lg men hover:shadow-[0px_2px_0px_0px_#FFBF3F]
+              subMenuTitle hover:cursor-pointer  ${
+                active === option.title
+                  ? "shadow-[0px_2px_0px_0px_#FFBF3F]"
+                  : ""}
+              `}
             onMouseEnter={() => setHoveredMainMenu(index)}
             onMouseLeave={() => setHoveredMainMenu(null)}
           >
@@ -111,18 +114,18 @@ const DesktopNavbar: React.FC = () => {
               </Link>
             ) : (
               <div
-                className="flex justify-center items-center gap-1 text-nowrap relative px-2 py-2 rounded-lg"
+                className="flex justify-center items-center gap-1 text-nowrap relative px-1 py-2 rounded-lg"
                 onClick={() => setActive(option.title)}
               >
                 {option.title}
-                <CaretDown className="ml-2 inline-block pt-0.5 block group-hover:rotate-180 duration-700" />
+                <CaretDown weight="bold" className="inline-block block group-hover:rotate-180 duration-700" />
               </div>
             )}
 
             {/* Show SubMenu Titles on Hover */}
             {hoveredMainMenu === index && (option.subMenu || option.mircoOptions) && (
               <ul
-                className="absolute px-2 top-10 left-0 pointer-events-none group-hover:pointer-events-auto flex justify-start items-start flex-col py-6 gap-3 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:z-50 bg-s1 text-white/80 rounded-lg group-hover:translate-y-0 group-hover:scale-100 translate-y-8 scale-75 duration-500"
+                className="absolute px-2 top-10 left-0 pointer-events-none group-hover:pointer-events-auto flex justify-start items-start flex-col py-6 gap-3 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:z-50 bg-s1 text-white/80 rounded-lg group-hover:translate-y-0 group-hover:scale-100 translate-y-8 scale-75 duration-500" onClick={() => setActive(option.title)}
               >
                 {option.subMenu &&
                   option.subMenu.map((sub: SubMenu, subIndex: number) => (
@@ -131,6 +134,7 @@ const DesktopNavbar: React.FC = () => {
                       className="cursor-pointer px-2 text-start text-nowrap relative duration-500 subMenuItem"
                       onMouseEnter={() => setHoveredSubMenu(subIndex)}
                       onMouseLeave={() => setHoveredSubMenu(null)}
+                      onClick={() => setActive(option.title)}
                     >
                       <p className="hover:text-s2 w-[200px]">{sub.title}</p>
 
@@ -140,6 +144,7 @@ const DesktopNavbar: React.FC = () => {
                             <li
                               key={subOptionIndex}
                               className="px-6 py-1.5 hover:ml-1 duration-500 hover:text-s2 subMenuItem"
+                              onClick={() => setActive(option.title)}
                             >
                               <Link href={subOption.link}>{subOption.title}</Link>
                             </li>

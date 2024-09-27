@@ -40,15 +40,15 @@ const Header = () => {
       }`}
     >
       <div className="top-0 left-0 right-0 z-50 header flex justify-center">
-        <div className="flex justify-between items-center container text-s1 py-6">
-          <div className="pb-1 flex justify-start items-center gap-3">
+        <div className="flex justify-between items-center  text-s1 py-6">
+          <div className="pb-1 flex justify-between items-start md:items-center gap-5">
             <button
               className="lg:hidden text-3xl mobileMenuOpenButton"
               onClick={handleSidebar}
             >
               ☰
             </button>
-            <Link href="/">
+            <Link href="/" className="mr-5">
               <Image src={Logo} alt="Ensurekar logo" />
             </Link>
           </div>
