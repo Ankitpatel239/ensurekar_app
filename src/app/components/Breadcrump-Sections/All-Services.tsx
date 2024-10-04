@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import breadcrump_icon from "../../images/breadcrump_icon.png";
-import breadcrumb_img_1 from "../../images/breadcrumb_img_1.png";
+
 import Image from "next/image";
 import Link from "next/link";
 import { CaretRight, House, X } from "phosphor-react";
@@ -16,7 +16,6 @@ const BreadcrumbSection = ({
     subHeading: string;
     description: string;
     image: string;
-    component: React.ReactNode;
   };
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +35,9 @@ const BreadcrumbSection = ({
 
     return () => clearTimeout(timer);
   }, []);
+  const handleBuy = () => {
+    console.log("clicked digital sign");
+  };
   return (
     <>
       <section className="stp-30 sbp-30 bg-softBg1 relative max-xxl:overflow-hidden">
@@ -64,22 +66,35 @@ const BreadcrumbSection = ({
             </ul>
 
             <h1 className="display-3 pt-4">{BreadcrumbData.heading}</h1>
-            <div className="text-2xl font-bold mt-6">{BreadcrumbData.subHeading
-}</div>
+            <div className="text-2xl font-bold mt-6">
+              {BreadcrumbData.subHeading}
+            </div>
             <p className="text-bodyText pt-2">{BreadcrumbData.description}</p>
           </div>
           <div className="col-span-12 md:col-span-6 flex justify-center flex-col items-center">
-            {BreadcrumbData.component && <>{BreadcrumbData.component || ""}</>}
-            {!BreadcrumbData.component && (
-              <div className="flex justify-center items-center w-full overflow-hidden">
-                <Image
-                  src={BreadcrumbData.image || breadcrumb_img_1}
-                  alt="image"
-                  className="object-fit max-sm:max-h-[300px]"
-                />
+            <div className="col-span-12 md:col-span-6 mt-5 md:mt-10 flex justify-center items-center">
+              <div className="">
+                <div className="grid grid-cols-1 gap-6  p-5 ">
+                  <div className="col-span-2">
+                    <button
+                      className="py-2.5 min-w-[250px] bg-yellow-400 border rounded  block text-center   hover:border-mainTextColor font-bold duration-500 w-full text-slate-800"
+                      onClick={handleBuy}
+                    >
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
               </div>
-            )}
-            <div className="font-bold my-4">Still Confused ? <button className="text-blue-500 hover:underline" onClick={handleOpenModal}>click here</button></div>
+            </div>
+            <div className="font-bold my-4">
+              Still Confused ?{" "}
+              <button
+                className="text-blue-500 hover:underline"
+                onClick={handleOpenModal}
+              >
+                click here
+              </button>
+            </div>
           </div>
         </div>
       </section>

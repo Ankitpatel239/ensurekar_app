@@ -1,14 +1,14 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import logo1 from "../../images/logo1.png";
 
 interface OverviewData {
   heading: string;
   meta: string;
-  questionAnswer: {
-    question: string;
-    answers: string[];
+  introduction: {
+    heading: string;
+    description: string[];
   };
   advantagesInfo: {
     heading: string;
@@ -22,33 +22,28 @@ interface OverviewData {
   };
   eligibilityCriteria: {
     imageData: {
-      imageUrl: string;
+      imageUrl: StaticImageData;
       imageDirection: string;
     };
-    heading: string;
-    meta: string;
+    heading: {
+      start: string;
+      blueText: string;
+      end: string;
+    };
     subHeading: string;
-    documentsRequiredData?: {
-      heading: string;
-      documents: {
-        heading: string;
-        details: string;
-      }[];
-    }[];
-    basicTypes?: {
+    startingDescription: string;
+    endingDescription: string;
+    requiredSteps?: {
       heading: string;
       description: string;
-    }[];
-    ImportanceData?: {
-      heading: string;
-      description: string;
+      steps: { heading: string; description: string }[];
     }[];
   }[];
 }
 
 const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
   if (!OverviewData) return <div>loading...</div>;
-  const { heading, meta, questionAnswer, advantagesInfo, eligibilityCriteria } =
+  const { heading, meta, introduction, advantagesInfo, eligibilityCriteria } =
     OverviewData;
 
   return (
@@ -61,11 +56,10 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
 
         <div className="border  my-8 p-4 shadow-inner shadow-cyan">
           <h4 className="heading-4 my-5 text-center">
-            <span className="text-blue-600">{'"'}</span>{" "}
-            {questionAnswer.question}{" "}
+            <span className="text-blue-600">{'"'}</span> {introduction?.heading}{" "}
             <span className="text-blue-600 text-semibold">{'"'}</span>
           </h4>
-          {questionAnswer.answers.map((answer, index) => (
+          {introduction?.description.map((answer: any, index) => (
             <p key={index} className="text-bodyText mb-2">
               {answer}
             </p>
@@ -74,15 +68,15 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
 
         <div className="my-5 text-center">
           <h3 className="heading-3 my-4">
-            <span className="text-blue-600">{advantagesInfo.heading} </span>{" "}
-            {advantagesInfo.meta}
+            <span className="text-blue-600">{advantagesInfo?.heading} </span>{" "}
+            {advantagesInfo?.meta}
           </h3>
-          {advantagesInfo.description && (
-            <p className="p-5">{advantagesInfo.description}</p>
+          {advantagesInfo?.description && (
+            <p className="p-5">{advantagesInfo?.description}</p>
           )}
 
           <div className="flex flex-wrap items-start flex-start justify-around">
-            {advantagesInfo.advantages.map((advantage) => (
+            {advantagesInfo?.advantages?.map((advantage) => (
               <div
                 key={advantage.heading}
                 className="flex flex-col justify-between items-center gap- bg-slate-100 rounded p-3 m-3 flex-grow w-[400px] max-w-[400px]  min-h-[280px]"
@@ -95,10 +89,11 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
               </div>
             ))}
           </div>
-          <div className="flex my-5 flex-col  items-center justify-center align-center text-start">
-            {eligibilityCriteria.map((criteria) => (
+          <div className="flex my-5 flex-col  items-start justify-center align-center text-start">
+            
+            {eligibilityCriteria?.map((criteria) => (
               <>
-                {criteria.documentsRequiredData && (
+                {criteria.requiredSteps && (
                   <div
                     className={`flex ${
                       criteria.imageData.imageDirection === "right"
@@ -119,113 +114,57 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
 
                     {/* Content */}
                     <div className="w-2/3 ml-5">
-                    <h3 className="heading-3">
-                        <span className="text-blue-600">{criteria.heading}</span> {criteria.meta}
+                      <h3
+                        className={`heading-3 my-5 ${
+                          criteria.imageData.imageDirection === "left"
+                            ? "ml-5"
+                            : ""
+                        }`}
+                      >
+                        {criteria.heading.start}{" "}
+                        <span className="text-blue-600">
+                          {criteria.heading.blueText}
+                        </span>{" "}
+                        {criteria.heading.end}
                       </h3>
-                      <p className="p-3">{criteria.subHeading}</p>
-                      <h3 className="text-xl font-semibold mt-4">
+
+                      <h3 className=" font-semibold mt-4">
                         {criteria.subHeading}
                       </h3>
-                      <ul className="text-start disc-none">
-                        {criteria.documentsRequiredData.map((data) => (
-                          <li key={data.heading}>
-                            <h4 className="text-2xl font-bold my-6">
-                              {data.heading}
+                      <ul
+                        className={`text-start ml-5  ${
+                          criteria.requiredSteps.length > 1
+                            ? "list-disc"
+                            : "disc-none"
+                        }`}
+                      >
+                        <p className="my-3">{criteria.startingDescription}</p>
+                     
+                        {criteria.requiredSteps.map((step) => (
+                          <li key={step.heading}>
+                            <h4 className={`text-2xl font-bold my-6 `}>
+                              {step.heading}
                             </h4>
-                            <ul className="text-start list-disc pl-10">
-                              {data.documents.map((document, index) => (
-                                <li key={index}>
-                                  {document.heading && (
+
+                            <p>{step.description}</p>
+                            <ul className={`text-start  pl-10 list-disc`}>
+                              {step.steps.map((subStep) => (
+                                <li key={subStep.heading} className="my-2">
+                                  {subStep.heading && (
                                     <h5 className="font-bold inline">
-                                      {document.heading}:{" "}
+                                      {subStep.heading}:{" "}
                                     </h5>
                                   )}
-                                  <p className="inline">{document.details}</p>
+
+                                  <p className="inline">
+                                    {subStep.description}
+                                  </p>
                                 </li>
                               ))}
                             </ul>
                           </li>
                         ))}
-                      </ul>
-                    </div>
-                  </div>
-                )}
-
-                {criteria.basicTypes && (
-                  <div
-                  className={`flex ${
-                    criteria.imageData.imageDirection === "right"
-                      ? "flex-row-reverse"
-                      : "flex-row"
-                  } items-center my-6`}
-                  >
-                    {/* Image */}
-                    <div className="w-1/3">
-                      {criteria.imageData && (
-                        <Image
-                          src={criteria.imageData.imageUrl  ||logo1}
-                          alt="Related"
-                          className="w-full h-auto"
-                        />
-                      )}
-                    </div>
-
-                    {/* Content */}
-                    <div className="w-2/3 ml-14">
-                    <h3 className="heading-3">
-                        <span className="text-blue-600">{criteria.heading}</span> {criteria.meta}
-                      </h3>
-                      <p className="p-3">{criteria.subHeading}</p>
-                      <h3 className="text-xl font-semibold mt-4">
-                        {criteria.subHeading}
-                      </h3>
-                      <ul className="text-start list-disc">
-                        {criteria.basicTypes.map((basicType) => (
-                          <li key={basicType.heading}>
-                            <h4 className="heading-4 mt-4">{basicType.heading}</h4>
-                            <p>{basicType.description}</p>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                )}
-
-                {criteria.ImportanceData && (
-                  <div
-                  className={`flex ${
-                    criteria.imageData.imageDirection === "right"
-                      ? "flex-row-reverse"
-                      : "flex-row"
-                  } items-center my-6 justify-around w-full`}
-                  >
-                    {/* Image */}
-                    <div className="w-1/3">
-                      {criteria.imageData && (
-                        <Image
-                          src={criteria.imageData.imageUrl || logo1}
-                          alt="Related"
-                          className="w-full h-auto"
-                        />
-                      )}
-                    </div>
-
-                    {/* Content */}
-                    <div className="w-2/3 ml-5">
-                    <h3 className="heading-3">
-                        <span className="text-blue-600">{criteria.heading}</span> {criteria.meta}
-                      </h3>
-                      <p className="p-3">{criteria.subHeading}</p>
-                      <h3 className="text-xl font-semibold mt-4">
-                        {criteria.subHeading}
-                      </h3>
-                      <ul className="text-start list-disc ml-5">
-                        {criteria.ImportanceData.map((importance) => (
-                          <li key={importance.heading}>
-                            <h4 className="heading-4">{importance.heading}</h4>
-                            <p>{importance.description}</p>
-                          </li>
-                        ))}
+                        <p className="py-5">{criteria.endingDescription}</p>
                       </ul>
                     </div>
                   </div>

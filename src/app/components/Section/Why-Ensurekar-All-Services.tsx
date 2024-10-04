@@ -13,7 +13,7 @@ const WhyEnsurekarSection = ({WhyEnsurekarData }:{WhyEnsurekarData: WhyEnsurekar
     const {heading,description,elements} = WhyEnsurekarData;
 
   return (
-    <section className="sbp-30 stp-30">
+    <section className="sbp-30 bg-softBg1 stp-30">
         <div className="container">
           <div className="flex justify-center items-center">
             <div className="flex justify-center items-center max-xxl:overflow-hidden">
