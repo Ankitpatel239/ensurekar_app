@@ -59,11 +59,14 @@ const Pvt_Ltd_Incorporation_Registration = () => {
       "Ensurekar is dedicated to supporting the financial health of your dental practice. From payroll solutions for dental professionals to compliance management.",
     image: "",
     component: Component,
+     subHeading:""
   };
   const RegisterStepsData ={
     heading:" ",
     title:"",
     description:"",
+    steps:[],
+    meta:''
   }
   return (
     <div>

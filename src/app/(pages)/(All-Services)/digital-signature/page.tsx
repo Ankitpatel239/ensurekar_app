@@ -8,45 +8,75 @@ import dentist_section_img from "../../../images/dentist_section_img.png";
 import save_time_money_section from "../../../images/save_time_money_section.png";
 import RegisterSteps from "@/app/components/Section/Register-Steps";
 import FAQsSection from "@/app/components/other-page-sections/FAQs-Section";
-import { Headphones } from "phosphor-react";
+import { Headphones, Question } from "phosphor-react";
 import TestimonialSection from "@/app/components/Section/Testimonial-Section";
+import ServiceOverview from "@/app/components/Section/Service-Overview";
+import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
+
+interface OverviewData {
+  heading: string;
+  meta: string;
+  questionAnswer: {
+    question: string;
+    answers: string[];
+  };
+  advantagesInfo: {
+    heading: string;
+    meta: string;
+    description: string;
+    advantages: {
+      imageUrl: string;
+      heading: string;
+      details: string;
+    }[];
+  };
+  eligibilityCriteria: {
+    imageData: {
+      imageUrl: string;
+      imageDirection: string;
+    };
+    heading: string;
+    meta: string;
+    subHeading: string;
+    documentsRequiredData?: {
+      heading: string;
+      documents: {
+        heading: string;
+        details: string;
+      }[];
+    }[];
+    basicTypes?: {
+      heading: string;
+      description: string;
+    }[];
+    ImportanceData?: {
+      heading: string;
+      description: string;
+    }[];
+  }[];
+}
+
+interface WhyEnsurekar {
+  heading: string;
+  description: string;
+  elements: { heading: string; description: string; imageUrl: string }[];
+}
 
 const DigitalSignature = () => {
+  const handleBuy = () => {
+    console.log("clicked digital sign");
+  };
   const Component = (
     <div className="col-span-12 md:col-span-6 mt-5 md:mt-10 flex justify-center items-center">
       <div className="">
-        <div className="grid grid-cols-1 gap-6 bg-white p-5 shadow-md">
-          <p className="text-xl font-semibold text-center">
-            Register Your Company Today
-          </p>
-
-          <div className="col-span-2 py-2 px-5 border rounded flex justify-start items-center gap-2">
-            <input
-              type="text"
-              placeholder="Email"
-              className="placeholder:text-bodyText w-full outline-none"
-            />
-          </div>
-          <div className="col-span-2 py-2 px-5 border rounded flex justify-start items-center gap-2">
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="placeholder:text-bodyText w-full outline-none"
-            />
-          </div>
-          <div className="col-span-2 py-2 px-5 border rounded flex justify-start items-center gap-2">
-            <input
-              type="text"
-              placeholder="City/Pincode"
-              className="placeholder:text-bodyText w-full outline-none"
-            />
-          </div>
-
+        <div className="grid grid-cols-1 gap-6  p-5 ">
           <div className="col-span-2">
-            <button className="py-2.5 bg-yellow-400 border rounded  block text-center   hover:border-mainTextColor font-bold duration-500 w-full text-slate-800">
-              Get Started
+            <button
+              className="py-2.5 min-w-[250px] bg-yellow-400 border rounded  block text-center   hover:border-mainTextColor font-bold duration-500 w-full text-slate-800"
+              onClick={handleBuy}
+            >
+              Buy Now
             </button>
-            {/* <button onClick={handleOpenModal} className="ml-2 mt-2 font-bold hover:underline">Still Confused?</button> */}
           </div>
         </div>
       </div>
@@ -54,17 +84,226 @@ const DigitalSignature = () => {
   );
   const BreadcrumbData = {
     title: "Digital Signature",
-    heading: "Digital Signature Certificate",
+    heading: "Digital Signature",
+    subHeading: "EnsureKar is the best digital signature provider",
     description:
-      "Ensurekar is dedicated to supporting the financial health of your dental practice. From payroll solutions for dental professionals to compliance management.",
+      "and we can provide a DSC and digital signature certificate online registration in just three simple steps!",
     image: "",
     component: Component,
   };
-  const RegisterStepsData ={
-    heading:" ",
-    title:"",
-    description:"",
-  }
+
+  const RegisterStepsData = {
+    title: "Digital Signature",
+    heading: "Steps to Register your",
+    meta: "Digital Signature Certificate",
+    description: "",
+    steps: [
+      {
+        title: "Reach out to our expert",
+        description:
+          "When you first contact our experts, we'll collect essential details from you. This includes your name, gender, address, nationality, country, email, mobile number, and the specific purpose you need a Digital Signature Certificate (DSC) for (e.g., personal use, foreign trade, e-tenders, tax filing, company registration, GST filing, or other). We'll also assist you in selecting the right type of DSC and guide you through the application process",
+      },
+      {
+        title: "Complete Online documentation",
+        description:
+          "To process your application, we'll need to gather and verify several documents, including your PAN card, proof of address, and passport. These documents will need to be properly attested",
+      },
+      {
+        title: "Digital Signature Registration",
+        description:
+          "We'll verify your identity with a video call and SMS. After that, we'll send your digital signature on a USB token",
+      },
+    ],
+  };
+
+  const OverviewData: OverviewData = {
+    heading: "Digital Signature",
+    meta: "Overview",
+    questionAnswer: {
+      question: "What Is a Digital Signature Certificate Online?",
+      answers: [
+        "A DSC or ID is another name for a digital signature certificate. To digitally sign official documents, the authority must have an active digital certificate.",
+        "A digital certificate will be issued by a certificate authority. A DSC can be purchased or applied for online from third-party certificate authorities.",
+        "Furthermore, many organizations, governments, and businesses can issue their own certifications.",
+        "A digital certificate is required in order to use a digital signature.",
+        "Digital certificates enable the use of digital signatures.",
+        "The digital signature registration certificate is used to identify and validate the identity of those who hold and use this signature. It can also be used as a secure digital key.",
+        "To generate the signatures, public key encryptions are used in digital signatures.",
+        "Along with the user's name, the digital signature certificate will include other information such as the pin code email address, the date the certificate was issued, and the name of the certifying authority.",
+      ],
+    },
+    advantagesInfo: {
+      heading: "Advantages",
+      meta: "of Digital Signature",
+      description: "",
+      advantages: [
+        {
+          imageUrl: "",
+          heading: "Security",
+          details:
+            "Security capabilities are embedded in digital signatures to ensure a legal document isn't altered and signatures are legitimate.",
+        },
+        {
+          imageUrl: "",
+          heading: "Timestamping",
+          details: "",
+        },
+        {
+          imageUrl: "",
+          heading: "Globally accepted and legally compliant",
+          details: "",
+        },
+        {
+          imageUrl: "",
+          heading: "Time savings",
+          details: "",
+        },
+        {
+          imageUrl: "",
+          heading: "Cost Savings",
+          details: "",
+        },
+        {
+          imageUrl: "",
+          heading: "Positive environmental effects",
+          details: "",
+        },
+        {
+          imageUrl: "",
+          heading: "Traceability",
+          details: "",
+        },
+      ],
+    },
+    eligibilityCriteria: [
+      {
+        imageData: {
+          imageUrl: "",
+          imageDirection: "right",
+        },
+        heading: "Documents",
+        meta: "for Online Digital Signature Certificate (DSC)",
+        subHeading: "Documents Required for DSC Class 3 Registration",
+        documentsRequiredData: [
+          {
+            heading:
+              "Indians who wish to apply for a digital signature online must provide the following information:",
+            documents: [
+              {
+                heading: "",
+                details:
+                  "PAN Card Identity Proof, similar to a driver's license.",
+              },
+              {
+                heading: "Address confirmation",
+                details:
+                  "Aadhaar card, voter identification card, driver's license, or registration document.",
+              },
+              { heading: "", details: "An official attestation." },
+            ],
+          },
+
+          {
+            heading:
+              "Indian organizations that want to apply for an online DSC must do the following:",
+            documents: [
+              {
+                heading: "",
+                details: "PAN within the organization",
+              },
+              {
+                heading: "",
+                details:
+                  "The partnership agreement, if applicable Concerned persons authorized to sign documents, Proof of an authorized signatory GST registration",
+              },
+              {
+                heading: "",
+                details:
+                  "The papers for Indian firms differ depending on the type of entity—partnership, sole proprietorship, LLP, and so on.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        imageData: {
+          imageUrl: "",
+          imageDirection: "left",
+        },
+        heading: "Basic Types",
+        meta: "of Digital Signature Registration Certificate",
+        subHeading: "",
+        basicTypes: [
+          {
+            heading: "Sign DSC",
+            description:
+              "Only signing documents are permitted with sign DSC. The most common application is for websites such as tax returns, MCA, and others to sign PDF files. When you sign using DSC, the data and the signer's integrity are both guaranteed. It serves as evidence of intact and unaltered data.",
+          },
+
+          {
+            heading: "Encrypt DSC",
+            description:
+              "This type of dsc registration is widely used to protect a document. It is used to encrypt a document and is used in tender portals to help businesses that focus on uploading their papers. \n The certificate might potentially be used to deliver encrypted, sensitive information. Legal documents, e-commerce documents, and distributing documents containing highly confidential information are appropriate uses for encrypting DSC. The encrypt certificate is a standalone certificate.",
+          },
+          {
+            heading: "Encrypt and Sign",
+            description:
+              "Both signing and encrypting may be done using the Sign & Encrypt DSC. It is apt for users who wish to uphold the privacy of shared information and authenticate the same. It is used for submitting applications and forms to the government.",
+          },
+        ],
+      },
+      {
+        imageData: {
+          imageUrl: "",
+          imageDirection: "right",
+        },
+        heading: "Importance",
+        meta: "of Digital Signature",
+        ImportanceData: [
+          {
+            heading: "Safety Priority",
+            description: "",
+          },
+          {
+            heading: "Legal Standing",
+            description: "",
+          },
+          {
+            heading: "Time-saving Tool",
+            description: "",
+          },
+          {
+            heading: "Streamlined Processes",
+            description: "",
+          },
+          {
+            heading: "Business Efficiency",
+            description: "",
+          },
+          {
+            heading: "Cost-effectiveness",
+            description: "",
+          },
+        ],
+        subHeading: "",
+      },
+    ],
+  };
+
+  const WhyEnsurekar: WhyEnsurekar = {
+    heading: "Why Choose Ensurekar for Digital signature?",
+    description: "",
+    elements: [
+      {
+        heading: "Easy simple,  and quick procedure",
+        description: "",
+        imageUrl: "",
+      },
+      { heading: "100% data privacy", description: "", imageUrl: "" },
+      { heading: "24*7 Professional Support", description: "", imageUrl: "" },
+    ],
+  };
+
   return (
     <div>
       <BreadcrumbSection BreadcrumbData={BreadcrumbData} />
@@ -96,11 +335,11 @@ const DigitalSignature = () => {
                 <i className="ph-fill ph-tooth"></i>
               </div>
               <div className="">
-                <h4 className="heading-4">Payroll for Dental Professionals</h4>
+                <h4 className="heading-4">Authenticity</h4>
                 <p className="text-bodyText pt-3">
-                  Accurate and efficient payroll processing tailored to meet the
-                  unique needs of dental professionals. Ensure your dedicated
-                  team
+                  When conducting online business, authentication is useful for
+                  verifying the accuracy of an individual's personal
+                  information, and DSC provides greater authenticity.
                 </p>
               </div>
             </div>
@@ -109,10 +348,13 @@ const DigitalSignature = () => {
                 <i className="ph-fill ph-users-three"></i>
               </div>
               <div className="">
-                <h4 className="heading-4">Compliance Management</h4>
+                <h4 className="heading-4">Cost and time savings</h4>
                 <p className="text-bodyText pt-3">
-                  Stay compliant with the ever-evolving regulations in the
-                  dental industry. Our services include compliance management
+                  You can digitally sign PDF files and send them much faster
+                  than you can physically sign paper copies of documents and
+                  scan them to send via email. It is not necessary for a digital
+                  signature certificate online holder to be physically present
+                  to conduct or authorize business.
                 </p>
               </div>
             </div>
@@ -122,24 +364,11 @@ const DigitalSignature = () => {
               </div>
               <div className="">
                 <h4 className="heading-4">
-                  Financial Advisory for Dental Practices
+                  Document authenticity is improved{" "}
                 </h4>
                 <p className="text-bodyText pt-3">
-                  Navigate the financial landscape of dental care with our
-                  expert advisory services. From budgeting to strategic
-                  planning,
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-start items-start gap-4">
-              <div className="text-s1 text-2xl sm:text-3xl p-3 sm:p-4 rounded-full bg-softBg1 !leading-[0]">
-                <i className="ph-fill ph-users-three"></i>
-              </div>
-              <div className="">
-                <h4 className="heading-4">Dental Consulting</h4>
-                <p className="text-bodyText pt-3">
-                  Receive personalized consulting services to address the unique
-                  challenges of your dental practice.
+                  In most cases, a digitally signed document provides the
+                  recipient with greater assurance that the signer is genuine.
                 </p>
               </div>
             </div>
@@ -165,77 +394,17 @@ const DigitalSignature = () => {
             <p className="text-bodyText">
               Hire effortlessly with automation-assisted job listings, applicant
               tracking, and popular job board integrations. Then, give your new
-              hires a delightfully smooth and paperless onboarding. Ensurekar will
-              send forms, training modules,
+              hires a delightfully smooth and paperless onboarding. Ensurekar
+              will send forms, training modules,
             </p>
           </div>
         </div>
       </section>
-      <CompaniesAct />
+      <ServiceOverview OverviewData={OverviewData} />
+      {/* <CompaniesAct /> */}
       <RegisterSteps RegisterSteps={RegisterStepsData} />
       <FAQsSection />
-      <section className="sbp-30 stp-30">
-        <div className="container">
-          <div className="flex justify-center items-center">
-            <div className="flex justify-center items-center max-xxl:overflow-hidden">
-              <div className="max-w-[700px] text-center flex justify-center items-center flex-col">
-                <p className="bg-p1 py-2 sm:py-3 px-5 rounded-full text-white">
-                  Why Choose Us
-                </p>
-
-                <h1 className="display-4 pt-4 pb-4 lg:pb-6">
-                  Why Choose Ensurekar for Dentist Services?
-                </h1>
-
-                <p className="text-bodyText">
-                  Ensurekar is dedicated to supporting the financial health of
-                  your dental practice. From payroll solutions for dental
-                  professionals to compliance management.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-12 gap-6 stp-15">
-            <div className="col-span-12 md:col-span-4 flex justify-center items-center flex-col">
-              <div className="text-7xl text-s1">
-                <i className="ph-fill ph-tooth"></i>
-              </div>
-              <h4 className="heading-4 pb-4 pt-3 text-center">
-                Dental Industry Expertise
-              </h4>
-              <p className="text-center">
-                Our team understands the specific needs and challenges of the
-                dental industry, providing tailored solutions.
-              </p>
-            </div>
-            <div className="col-span-12 md:col-span-4 flex justify-center items-center flex-col">
-              <div className="text-7xl text-s1">
-                <Headphones weight="fill" />
-              </div>
-              <h4 className="heading-4 pb-4 pt-3 text-center">
-                Financial Support
-              </h4>
-              <p className="text-center">
-                Beyond payroll, we offer a range of financial services to
-                support the overall health of your dental practice.
-              </p>
-            </div>
-            <div className="col-span-12 md:col-span-4 flex justify-center items-center flex-col">
-              <div className="text-7xl text-s1">
-                <i className="ph-fill ph-webhooks-logo"></i>
-              </div>
-              <h4 className="heading-4 pb-4 pt-3 text-center">
-                Technology Integration
-              </h4>
-              <p className="text-center">
-                Stay ahead with technology-driven solutions that enhance
-                efficiency and compliance in the dental care sector.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <WhyEnsurekarSection WhyEnsurekarData={WhyEnsurekar} />
       <TestimonialSection />
     </div>
   );

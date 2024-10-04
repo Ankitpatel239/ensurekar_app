@@ -10,7 +10,7 @@ import team_image5 from "../../../images/team_image5.png";
 import team_image6 from "../../../images/team_image6.png";
 import Link from "next/link";
 import { DribbbleLogo, InstagramLogo, TwitterLogo } from "phosphor-react";
-import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-Section";
+
 import FAQsSection from "@/app/components/other-page-sections/FAQs-Section";
 const Team = () => {
   return (

@@ -10,6 +10,7 @@ import RegisterSteps from "@/app/components/Section/Register-Steps";
 import FAQsSection from "@/app/components/other-page-sections/FAQs-Section";
 import { Headphones } from "phosphor-react";
 import TestimonialSection from "@/app/components/Section/Testimonial-Section";
+import { title } from "process";
 
 const FSSAI_Food_Licence = () => {
   const Component = (
@@ -59,11 +60,14 @@ const FSSAI_Food_Licence = () => {
       "Ensurekar is dedicated to supporting the financial health of your dental practice. From payroll solutions for dental professionals to compliance management.",
     image: "",
     component: Component,
+    subHeading:""
   };
   const RegisterStepsData ={
     heading:" ",
     title:"",
     description:"",
+    steps:[],
+    meta:''
   }
   return (
     <div>

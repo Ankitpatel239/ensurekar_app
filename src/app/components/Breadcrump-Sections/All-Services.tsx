@@ -13,6 +13,7 @@ const BreadcrumbSection = ({
   BreadcrumbData: {
     title: string;
     heading: string;
+    subHeading: string;
     description: string;
     image: string;
     component: React.ReactNode;
@@ -63,8 +64,9 @@ const BreadcrumbSection = ({
             </ul>
 
             <h1 className="display-3 pt-4">{BreadcrumbData.heading}</h1>
-
-            <p className="text-bodyText pt-6">{BreadcrumbData.description}</p>
+            <div className="text-2xl font-bold mt-6">{BreadcrumbData.subHeading
+}</div>
+            <p className="text-bodyText pt-2">{BreadcrumbData.description}</p>
           </div>
           <div className="col-span-12 md:col-span-6 flex justify-center flex-col items-center">
             {BreadcrumbData.component && <>{BreadcrumbData.component || ""}</>}
