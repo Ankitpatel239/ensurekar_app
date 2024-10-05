@@ -13,6 +13,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 const TestimonialSection = () => {
+
+  
   return (
     <section className="stp-30 sbp-30 relative sponsors">
       <div className="overflow-hidden">
@@ -615,7 +617,7 @@ const TestimonialSection = () => {
         <div className="swiper testimonial-carousel2">
           <div className="swiper-wrapper !flex !justify-center !items-center">
             <Swiper
-              modules={[Autoplay]} // Properly pass the Autoplay module
+              modules={[Autoplay]}
               direction="horizontal"
               spaceBetween={24}
               slidesPerView={4}

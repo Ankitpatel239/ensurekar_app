@@ -7,7 +7,7 @@ import Image, { StaticImageData } from "next/image";
 import dentist_section_img from "../../../images/dentist_section_img.png";
 import save_time_money_section from "../../../images/save_time_money_section.png";
 import RegisterSteps from "@/app/components/Section/Register-Steps";
-import faq_illus from '../../../images/faq_illus.png';
+import faq_illus from "../../../images/faq_illus.png";
 import TestimonialSection from "@/app/components/Section/Testimonial-Section";
 import ServiceOverview from "@/app/components/Section/Service-Overview";
 import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
@@ -42,14 +42,13 @@ interface OverviewData {
     };
     meta: string;
     subHeading: string;
-    startingDescription:string;
-    endingDescription:string;
+    startingDescription: string;
+    endingDescription: string;
     requiredSteps?: {
       heading: string;
       description: string;
-  
+
       steps: { heading: string; description: string }[];
-      
     }[];
   }[];
 }
@@ -62,6 +61,12 @@ interface WhyEnsurekar {
 
 import All_In_One_ServiceSection from "@/app/components/Section/All-in-One-All-Services";
 import FAQsServicesSection from "@/app/components/Section/FAQs-All-Services";
+import TestimonialSectionAllServices from "@/app/components/Section/Testimonial-Section-All-Services";
+import testimonial10 from "../../../images/testimonial10.png";
+import testimonial9 from "../../../images/testimonial9.png";
+import testimonial7 from "../../../images/testimonial7.png";
+import testimonial8 from "../../../images/testimonial8.png";
+import testimonial6 from "../../../images/testimonial6.png";
 
 interface AdvantagesData {
   title: string;
@@ -75,22 +80,6 @@ const DigitalSignature = () => {
   const handleBuy = () => {
     console.log("clicked digital sign");
   };
-  const Component = (
-    <div className="col-span-12 md:col-span-6 mt-5 md:mt-10 flex justify-center items-center">
-      <div className="">
-        <div className="grid grid-cols-1 gap-6  p-5 ">
-          <div className="col-span-2">
-            <button
-              className="py-2.5 min-w-[250px] bg-yellow-400 border rounded  block text-center   hover:border-mainTextColor font-bold duration-500 w-full text-slate-800"
-              onClick={handleBuy}
-            >
-              Buy Now
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
   const BreadcrumbData = {
     title: "Digital Signature",
     heading: "Digital Signature Certificate",
@@ -98,7 +87,6 @@ const DigitalSignature = () => {
     description:
       "and we can provide a DSC and digital signature certificate online registration in just three simple steps!",
     image: "",
-    component: Component,
   };
 
   const RegisterStepsData = {
@@ -196,11 +184,10 @@ const DigitalSignature = () => {
           end: "for Online Digital Signature Certificate (DSC)",
         },
         meta: "for Online Digital Signature Certificate (DSC)",
-       
-      
+
         subHeading: "Documents Required for DSC Class 3 Registration",
-        startingDescription:"",
-    endingDescription:"",
+        startingDescription: "",
+        endingDescription: "",
         requiredSteps: [
           {
             heading:
@@ -219,7 +206,6 @@ const DigitalSignature = () => {
               },
               { heading: "", description: "An official attestation." },
             ],
-            
           },
           {
             heading:
@@ -241,7 +227,6 @@ const DigitalSignature = () => {
                   "The papers for Indian firms differ depending on the type of entity—partnership, sole proprietorship, LLP, and so on.",
               },
             ],
-           
           },
         ],
       },
@@ -381,35 +366,232 @@ const DigitalSignature = () => {
     description:
       "  Hire effortlessly with automation-assisted job listings, applicant tracking, and popular job board integrations. Then, give your new hires a delightfully smooth and paperless onboarding. Ensurekar will send forms, training modules,",
   };
-  const FAQsData ={
-    title:"FAQs",
-    heading:"What Ensurekar offer you?",
-    description:"",
-    FAQs :[
+  const FAQsData = {
+    title: "FAQs",
+    heading: "What Ensurekar offer you?",
+    description: "",
+    FAQs: [
       {
         question: "What services does Ensurekar offer?",
-        answer: "Ensurekar offers a comprehensive suite of services, including accounting, payroll processing, tax preparation, financial advisory, and global payroll solutions."
+        answer:
+          "Ensurekar offers a comprehensive suite of services, including accounting, payroll processing, tax preparation, financial advisory, and global payroll solutions.",
       },
       {
         question: "How does the accounting process work?",
-        answer: "Ensurekar’s accounting process starts with gathering financial data, processing it for accuracy, and generating detailed reports for decision-making."
-      }
+        answer:
+          "Ensurekar’s accounting process starts with gathering financial data, processing it for accuracy, and generating detailed reports for decision-making.",
+      },
       // Add more FAQ items similarly
     ],
-    imageUrl: faq_illus
-  }
+    imageUrl: faq_illus,
+  };
+
+  const TestimonialData = {
+    title: "Testimonials",
+    heading: "Ensurekar Customer Stories",
+    description:
+      "Startups thrive with Ensurekar. Their flexible payroll solutions have been instrumental in our journey, providing the support.",
+    testimonials: [
+      {
+        image: testimonial10,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Isabelle McKinney",
+        position: "Product Manager",
+      },
+      {
+        image: testimonial9,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Amy Gutierrez",
+        position: "CFO, Solutions",
+      },
+      {
+        image: testimonial8,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "John D",
+        position: "Small Business Owner",
+      },
+      {
+        image: testimonial7,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "Hunter Romero",
+        position: "HR Manager",
+      },
+      {
+        image: testimonial6,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Ora Wong",
+        position: "Finance Director",
+      },
+      {
+        image: testimonial10,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Isabelle McKinney",
+        position: "Product Manager",
+      },
+      {
+        image: testimonial9,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Amy Gutierrez",
+        position: "CFO, Solutions",
+      },
+      {
+        image: testimonial8,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "John D",
+        position: "Small Business Owner",
+      },
+      {
+        image: testimonial7,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "Hunter Romero",
+        position: "HR Manager",
+      },
+      {
+        image: testimonial6,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Ora Wong",
+        position: "Finance Director",
+      },
+
+      {
+        image: testimonial10,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Isabelle McKinney",
+        position: "Product Manager",
+      },
+      {
+        image: testimonial9,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Amy Gutierrez",
+        position: "CFO, Solutions",
+      },
+      {
+        image: testimonial8,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "John D",
+        position: "Small Business Owner",
+      },
+      {
+        image: testimonial7,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "Hunter Romero",
+        position: "HR Manager",
+      },
+      {
+        image: testimonial6,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Ora Wong",
+        position: "Finance Director",
+      },
+      {
+        image: testimonial8,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "John D",
+        position: "Small Business Owner",
+      },
+      {
+        image: testimonial7,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "Hunter Romero",
+        position: "HR Manager",
+      },
+      {
+        image: testimonial6,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Ora Wong",
+        position: "Finance Director",
+      },
+      {
+        image: testimonial10,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Isabelle McKinney",
+        position: "Product Manager",
+      },
+      {
+        image: testimonial9,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Amy Gutierrez",
+        position: "CFO, Solutions",
+      },
+      {
+        image: testimonial8,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "John D",
+        position: "Small Business Owner",
+      },
+      {
+        image: testimonial7,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "Hunter Romero",
+        position: "HR Manager",
+      },
+      {
+        image: testimonial6,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Ora Wong",
+        position: "Finance Director",
+      },
+      {
+        image: testimonial8,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "John D",
+        position: "Small Business Owner",
+      },
+      {
+        image: testimonial7,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "Hunter Romero",
+        position: "HR Manager",
+      },
+      {
+        image: testimonial6,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Ora Wong",
+        position: "Finance Director",
+      },
+      {
+        image: testimonial10,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Isabelle McKinney",
+        position: "Product Manager",
+      },
+      {
+        image: testimonial9,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Amy Gutierrez",
+        position: "CFO, Solutions",
+      },
+      {
+        image: testimonial8,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "John D",
+        position: "Small Business Owner",
+      },
+      {
+        image: testimonial7,
+        text: "Ensurekar's personalized service has been a game-changer for my small business. Efficient payroll processing.",
+        name: "Hunter Romero",
+        position: "HR Manager",
+      },
+      {
+        image: testimonial6,
+        text: "Ensurekar's payroll solutions have transformed HR processes at Retail Innovations Ltd. The user-friendly platform",
+        name: "Ora Wong",
+        position: "Finance Director",
+      },
+    ],
+  };
+
   return (
     <div>
       <BreadcrumbSection BreadcrumbData={BreadcrumbData} />
       <ServiceAdvantages AdvantagesData={AdvantagesData} />
       <All_In_One_ServiceSection AllInOneData={AllInOneData} />
       <ServiceOverview OverviewData={OverviewData} />
-      {/* <CompaniesAct /> */}
       <RegisterSteps RegisterSteps={RegisterStepsData} />
-      <FAQsServicesSection FAQsData={FAQsData}  />
-     
+      <FAQsServicesSection FAQsData={FAQsData} />
       <WhyEnsurekarSection WhyEnsurekarData={WhyEnsurekar} />
-      <TestimonialSection />
+      <TestimonialSectionAllServices TestimonialData={TestimonialData} />
     </div>
   );
 };
