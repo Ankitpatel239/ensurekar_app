@@ -2,21 +2,14 @@
 
 import React from "react";
 import BreadcrumbSection from "@/app/components/Breadcrump-Sections/All-Services";
-import CompaniesAct from "@/app/components/Section/Companies-Act";
-import Image from "next/image";
 import faq_illus from "../../../images/faq_illus.png";
-
 import dentist_section_img from "../../../images/dentist_section_img.png";
 import save_time_money_section from "../../../images/save_time_money_section.png";
 import RegisterSteps from "@/app/components/Section/Register-Steps";
-import FAQsSection from "@/app/components/other-page-sections/FAQs-Section";
-import { Headphones } from "phosphor-react";
-import TestimonialSection from "@/app/components/Section/Testimonial-Section";
 import PlansSection from "@/app/components/Section/Plans-Section";
 import All_In_One_ServiceSection from "@/app/components/Section/All-in-One-All-Services";
 import ServiceAdvantages from "@/app/components/Section/Advantages-All-Services";
 import ServiceOverview from "@/app/components/Section/Service-Overview";
-import { desc, head } from "framer-motion/client";
 import FAQsServicesSection from "@/app/components/Section/FAQs-All-Services";
 import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
 import TestimonialSectionAllServices from "@/app/components/Section/Testimonial-Section-All-Services";
@@ -25,43 +18,60 @@ import testimonial9 from "../../../images/testimonial9.png";
 import testimonial7 from "../../../images/testimonial7.png";
 import testimonial8 from "../../../images/testimonial8.png";
 import testimonial6 from "../../../images/testimonial6.png";
-const Pvt_Ltd_Incorporation_Registration = () => {
+import { title } from "process";
+
+const PartnershipRegistration = () => {
   const BreadcrumbData = {
-    title: "Private Limited Incorporation",
-    heading: "Private Limited Incorporation Registration",
+    title: "Partnership Registration  ",
+    heading: "Partnership Registration ",
+    subHeading: "Partnership Firm Registration in just 7 days",
     description:
-      "Get Your Pvt Ltd Registered, India's Fastest: Ensurekar Makes It Easy 100% Online Process",
+      "  Setting up your Dream Business was never this easy 100% Online Process",
     image: "",
-    subHeading: "Private Limited Incorporation Registration in just 7 days",
+  };
+  const AdvantagesData = {
+    title: "Partnership Registration",
+    heading: "Advantages of Partnership Registration",
+    description:
+      "Ensurekar is dedicated to supporting the financial health of your dental practice. From payroll solutions for dental professionals to compliance management,",
+    image: dentist_section_img,
+    advantages: [
+      {
+        title: "Authenticity",
+        description:
+          "When conducting online business, authentication is useful for verifying the accuracy of an individual's personal information, and DSC provides greater authenticity.",
+        icon: <svg>...</svg>,
+      },
+      {
+        title: "Cost and time savings",
+        description:
+          "You can digitally sign PDF files and send them much faster than you can physically sign paper copies of documents and scan them to send via email. It is not necessary for a digital signature certificate online holder to be physically present to conduct or authorize business.",
+        icon: <svg>...</svg>,
+      },
+      {
+        title: "Document authenticity is improved",
+        description:
+          "In most cases, a digitally signed document provides the recipient with greater assurance that the signer is genuine.",
+        icon: <svg>...</svg>,
+      },
+    ],
   };
   const RegisterStepsData = {
     title: "Private Limited Incorporation",
     heading: "Steps to Register your",
     meta: "Private Limited Incorporation",
     description: "",
-    steps:[
-      {title:"Create you're account",description:""},
-      {title:"consult with our experts ",description:""},
-      {title:"provide required documenst and get your incorporated certificate",description:""}
+    steps: [
+      {title: "Create you're account and submit details",description:""},
+      {title: "consult with our experts",description:""},
+      {title: "Get Your Certificate",description:""},
     ],
-    aboutSteps: [
-      {
-        title: "Company Name Approval",
-        description:
-          "After selecting a unique name for your company, our team will check its availability and submit either the RUN form or SPICe-A form for approval. Once the name is approved, we will proceed with filing the SPICe-B form.",
-      },
-      {
-        title: "Securing DSC and DIN",
-        description:
-          "We assist you in obtaining the Director Identification Number (DIN) and Digital Signature Certificate (DSC) by filing the DIR-3 form, ensuring you have everything needed for online document submission.",
-      },
-      {
-        title: "Incorporation and Document Filing",
-        description:
-          "Our team will handle the submission of key incorporation documents, including the MoA, AoA, and SPICe+ form. We'll also ensure your company receives its PAN and TAN. Upon successful registration, the MCA will issue your certificate of incorporation.",
-      },
+    aboutSteps:[
+        {title:"Submit Your Details",description:"Provide your basic information and partnership firm details on our platform to begin the registration process."},
+        {title:"Expert Guidance & Documentation",description:"Our team will assist you with drafting the partnership deed, preparing necessary documents, and submitting them to the local registrar."},
+        {title:"Receive Your Registration Certificate",description:"After the submission, you'll receive your partnership registration certificate along with the PAN and other essential documents within the specified timeline."}
     ],
-    footerMessage:''
+    footerMessage:"Simple, quick, and hassle-free!"
   };
   const planData = {
     heading: {
@@ -90,7 +100,7 @@ const Pvt_Ltd_Incorporation_Registration = () => {
                 link: "",
               },
             },
-            questionHeading: ["What you'll get"],
+            questionHeading: ["What We Offer:"],
             offers: [
               {
                 imageUrl: "",
@@ -114,12 +124,11 @@ const Pvt_Ltd_Incorporation_Registration = () => {
               },
             },
             features: [
-              "Company Name Reserved in 2-4 Days",
-              "Digital Signature Certificate (DSC) Issued in 4-7 Days",
-              " SPICe+ Form Filing Completed in 14 Days",
-              "Incorporation Certificate Issued in 14-21 Days",
-              "Company PAN and TAN",
-              "Director Identification Number (DIN) for Directors",
+              "Professional guidance throughout the process",
+              "Partnership deed drafted within 3 days",
+              "Deed submission to the local registrar on your behalf",
+              "PAN card issuance",
+              "Zero balance current account with 7% interest",
             ],
           },
           {
@@ -188,7 +197,7 @@ const Pvt_Ltd_Incorporation_Registration = () => {
                 link: "",
               },
             },
-            questionHeading: ["What you'll get"],
+            questionHeading: ["What You'll Get"],
             offers: [
               {
                 imageUrl: "",
@@ -212,14 +221,14 @@ const Pvt_Ltd_Incorporation_Registration = () => {
               },
             },
             features: [
-              "Expert-Guided Process",
-              "Company Name Reservation in Just 1-2 Days*",
-              "Digital Signature Certificate (DSC) Issued in 3-4 Days",
-              "SPICe+ Form Filing Completed in 5-7 Days*",
-              "Incorporation Certificate Delivered in 7-14 Days",
-              "Company PAN and TAN",
-              "Director Identification Number (DIN)",
-              "Digital Welcome Kit with a Post-Incorporation Compliance Checklist",
+              "Expert guidance throughout the process",
+              "Partnership deed drafted within 3 days*",
+              "Deed submission to the local registrar on your behalf",
+              "PAN card issuance",
+              "GST registration",
+              "GSTR-1 & 3B filing for 12 months (up to 300 transactions)",
+              "1-year license for accounting software",
+              "Zero balance current account with 7% interest",
             ],
           },
           {
@@ -302,7 +311,7 @@ const Pvt_Ltd_Incorporation_Registration = () => {
                 link: "",
               },
             },
-            questionHeading: ["What you'll get"],
+            questionHeading: ["What You'll Receive"],
             offers: [
               {
                 imageUrl: "",
@@ -326,28 +335,17 @@ const Pvt_Ltd_Incorporation_Registration = () => {
               },
             },
             features: [
-              "Expert assisted process",
-              "Your company name is reserved in just 1 - 2 days*",
-              "DSC in just 3 - 4 days",
-              "SPICe+ form filing in 5 - 7 days*",
-              "Incorporation Certificate in 7 - 14 days",
-              "Company PAN+TAN",
-              "DIN for directors",
-              "Digital welcome kit that includes a checklist of all post-incorporation compliances",
-              "Appointment of Auditor - ADT 01",
-              "Issuance of share certificate",
-              "INC 20 A form filing",
-              "DIR 3 KYC (For 2 directors)",
-              "Accounting & Bookkeeping (Up to 100 transactions)",
-              "Financial statement preparation",
-              "Accounting software (1-year license)",
-              "AOC 4, MGT 7 & ADT filing",
-              "Annual filing (Up to turnover of 20 lakhs)",
-              "Facilitation of Annual General Meeting",
-              "Statutory regulations PF, ESI",
-              "One Year Income Tax filing (Up to turnover of 20 lakhs)",
-              "30-minute call with a senior CA/CS for your business planning",
-            ],
+                "Dedicated account manager",
+                "Partnership deed drafted within 3 days",
+                "Deed submission to the local registrar on your behalf",
+                "PAN card issuance",
+                "GST registration",
+                "GSTR-1 & 3B filing for 12 months (up to 300 transactions)",
+                "1-year license for accounting software",
+                "Zero balance current account with 7% interest",
+                "Trademark registration for your brand",
+                "ITR filing for one financial year (up to 10 lakhs turnover)",
+                ],
           },
           {
             state: "DL",
@@ -455,114 +453,86 @@ const Pvt_Ltd_Incorporation_Registration = () => {
   };
   const AllInOneData = {
     title: "",
-    heading: "Private Limited Incorporation",
+    heading: "Partnership Registration",
     image: save_time_money_section,
     description:
-      "It is an antiquated or the very oldest form of business entity and also the simplest form to set up and most commonly run and formed entity in India.A Private Limited Company requires a formal registration with the Registrar of Companies (ROC).",
+      "A partnership firm is one of the most important forms of a business organization. It is a popular form of business structure in India. A minimum of two persons are required to establish a partnership firm. A partnership firm is where two or more persons come together to establish a business and divide its profits amongst themselves in the agreed ratio. The partnership business includes any kind of trade, occupation and profession.",
   };
-  const AdvantagesData = {
-    title: "Private Limited Incorporation",
-    heading: "Advantages of Private Limited Incorporation",
-    description:
-      "Ensurekar is dedicated to supporting the financial health of your dental practice. From payroll solutions for dental professionals to compliance management,",
-    image: dentist_section_img,
-    advantages: [
-      {
-        title: "Authenticity",
-        description:
-          "When conducting online business, authentication is useful for verifying the accuracy of an individual's personal information, and DSC provides greater authenticity.",
-        icon: <svg>...</svg>,
-      },
-      {
-        title: "Cost and time savings",
-        description:
-          "You can digitally sign PDF files and send them much faster than you can physically sign paper copies of documents and scan them to send via email. It is not necessary for a digital signature certificate online holder to be physically present to conduct or authorize business.",
-        icon: <svg>...</svg>,
-      },
-      {
-        title: "Document authenticity is improved",
-        description:
-          "In most cases, a digitally signed document provides the recipient with greater assurance that the signer is genuine.",
-        icon: <svg>...</svg>,
-      },
-    ],
-  };
+
   const OverviewData = {
-    heading: "Private limited",
+    heading: "Partnership Registration  ",
     meta: "Overview",
     introduction: {
       heading:
-        "Fastest Private Limited Incorporation Registration In India | Same Day Process",
+        "Fastest Limited Liability Partnership Registration In India | Same Day Process",
       description: [
-        "It is an antiquated or the very oldest form of business entity and also the simplest form to set up and most commonly run and formed entity in India.",
-        " A Private Limited Company requires a formal registration with the Registrar of Companies (ROC).",
+        "Partnership is an association of two or more persons to carry on a business in the capacity of co-owners. Each such person is called a partner. All the partners share the profits and losses in proportion of their respective ownership, or as agreed between them. The primary governing partnership registration law in India is the Indian Partnership Registration Act of 1932.",
+        "A proprietary form of business is faced with many limitations. There is a limit to the amount of money that can be invested by a businessman in a business. The amount of strategic thinking that he/she can do is also limited. As such, sole proprietary businesses are usually small. Partnership form of business removes these limitations and allows the business to grow.",
       ],
     },
     advantagesInfo: {
-      heading: "Advantages",
-      meta: "of Digital Signature",
+      heading: "An Overview of ",
+      meta: "Limited Liability Partnership",
       description:
         "Start your dream business today with the fastest Pvt Ltd company registration in India. Ensurekar simplifies the process with online tools, expert guidance, and competitive pricing. Register your company with the MCA and get started in no time. Register your company online, with business incorporation services that help you get your entity up and running. No more delays or difficulties! Registering your business with us provides you with the fastest, easiest, and most reliable way to get your documents registered. Now register your business with 100% certainty with Ensurekar.",
       advantages: [
         {
           imageUrl: "",
-          heading: "Limited Liability ",
+          heading: "Increased Capital ",
           details:
-            "A major advantage of a private limited company is limited liability, which protects shareholders' personal assets. If the company faces financial troubles or legal claims, shareholders' personal wealth remains secure. Their liability is restricted to their investment, meaning they are only responsible for company debts up to the value of their shares.",
+            "With more partners, raising funds becomes easier, attracting potential investors and enhancing your creditworthiness for loans.",
         },
         {
           imageUrl: "",
-          heading: "Continuous Existence",
+          heading: "Expanded Business Opportunities",
           details:
-            "A company enjoys 'perpetual succession', meaning it continues to exist until legally dissolved. As a separate legal entity, a company is unaffected by the death or departure of any member and remains operational regardless of changes in membership. This perpetual succession is a key feature of a company's structure",
+            "Partnerships distribute the workload, enabling diversification and growth, while also minimizing opportunity costs.",
         },
         {
           imageUrl: "",
-          heading: "Separate Legal Entity ",
-          details:
-            "A private limited company is legally separate from its owners, enabling it to own property, incur debts, and enter contracts in its own name. This distinction simplifies management, boosts credibility with customers and suppliers, and streamlines selling or transferring ownership.",
+          heading: "Built-In Trust",
+          details:"Partnership fosters trust and values different viewpoints, making it crucial for effective decision-making and shared success.",
         },
         {
           imageUrl: "",
-          heading: "Credibility and Professionalism ",
-          details:
-            "A limited or private company boosts your credibility and professionalism. Registered with Companies House, these companies are seen as more prestigious, making a strong impression on clients, suppliers, and investors. This perception of stability can lead to better business opportunities, easier credit access, and favorable supplier terms. \n\n Many established organizations prefer to work only with limited companies or contractors rather than sole traders.",
+          heading: "Shared Responsibilities",
+          details:"Profit and authority are divided among partners, reducing individual burden and allowing more focus on business growth.",
         },
         {
           imageUrl: "",
-          heading: "Easier Access to Capital ",
+          heading: "Better Decision Making",
           details:
-            "Raising capital is typically easier for private limited companies. Directors can issue shares to attract investors, providing essential funds for expansion. This financing flexibility is especially beneficial for startups and growing businesses needing significant investment to scale operations.",
+            "Diverse perspectives contribute to well-rounded decisions, driving efficient business operations and problem-solving.",
         },
         {
           imageUrl: "",
-          heading: "Better Professional Status ",
+          heading: "Tax Benefits ",
           details:
-            "As a sole trader, your business name isn't protected unless trademarked, allowing anyone to use it. In contrast, a registered limited company automatically protects its name, preventing unauthorized use.\n\n A unique name is essential for online visibility, making it a key reason to form a limited company. Additionally, limited companies often seem larger and more professional, enhancing their image and fostering trust. This can lead to stronger relationships, more opportunities, and better chances of attracting clients and investors, even influencing bank loan approvals due to perceived stability.",
+            "Partnership firms are not taxed separately; partners can report profit and loss on their personal income tax returns, reducing tax liabilities.",
         },
         {
           imageUrl: "",
-          heading: "Confidentiality and Privacy ",
+          heading: "Enhanced Flexibility",
           details:
-            "This advantage protects business information, including trade secrets, by allowing private limited companies to maintain confidentiality with fewer disclosure requirements. Once registered with Companies House, your company name is legally protected, preventing other private limited companies from using it and safeguarding your bra",
+            "Partnership structures are less regulated, providing freedom in managing and financing the business.",
         },
         {
           imageUrl: "",
-          heading: "Flexibility in Ownership ",
+          heading: "Emotional Support ",
           details:
-            "Transferring ownership is easier for private limited companies than for sole traders or public companies.In cases where you wish to sell your shares, cease trading, or if you pass away, you or your executor can easily transfer ownership due to the share structure of limited companies.If you're the sole director, you likely own all the shares. In companies with multiple shareholders, ownership is divided among them. Regardless of whether you own all or part of the shares, changing ownership is a straightforward process.",
+            "Partners provide mutual encouragement, easing frustrations and creating a more collaborative work environment.",
         },
         {
           imageUrl: "",
-          heading: "Dual Relationship",
+          heading: "Access to New Ideas",
           details:
-            "In the company form of organization it is possible for a company to make a valid and effective contract with any of tis members. It is also possible for a person to be in control of a company and at the same time be in its employment. Thus, a person can at the same time be a shareholder, creditor, director and also an employee of the company",
+            "Different viewpoints stimulate creativity and innovation, offering a broader vision for business strategies.",
         },
         {
           imageUrl: "",
-          heading: "Better Income Splits ",
+          heading: "Balanced Lifestyle",
           details:
-            "If you have incorporated a limited company in India, you can easily distribute income among your spouse or family members. By issuing dividends to them, you can leverage their tax-free income up to the basic exemption limit and benefit from the ₹1 lakh tax-free dividend allowance. This strategy helps in dividing your business profits, thereby reducing your personal tax liabilities.",
+            "Shared responsibilities allow for reduced stress and a healthier work-life balance, leading to improved mental health.",
         },
       ],
     },
@@ -574,12 +544,12 @@ const Pvt_Ltd_Incorporation_Registration = () => {
         },
         heading: {
           start: "",
-          blueText: "Eligibilty Criteria ",
-          end: "for private limited company registration",
+          blueText: "Eligibility",
+          end: "for Online Partnership Firm Registration",
         },
         subHeading: "",
         startingDescription:
-          "According to MCA guidelines, a private limited company must have a minimum of two directors and shareholders. While shareholders can be individuals or corporate entities, directors must be individuals. Additionally, a registered office address in India is required. The following criteria must be fulfilled for private limited company registration:",
+          "Any individual or entity with the legal capacity to enter into a contract can form a partnership. The key eligibility criteria are as follows:",
         endingDescription: "",
         requiredSteps: [
           {
@@ -587,24 +557,29 @@ const Pvt_Ltd_Incorporation_Registration = () => {
             description: "",
             steps: [
               {
-                heading: "",
+                heading: "Individual",
                 description:
-                  "The applicant must be at least eighteen years old",
+                  "Any person legally able to enter into contracts can become a partner. A person may join as an individual and also as a Karta of a Hindu Undivided Family (HUF).",
               },
               {
-                heading: "",
+                heading: "Firm",
                 description:
-                  "The applicant must be a citizen or resident of India",
+                  "A partnership firm cannot enter into another partnership, but individual partners can form partnerships with other entities or individuals, sharing profits with their firm",
               },
               {
-                heading: "",
+                heading: "Hindu Undivided Family (HUF)",
                 description:
-                  "The company must have between 200 and 300 members",
+                  "The Karta of a HUF may join a partnership in their personal capacity, as long as they contribute their own skills or efforts.",
               },
               {
-                heading: "",
+                heading: "Company",
                 description:
-                  "There must be a minimum of 2 directors or shareholders",
+                  "A company, being a legal entity, can join a partnership firm, provided its objectives allow it.",
+              },
+              {
+                heading: "Trustees",
+                description:
+                  "Trustees of religious or family trusts may form partnerships unless their trust's objectives prohibit it.",
               },
             ],
           },
@@ -617,8 +592,8 @@ const Pvt_Ltd_Incorporation_Registration = () => {
         },
         heading: {
           start: "",
-          blueText: "Document",
-          end: "  for private limited company registration  ",
+          blueText: "Documents Required ",
+          end: "for Partnership Firm Registration",
         },
         subHeading: "",
         startingDescription: "",
@@ -630,43 +605,43 @@ const Pvt_Ltd_Incorporation_Registration = () => {
             steps: [
               {
                 heading: "",
-                description: "Passport-sized photographs of directors",
+                description: "Partnership Deed",
               },
               {
                 heading: "",
-                description: "Proof of residential address for directors",
+                description: "	Address Proof of the firm",
               },
               {
                 heading: "",
-                description: "Photo identification for directors",
+                description: "Identity Proof of Partners",
               },
-              { heading: "", description: "Sample signatures" },
-              {
-                heading: "",
-                description:
-                  "A self-declaration regarding directorships in other companies",
-              },
+              { heading: "", description: "Passport-sized Photographs" },
               {
                 heading: "",
                 description:
-                  "Lease or rent agreement for the registered office",
+                  "Address Proof of Partners",
               },
               {
                 heading: "",
-                description: "No objection letter from the property owner",
-              },
-              { heading: "", description: "Aadhaar card" },
-              { heading: "", description: "PAN card" },
-              {
-                heading: "",
-                description: "Director Identification Number (DIN)",
+                description:
+                  "Registration Certificate (if applicable)",
               },
               {
                 heading: "",
-                description: "Digital Signature Certificate (DSC)",
+                description: "Bank Account Proof",
               },
-              { heading: "", description: "Memorandum of Association (MoA)" },
-              { heading: "", description: "Articles of Association (AoA)" },
+              { heading: "", description: "Specimen Signature of partners" },
+              { heading: "", description: "PAN Card of the Partnership Firm" },
+              {
+                heading: "",
+                description: "GST Registration (if applicable)",
+              },
+              {
+                heading: "",
+                description: "Power of Attorney",
+              },
+              { heading: "", description: "NOC from Property Owner (for rented premises)" },
+              { heading: "", description: "Affidavit" },
             ],
           },
         ],
@@ -677,46 +652,37 @@ const Pvt_Ltd_Incorporation_Registration = () => {
           imageDirection: "right",
         },
         heading: {
-          start: "",
-          blueText: "Checklist",
-          end: " for private limited Company Registration ",
+          start: "Steps for",
+          blueText: "Partnership Firm Registration",
+          end: "  Online",
         },
         subHeading: "",
-        startingDescription:
-          "As per the MCA, a checklist has to be met for registering your company. Here is a clear outline of a checklist for private limited company registration to follow:",
+        startingDescription:"",
         endingDescription: "",
         requiredSteps: [
           {
             heading: "",
             description: "",
             steps: [
-              { heading: "", description: "At least 2 Directors" },
+              { heading: "Number of Partners", description: "A partnership registration must have at least two partners. When performing banking transactions, the maximum is 10; in all other situations, the maximum is 20." },
               {
-                heading: "",
+                heading: "Voluntary Registration",
                 description:
-                  "Directors and shareholders can be the same person",
+                  "Although it is not required to register a partnership, it is always advisable to do so because doing so has many additional advantages.",
               },
               {
-                heading: "",
-                description: "All the Directors should have DIN and DSC",
+                heading: "Contractual partner",
+                description: "There is a contractual tie between each partner. An original partnership deed registration format proposes that in order on various aspects governs the relationship. Each and every partner signs the deed, binding each and every one of them.",
               },
               {
-                heading: "",
-                description: "Have the minimum Authorised share capital",
+                heading: "Competency of the Partners",
+                description: "According to the Act, the partners entering into the agreement must be competent adults and cannot be minors.",
               },
               {
-                heading: "",
-                description: "Have the minimum Paid up share capital",
+                heading: "Profit and Loss Sharing",
+                description: "The partners divide the profits or losses according to the percentages that were agreed upon and recorded in the agreement.",
               },
-              { heading: "", description: "Draft and MoA and AoA" },
-              {
-                heading: "",
-                description: "Need details of the company working address",
-              },
-              {
-                heading: "",
-                description: "NOC and Rental Agreement from the landlord",
-              },
+             
             ],
           },
         ],
@@ -730,47 +696,59 @@ const Pvt_Ltd_Incorporation_Registration = () => {
     FAQs: [
       {
         question:
-          "Can a private limited company take a loan from an individual?",
+          "What documents are needed to register a partnership firm in India?",
         answer:
           "Yes, a private limited company can take a loan from an individual, subject to compliance with the provisions of the companies act, 2013 and other regulatory requirements. however, there are certain restrictions and procedures that must be followed",
       },
       {
-        question: "Are private limited companies listed on the stock exchange?",
+        question: "Can I convert my partnership firm into a company in India?",
         answer:
           "No, private limited companies are not listed on the stock exchange. they cannot issue shares to the public and are restricted in terms of transferring shares, unlike public companies.",
       },
       {
-        question: "How do private limited companies raise funds?",
+        question: "Is an audit mandatory for partnership firms?",
         answer:
           "Private limited companies raise funds through equity investments from shareholders, venture capitalists, private equity, or by taking loans from banks and financial institutions.",
       },
       {
-        question: "What is a private limited company?",
+        question: "Is drafting a partnership deed necessary?",
         answer:
           "A private limited company is a business entity privately held by shareholders, where ownership is limited to a small group of investors. the shares are not available for public trading, and there are restrictions on the transfer of shares.",
       },
       {
-        question:
-          "What are the benefits of registering a private limited company in india?",
+        question:"What is the timeline for registering a partnership firm?",
         answer:
-          "Registering a private limited company in india offers benefits like limited liability for shareholders, ease of raising funds, perpetual succession, separate legal entity, and credibility with financial institutions and investors.",
+          "NA",
       },
       {
-        question: "Why choose a private limited company structure?",
+        question: "How can I convert a partnership firm into a private limited company?",
         answer:
-          "Choosing a private limited company structure provides advantages like limited liability protection, ease of raising capital, tax benefits, and the flexibility to grow the business without extensive compliance requirements faced by public companies.",
+          "NA",
       },
       {
-        question: "Is a private limited company a corporation?",
+        question: "What are the key requirements for registering a partnership firm in Tamil Nadu?",
         answer:
-          "Yes, a private limited company is a type of corporation, but it is privately held and not traded on public stock exchanges. it's a separate legal entity from its owners and has limited liability.",
+          "NA",
       },
+      {
+        question:"Can a partnership firm registered in Delhi operate in other states?",
+        answer:"NA"
+      },
+      {
+        question:"What is the required stamp paper value for a partnership deed in Haryana?",
+        answer:"NA"
+      },
+      {
+        question:"What are the eligibility criteria for registering a partnership firm in Madhya Pradesh?",
+        answer:"NA"
+      },
+      
       // Add more FAQ items similarly
     ],
     imageUrl: faq_illus,
   };
   const WhyEnsurekar = {
-    heading: "Why to choose Ensurekar for Private Limited Registration ",
+    heading: "Why to choose Ensurekar for Partnership Registration ",
     description: "",
     elements: [
       {
@@ -988,6 +966,7 @@ const Pvt_Ltd_Incorporation_Registration = () => {
       },
     ],
   };
+
   return (
     <div>
       <BreadcrumbSection BreadcrumbData={BreadcrumbData} />
@@ -1003,4 +982,4 @@ const Pvt_Ltd_Incorporation_Registration = () => {
   );
 };
 
-export default Pvt_Ltd_Incorporation_Registration;
+export default PartnershipRegistration;

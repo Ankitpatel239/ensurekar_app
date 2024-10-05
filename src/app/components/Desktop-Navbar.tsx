@@ -83,6 +83,7 @@ const DesktopNavbar: React.FC = () => {
         { title: "Udyam Registration", link: "/udyam-registration" },
         { title: "MSME Registration", link: "/msme-registration" },
         { title: "PVT LTD Incorporation", link: "/pvt-ltd-incorporation" },
+        { title: "Partnership Registration", link: "/partnership-registration" },
       ],
     },
   ];

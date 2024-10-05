@@ -95,6 +95,11 @@ const DigitalSignature = () => {
     meta: "Digital Signature Certificate",
     description: "",
     steps: [
+      {title: "Reach out to our expert",description:""},
+      {title: "Complete Online documentation",description:""},
+      {title: "Digital Signature Registration",description:""},
+    ],
+    aboutSteps: [
       {
         title: "Reach out to our expert",
         description:
@@ -111,6 +116,7 @@ const DigitalSignature = () => {
           "We'll verify your identity with a video call and SMS. After that, we'll send your digital signature on a USB token",
       },
     ],
+    footerMessage:"Simple, quick, and hassle-free!"
   };
 
   const OverviewData: OverviewData = {

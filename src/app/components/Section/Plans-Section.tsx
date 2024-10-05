@@ -1,9 +1,7 @@
-import { desc, sub } from "framer-motion/client";
-import { CaretDown, Check } from "phosphor-react";
+import {  Check } from "phosphor-react";
 import React, { useState } from "react";
 import { PiSealPercent, PiSealWarningBold } from "react-icons/pi";
 import Select from "react-select";
-import makeAnimated from "react-select/animated";
 
 
 
@@ -32,6 +30,7 @@ interface planData{
           link:string;
         };
       };
+      questionHeading:string[];
       offers:{
         imageUrl:string;
         heading:string;
@@ -150,14 +149,14 @@ const PlansSection = ({planData}:{planData:planData}) => {
           </p>
         </div>
         <div className="flex flex-col w-full items-center justify-center">
-          <div className="flex md:flex-row flex-col md:w-[619px] w-[320px] px-[12px] items-center md:justify-between justify-center md:gap-[5px] md:py-[10px] py-[10px] border-[1px] border-[#53A3F9] rounded-[8px] bg-[#CCE4FF] my-[16px]">
+          <div className="flex md:flex-row flex-col md:w-[619px] w-[320px] px-[12px] items-center md:justify-between justify-center md:gap-[5px] md:py-[10px] py-[10px] border-[#53A3F9] rounded-[3px] bg-yellow-400 my-[16px]">
             <div className="flex flex-col md:gap-[5px] gap-[2px]">
               <p className="md:text-[18px] text-[14px] max-md:w-full text-[#022B50] md:text-left text-center font-medium">
                 Select your state to view the Government Fee
               </p>
             </div>
             <div className=" my-2 w-full md:max-w-[200px] ">
-              <div className=" cursor-pointer">
+              <div className="cursor-pointer">
                 <Select
                   closeMenuOnSelect={true}
                   options={statesOptions}
@@ -165,6 +164,7 @@ const PlansSection = ({planData}:{planData:planData}) => {
                     (option) => option.value === selectedState
                   )}
                   onChange={handleStateChange}
+                  className="bg-[#CCE4FF]"
                 />
               </div>
             </div>
@@ -210,7 +210,7 @@ const PlansSection = ({planData}:{planData:planData}) => {
         {plansData.map((plan) => (
           <div
             key={plan.id}
-            className="p-4 flex m-3 mx-auto  relative flex-col gap-[10px] max-md:w-[335px] md:w-[360px] mt-[25px] md:mt-0 hover:bg-[#E5F0FF] hover:border-[ #007AFF] border-[1px] rounded-md shadow-[0px_0px_10px_rgba(104,104,104,0.08)]"
+            className="p-4 flex m-3 mx-auto  relative flex-col gap-[10px] max-md:w-[335px] md:w-[360px] mt-[25px] md:mt-0 hover:bg-yellow-400 hover:border-[ #007AFF] border-[1px] rounded-md shadow-[0px_0px_10px_rgba(104,104,104,0.08)] animation cursor-pointer transition delay-150 duration-300"
           >
             <p className="text-[24px] font-semibold text-[#171717]">
               {plan.name}
@@ -347,8 +347,13 @@ const PlansSection = ({planData}:{planData:planData}) => {
                   </div>
                 </div>
               </div>
-              <div className=" flex flex-col gap-[5px]">
-                <h3 className="text-xl font-bold my-5">What you'll get</h3>
+              <div className=" flex flex-col my-5">
+                {plan.states.find((state) => state.state === selectedState)?.questionHeading.map(
+                  (question, index) => (
+                    <h3 className="text-xl font-bold my-2" key={index}>{question}</h3>
+                  )
+                )}
+                
                 {plan.states
                   .find((state) => state.state === selectedState)
                   ?.features.map((feature, index) => (

@@ -76,6 +76,11 @@ const UdyamRegistration = () => {
     title: "Registration steps",
     description: "",
     steps: [
+      {title: "Consult with Our Experts",description:""},
+      {title: "Submit the Required Documents",description:""},
+      {title: "Receive Your UDYAM Registration",description:""},
+    ],
+    aboutSteps: [
       {
         title: "Consult with Our Experts",
         description: "Share your requirements with our team for personalized guidance.",
@@ -93,6 +98,7 @@ const UdyamRegistration = () => {
       },
     ],
     meta: "Your Udyam Registration Certificate",
+    footerMessage:""
   };
 
   const AdvantagesData: AdvantagesData = {

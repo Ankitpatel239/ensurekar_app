@@ -61,12 +61,13 @@ const ImportExportCode = () => {
      subHeading:""
   };
   const RegisterStepsData ={
-   
-    heading:" ",
+    heading:"",
     title:"",
     description:"",
     steps:[],
-    meta:''
+    aboutSteps:[],
+    meta:'',
+    footerMessage:''
   }
   return (
     <div>

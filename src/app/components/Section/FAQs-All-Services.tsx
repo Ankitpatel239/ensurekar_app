@@ -57,10 +57,10 @@ const FAQsServicesSection = ({ FAQsData }: { FAQsData: FAQsData }) => {
 
           <div className="grid grid-cols-12 stp-15 max-xl:gap-6">
             <div className="col-span-12 lg:col-span-6 xl:col-span-5 flex justify-center items-center overflow-hidden">
-              <Image
+            <Image
                 src={imageUrl}
                 alt="image"
-                className="hover:scale-110 duration-500 w-full h-full"
+                className="hover:scale-110 duration-500 w-full"
               />
             </div>
 

@@ -63,11 +63,13 @@ const FSSAI_Food_Licence = () => {
     subHeading:""
   };
   const RegisterStepsData ={
-    heading:" ",
+    heading:"",
     title:"",
     description:"",
     steps:[],
-    meta:''
+    aboutSteps:[],
+    meta:'',
+    footerMessage:''
   }
   return (
     <div>

@@ -4,7 +4,6 @@ import React from "react";
 import stepArrow1 from "../../images/stepArrow1.png";
 import stepArrow2 from "../../images/stepArrow2.png";
 import Image from "next/image";
-import { FilePlus, User } from "phosphor-react";
 
 interface RegisterSteps {
   title: string;
@@ -12,10 +11,12 @@ interface RegisterSteps {
   heading: string;
   description: string;
   steps: { title: string; description: string }[];
+  aboutSteps: { title: string; description: string }[];
+  footerMessage:string;
 }
 
 const RegisterSteps = ({RegisterSteps}:{RegisterSteps: RegisterSteps}) => {
-  const {title,meta,heading,description,steps} = RegisterSteps;
+  const {title,meta,heading,description,steps,aboutSteps,footerMessage} = RegisterSteps;
   return (
     <section className="stp-30 bg-softBg1 sbp-30">
       <div className="container">
@@ -63,7 +64,7 @@ const RegisterSteps = ({RegisterSteps}:{RegisterSteps: RegisterSteps}) => {
 
         <div className="flex flex-col my-5 mt-10 gap-y-5 justify-center ">
           {
-            steps.map((step,index)=>(
+            aboutSteps.map((step,index)=>(
 <div key={index}>
             <h5 className="heading-5">{index+1}{". "} {step.title}</h5>
             <p className="py-4 ">
@@ -74,6 +75,9 @@ const RegisterSteps = ({RegisterSteps}:{RegisterSteps: RegisterSteps}) => {
           }
           
          
+        </div>
+        <div>
+          <h1 className="heading-4 pt-8 pb-6">{footerMessage}</h1>
         </div>
       </div>
     </section>
