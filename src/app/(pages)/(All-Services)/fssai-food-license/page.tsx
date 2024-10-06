@@ -10,7 +10,7 @@ import RegisterSteps from "@/app/components/Section/Register-Steps";
 import FAQsSection from "@/app/components/other-page-sections/FAQs-Section";
 import { Headphones } from "phosphor-react";
 import TestimonialSection from "@/app/components/Section/Testimonial-Section";
-import { title } from "process";
+
 
 const FSSAI_Food_Licence = () => {
   const Component = (
@@ -246,5 +246,5 @@ const FSSAI_Food_Licence = () => {
     </div>
   );
 };
-
+ 
 export default FSSAI_Food_Licence;

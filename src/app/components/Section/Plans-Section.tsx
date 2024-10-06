@@ -74,6 +74,7 @@ const PlansSection = ({planData}:{planData:planData}) => {
   const [selectedState, setSelectedState] = useState(defaultState);
   const [plansData, setPlansData] = useState(plans);
   const [selectPlane, setSelectPlane] = useState(defaultPlan);
+
   const [splitPaymentStates, setSplitPaymentStates] = useState<{
     [key: number]: boolean;
   }>(plans.reduce((acc, plan) => ({ ...acc, [plan.id]: false }), {}));
@@ -155,7 +156,7 @@ const PlansSection = ({planData}:{planData:planData}) => {
                 Select your state to view the Government Fee
               </p>
             </div>
-            <div className=" my-2 w-full md:max-w-[200px] ">
+            <div className=" my-2 w-full md:max-w-[200px]">
               <div className="cursor-pointer">
                 <Select
                   closeMenuOnSelect={true}
@@ -210,17 +211,17 @@ const PlansSection = ({planData}:{planData:planData}) => {
         {plansData.map((plan) => (
           <div
             key={plan.id}
-            className="p-4 flex m-3 mx-auto  relative flex-col gap-[10px] max-md:w-[335px] md:w-[360px] mt-[25px] md:mt-0 hover:bg-yellow-400 hover:border-[ #007AFF] border-[1px] rounded-md shadow-[0px_0px_10px_rgba(104,104,104,0.08)] animation cursor-pointer transition delay-150 duration-300"
+            className="p-4 flex m-3 mx-auto group  relative flex-col gap-[10px] max-md:w-[335px] md:w-[360px] mt-[25px] md:mt-0 hover:bg-yellow-400 hover:border-[ #007AFF] border-[1px] rounded-md shadow-[0px_0px_10px_rgba(104,104,104,0.08)] animation cursor-pointer transition delay-150 duration-500"
           >
             <p className="text-[24px] font-semibold text-[#171717]">
               {plan.name}
             </p>
-            <p className="text-[16px] md:h-[48px] font-normal text-[#606162]">
+            <p className="text-[16px] md:h-[48px] font-normal group-hover:text-black duration-500 text-[#606162]">
               {plan.description}
             </p>
             <div className="flex gap-3 items-center">
               <div className="relative w-fit">
-                <p className="text-[12px] md:text-[16px] font-medium">
+                <p className="text-[12px] md:text-[16px] group-hover:text-gray-600 font-medium">
                   {
                     plan.states.find((state) => state.state === selectedState)
                       ?.price
@@ -249,18 +250,19 @@ const PlansSection = ({planData}:{planData:planData}) => {
                 </p>
               </div>
               <div className="flex flex-row pb-[16px] items-center ">
-                <p className="text-[18px] text-[#8095A7] font-medium">
+                <p className="text-[18px] text-[#8095A7] group-hover:text-gray-700 duration-500 font-medium">
                   {
                     plan.states.find((state) => state.state === selectedState)
                       ?.laterPaid.ammount
                   }
+                  {" "}
                   {
                     plan.states.find((state) => state.state === selectedState)
                       ?.laterPaid.text
                   }
                 </p>
                 <div
-                  className="relative flex group"
+                  className="relative flex group  "
                   title={
                     plan.states.find((state) => state.state === selectedState)
                       ?.laterPaid.iconInfo.text
@@ -277,7 +279,7 @@ const PlansSection = ({planData}:{planData:planData}) => {
               {plan.states.find((state) => state.state === selectedState)
                 ?.splitPayment.enabled && (
                 <div
-                  className="flex gap-[6px] items-center md:gap-[10px]"
+                  className="flex gap-[6px]  items-center md:gap-[10px]"
                   key={plan.id}
                 >
                   <div
@@ -332,7 +334,7 @@ const PlansSection = ({planData}:{planData:planData}) => {
                   <div className="grid grid-cols-1 mt-4 ">
                     <div className="col-span-2">
                       <button
-                        className="py-2.5  bg-yellow-400 border rounded  block text-center   hover:border-mainTextColor font-bold duration-500 w-full text-slate-800"
+                        className="py-2.5  bg-yellow-400 border  rounded  block text-center   hover:border-mainTextColo group-hover:border-black font-bold duration-500 w-full text-slate-800"
                         onClick={() =>
                           handleBuy(
                             plan.states.find(
@@ -363,7 +365,7 @@ const PlansSection = ({planData}:{planData:planData}) => {
                         <Check color="#2cdb14" size={23} weight="bold" />
                       </div>
 
-                      <p className="text-[14px] text-[#606162]">{feature}</p>
+                      <p className="text-[14px] text-[#606162] group-hover:text-gray-700 duration-500">{feature}</p>
                     </div>
                   ))}
               </div>

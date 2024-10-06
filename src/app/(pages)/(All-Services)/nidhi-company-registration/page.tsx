@@ -2,21 +2,14 @@
 
 import React from "react";
 import BreadcrumbSection from "@/app/components/Breadcrump-Sections/All-Services";
-import CompaniesAct from "@/app/components/Section/Companies-Act";
-import Image from "next/image";
 import faq_illus from "../../../images/faq_illus.png";
-
 import dentist_section_img from "../../../images/dentist_section_img.png";
 import save_time_money_section from "../../../images/save_time_money_section.png";
 import RegisterSteps from "@/app/components/Section/Register-Steps";
-import FAQsSection from "@/app/components/other-page-sections/FAQs-Section";
-import { Headphones } from "phosphor-react";
-import TestimonialSection from "@/app/components/Section/Testimonial-Section";
 import PlansSection from "@/app/components/Section/Plans-Section";
 import All_In_One_ServiceSection from "@/app/components/Section/All-in-One-All-Services";
 import ServiceAdvantages from "@/app/components/Section/Advantages-All-Services";
 import ServiceOverview from "@/app/components/Section/Service-Overview";
-import { desc, head } from "framer-motion/client";
 import FAQsServicesSection from "@/app/components/Section/FAQs-All-Services";
 import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
 import TestimonialSectionAllServices from "@/app/components/Section/Testimonial-Section-All-Services";
@@ -25,43 +18,66 @@ import testimonial9 from "../../../images/testimonial9.png";
 import testimonial7 from "../../../images/testimonial7.png";
 import testimonial8 from "../../../images/testimonial8.png";
 import testimonial6 from "../../../images/testimonial6.png";
-const Pvt_Ltd_Incorporation_Registration = () => {
+
+const NidhiCompanyRegistration = () => {
+
   const BreadcrumbData = {
-    title: "Private Limited Incorporation",
-    heading: "Private Limited Incorporation Registration",
+    title: "Nidhi Company Registration ",
+    heading: "Nidhi Company Registration",
+    subHeading: "Nidhi Company in just 7 days",
     description:
-      "Get Your Pvt Ltd Registered, India's Fastest: Ensurekar Makes It Easy 100% Online Process",
+      "Get Your Nidhi Company Registration, India's Fastest: Ensurekar Makes It Easy 100% Online Process",
     image: "",
-    subHeading: "Private Limited Incorporation Registration in just 7 days",
+  };
+  const AdvantagesData = {
+    title: "Nidhi Company Registration",
+    heading: "Fastest Nidhi Company Registration In India | Same Day Process",
+    description:
+      "A Nidhi Company is an NBFC regulated by the Companies Act, 2013, focused on promoting savings and lending among its members. To register, it requires seven members and ₹10 lakhs in funds. While exempt from RBI registration, it follows MCA rules and is limited to borrowing and lending only within its membership.",
+    image: dentist_section_img,
+    advantages: [
+      {
+        title: "Minimal RBI Compliance",
+        description:
+          "Nidhi Companies are public limited companies that don’t require an RBI license to operate, simplifying the regulatory burden.",
+        icon: <svg>...</svg>,
+      },
+      {
+        title: "Reduced Risk",
+        description:
+          "Nidhi Companies only provide loans and accept deposits from their members, minimizing risk and maintaining a closed community for financial transactions.",
+        icon: <svg>...</svg>,
+      },
+      {
+        title: "Low Capital Requirement",
+        description:
+          "With a minimum capital requirement of just ₹10 lakhs, Nidhi Companies are easy to set up under Nidhi Rules, 2014.",
+        icon: <svg>...</svg>,
+      },
+      {
+        title: "Simple Setup Process",
+        description:
+          "Registration is straightforward, requiring only seven members and a few essential documents to incorporate with the MCA.",
+        icon: <svg>...</svg>,
+      },
+    ],
   };
   const RegisterStepsData = {
     title: "Private Limited Incorporation",
     heading: "Steps to Register your",
     meta: "Private Limited Incorporation",
     description: "",
-    steps:[
-      {title:"Create you're account",description:""},
-      {title:"consult with our experts ",description:""},
-      {title:"provide required documenst and get your incorporated certificate",description:""}
+    steps: [
+      {title: "Create you're account and submit details",description:""},
+      {title: "consult with our experts",description:""},
+      {title: "Get Your Certificate",description:""},
     ],
-    aboutSteps: [
-      {
-        title: "Company Name Approval",
-        description:
-          "After selecting a unique name for your company, our team will check its availability and submit either the RUN form or SPICe-A form for approval. Once the name is approved, we will proceed with filing the SPICe-B form.",
-      },
-      {
-        title: "Securing DSC and DIN",
-        description:
-          "We assist you in obtaining the Director Identification Number (DIN) and Digital Signature Certificate (DSC) by filing the DIR-3 form, ensuring you have everything needed for online document submission.",
-      },
-      {
-        title: "Incorporation and Document Filing",
-        description:
-          "Our team will handle the submission of key incorporation documents, including the MoA, AoA, and SPICe+ form. We'll also ensure your company receives its PAN and TAN. Upon successful registration, the MCA will issue your certificate of incorporation.",
-      },
+    aboutSteps:[
+        {title:"Submit Your Details",description:"Provide your basic details and business information on our platform to initiate the registration process."},
+        {title:"Expert Assistance  & Documentation",description:"Our experts will help you obtain necessary information, reserve your company name, and prepare all required incorporation forms."},
+        {title:"Receive Your Certificate",description:"Once filed with the MCA, receive your Nidhi Company incorporation certificate, along with your PAN, TAN, and other necessary documents within the stipulated timeline."}
     ],
-    footerMessage:''
+    footerMessage:"Simple, quick, and hassle-free!"
   };
   const planData = {
     heading: {
@@ -90,7 +106,7 @@ const Pvt_Ltd_Incorporation_Registration = () => {
                 link: "",
               },
             },
-            questionHeading: ["What you'll get"],
+            questionHeading: ["What We Offer:"],
             offers: [
               {
                 imageUrl: "",
@@ -114,12 +130,14 @@ const Pvt_Ltd_Incorporation_Registration = () => {
               },
             },
             features: [
-              "Company Name Reserved in 2-4 Days",
-              "Digital Signature Certificate (DSC) Issued in 4-7 Days",
-              " SPICe+ Form Filing Completed in 14 Days",
-              "Incorporation Certificate Issued in 14-21 Days",
-              "Company PAN and TAN",
-              "Director Identification Number (DIN) for Directors",
+                "Expert-guided registration process",
+                "Company name reserved within 2-4 days",
+                "DSC issued in 4-7 days",
+                "LLP Incorporation form filed in 21 days*",
+                "LLP Incorporation Certificate",
+                "LLP Agreement form filed within 14 days (post-incorporation)",
+                "Company PAN and TAN",
+                "DIN for directors",
             ],
           },
           {
@@ -159,13 +177,14 @@ const Pvt_Ltd_Incorporation_Registration = () => {
               },
             },
             features: [
-              "Expert assisted process",
-              "Your company name is reserved in just 2 - 4 days",
-              "DSC in just 4 - 7 days",
-              "SPICe+ form filing in 14 days*",
-              "Incorporation Certificate in 14 - 21 days",
-              "Company PAN+TAN",
-              "DIN for directors",
+             "Expert-guided registration process",
+                "Company name reserved within 2-4 days",
+                "DSC issued in 4-7 days",
+                "LLP Incorporation form filed in 21 days*",
+                "LLP Incorporation Certificate",
+                "LLP Agreement form filed within 14 days (post-incorporation)",
+                "Company PAN and TAN",
+                "DIN for directors",
             ],
           },
         ],
@@ -188,7 +207,7 @@ const Pvt_Ltd_Incorporation_Registration = () => {
                 link: "",
               },
             },
-            questionHeading: ["What you'll get"],
+            questionHeading: ["What You'll Get"],
             offers: [
               {
                 imageUrl: "",
@@ -212,14 +231,15 @@ const Pvt_Ltd_Incorporation_Registration = () => {
               },
             },
             features: [
-              "Expert-Guided Process",
-              "Company Name Reservation in Just 1-2 Days*",
-              "Digital Signature Certificate (DSC) Issued in 3-4 Days",
-              "SPICe+ Form Filing Completed in 5-7 Days*",
-              "Incorporation Certificate Delivered in 7-14 Days",
-              "Company PAN and TAN",
-              "Director Identification Number (DIN)",
-              "Digital Welcome Kit with a Post-Incorporation Compliance Checklist",
+              "Expert-assisted registration process",
+              "Company name reserved in just 24 hours*",
+             "DSC issued in 24 hours*",
+             "LLP Incorporation form filed within 14 days*",
+             "LLP Incorporation Certificate",
+             "LLP Agreement form filed in 7 days (post-incorporation)",
+             "Company PAN + TAN",
+             "Digital welcome kit with a post-incorporation compliance checklist",
+             "DIN for directors",
             ],
           },
           {
@@ -259,26 +279,15 @@ const Pvt_Ltd_Incorporation_Registration = () => {
               },
             },
             features: [
-              "Expert-Assisted Process",
-              "Company Name Reservation in 1-2 Days*",
-              "Digital Signature Certificate (DSC) in 3-4 Days",
-              "SPICe+ Form Filing in 5-7 Days*",
-              "Incorporation Certificate Issued in 7-14 Days",
-              "Company PAN and TAN",
-              "Director Identification Number (DIN)",
-              "Appointment of Auditor",
-              "Issuance of Share Certificates",
-              "INC 20A Form Filing",
-              "DIR 3 KYC for 2 Directors",
-              "Accounting & Bookkeeping (Up to 100 Transactions)",
-              "Financial Statement Preparation",
-              "1-Year License for Accounting Software",
-              "Filing of AOC 4, MGT 7 & ADT 1",
-              "Annual Filing (For Turnover Up to 20 Lakhs)",
-              "Facilitation of Annual General Meeting",
-              "Compliance with PF and ESI Statutory Regulations",
-              "One-Year Income Tax Filing (For Turnover Up to 20 Lakhs)",
-              "30-Minute Consultation Call with a Senior CA/CS for Business Planning",
+                "Expert-assisted registration process",
+                "Company name reserved in just 24 hours*",
+               "DSC issued in 24 hours*",
+               "LLP Incorporation form filed within 14 days*",
+               "LLP Incorporation Certificate",
+               "LLP Agreement form filed in 7 days (post-incorporation)",
+               "Company PAN + TAN",
+               "Digital welcome kit with a post-incorporation compliance checklist",
+               "DIN for directors",
             ],
           },
         ],
@@ -302,7 +311,7 @@ const Pvt_Ltd_Incorporation_Registration = () => {
                 link: "",
               },
             },
-            questionHeading: ["What you'll get"],
+            questionHeading: ["What You'll Receive"],
             offers: [
               {
                 imageUrl: "",
@@ -326,28 +335,22 @@ const Pvt_Ltd_Incorporation_Registration = () => {
               },
             },
             features: [
-              "Expert assisted process",
-              "Your company name is reserved in just 1 - 2 days*",
-              "DSC in just 3 - 4 days",
-              "SPICe+ form filing in 5 - 7 days*",
-              "Incorporation Certificate in 7 - 14 days",
-              "Company PAN+TAN",
-              "DIN for directors",
-              "Digital welcome kit that includes a checklist of all post-incorporation compliances",
-              "Appointment of Auditor - ADT 01",
-              "Issuance of share certificate",
-              "INC 20 A form filing",
-              "DIR 3 KYC (For 2 directors)",
-              "Accounting & Bookkeeping (Up to 100 transactions)",
-              "Financial statement preparation",
-              "Accounting software (1-year license)",
-              "AOC 4, MGT 7 & ADT filing",
-              "Annual filing (Up to turnover of 20 lakhs)",
-              "Facilitation of Annual General Meeting",
-              "Statutory regulations PF, ESI",
-              "One Year Income Tax filing (Up to turnover of 20 lakhs)",
-              "30-minute call with a senior CA/CS for your business planning",
-            ],
+               "Expert-guided process",
+               "Company name reserved within 24 hours*",
+               "DSC issued in 24 hours*",
+               "LLP Incorporation form filed within 14 days*",
+               "LLP Incorporation Certificate",
+               "LLP agreement form filed within 14 days (post-incorporation)",
+               "Company PAN + TAN",
+               "DIN for directors",
+               "30-minute consultation with a senior CA/CS for business planning",
+               "Form 8 & 11 filing (for one year)",
+               "DIR-3 KYC for two directors",
+               "One year income tax filing (up to ₹20 lakh turnover)",
+               "Accounting & bookkeeping (up to 100 transactions)",
+               "Financial statement preparation",
+               "One-year accounting software license",
+                ],
           },
           {
             state: "DL",
@@ -386,27 +389,21 @@ const Pvt_Ltd_Incorporation_Registration = () => {
               },
             },
             features: [
-              "Expert assisted process",
-              "Your company name is reserved in just 1 - 2 days*",
-              " DSC in just 3 - 4 days",
-              "SPICe+ form filing in 5 - 7 days*",
-              "Incorporation Certificate in 7 - 14 days",
-              "Company PAN+TAN",
-              "DIN for directors",
-              "Digital welcome kit that includes a checklist of all post-incorporation compliances",
-              "Appointment of Auditor - ADT 01",
-              "Issuance of share certificate",
-              "INC 20 A form filing",
-              "DIR 3 KYC (For 2 directors)",
-              "Accounting & Bookkeeping (Up to 100 transactions)",
-              "Financial statement preparation",
-              "Accounting software (1-year license)",
-              "AOC 4, MGT 7 & ADT filing",
-              "Annual filing (Up to turnover of 20 lakhs)",
-              "Facilitation of Annual General Meeting",
-              "Statutory regulations PF, ESI",
-              "One Year Income Tax filing (Up to turnover of 20 lakhs)",
-              "30-minute call with a senior CA/CS for your business planning",
+           "Expert-guided process",
+               "Company name reserved within 24 hours*",
+               "DSC issued in 24 hours*",
+               "LLP Incorporation form filed within 14 days*",
+               "LLP Incorporation Certificate",
+               "LLP agreement form filed within 14 days (post-incorporation)",
+               "Company PAN + TAN",
+               "DIN for directors",
+               "30-minute consultation with a senior CA/CS for business planning",
+               "Form 8 & 11 filing (for one year)",
+               "DIR-3 KYC for two directors",
+               "One year income tax filing (up to ₹20 lakh turnover)",
+               "Accounting & bookkeeping (up to 100 transactions)",
+               "Financial statement preparation",
+               "One-year accounting software license",
             ],
           },
         ],
@@ -455,116 +452,23 @@ const Pvt_Ltd_Incorporation_Registration = () => {
   };
   const AllInOneData = {
     title: "",
-    heading: "Private Limited Incorporation",
+    heading: "Nidhi Company Registration",
     image: save_time_money_section,
-    description:
-      ["It is an antiquated or the very oldest form of business entity and also the simplest form to set up and most commonly run and formed entity in India.A Private Limited Company requires a formal registration with the Registrar of Companies (ROC)."],
-  };
-  const AdvantagesData = {
-    title: "Private Limited Incorporation",
-    heading: "Advantages of Private Limited Incorporation",
-    description:
-      "Ensurekar is dedicated to supporting the financial health of your dental practice. From payroll solutions for dental professionals to compliance management,",
-    image: dentist_section_img,
-    advantages: [
-      {
-        title: "Authenticity",
-        description:
-          "When conducting online business, authentication is useful for verifying the accuracy of an individual's personal information, and DSC provides greater authenticity.",
-        icon: <svg>...</svg>,
-      },
-      {
-        title: "Cost and time savings",
-        description:
-          "You can digitally sign PDF files and send them much faster than you can physically sign paper copies of documents and scan them to send via email. It is not necessary for a digital signature certificate online holder to be physically present to conduct or authorize business.",
-        icon: <svg>...</svg>,
-      },
-      {
-        title: "Document authenticity is improved",
-        description:
-          "In most cases, a digitally signed document provides the recipient with greater assurance that the signer is genuine.",
-        icon: <svg>...</svg>,
-      },
-    ],
+    description:[],
   };
   const OverviewData = {
-    heading: "Private limited",
-    meta: "Overview",
+    heading: "",
+    meta: "",
     introduction: {
-      heading:
-        "Fastest Private Limited Incorporation Registration In India | Same Day Process",
-      description: [
-        "It is an antiquated or the very oldest form of business entity and also the simplest form to set up and most commonly run and formed entity in India.",
-        " A Private Limited Company requires a formal registration with the Registrar of Companies (ROC).",
-      ],
+      heading:"",
+      description: [],
     },
     advantagesInfo: {
-      heading: "Advantages",
-      meta: "of Digital Signature",
+      heading: "",
+      meta: "",
       description:
-        "Start your dream business today with the fastest Pvt Ltd company registration in India. Ensurekar simplifies the process with online tools, expert guidance, and competitive pricing. Register your company with the MCA and get started in no time. Register your company online, with business incorporation services that help you get your entity up and running. No more delays or difficulties! Registering your business with us provides you with the fastest, easiest, and most reliable way to get your documents registered. Now register your business with 100% certainty with Ensurekar.",
-      advantages: [
-        {
-          imageUrl: "",
-          heading: "Limited Liability ",
-          details:
-            "A major advantage of a private limited company is limited liability, which protects shareholders' personal assets. If the company faces financial troubles or legal claims, shareholders' personal wealth remains secure. Their liability is restricted to their investment, meaning they are only responsible for company debts up to the value of their shares.",
-        },
-        {
-          imageUrl: "",
-          heading: "Continuous Existence",
-          details:
-            "A company enjoys 'perpetual succession', meaning it continues to exist until legally dissolved. As a separate legal entity, a company is unaffected by the death or departure of any member and remains operational regardless of changes in membership. This perpetual succession is a key feature of a company's structure",
-        },
-        {
-          imageUrl: "",
-          heading: "Separate Legal Entity ",
-          details:
-            "A private limited company is legally separate from its owners, enabling it to own property, incur debts, and enter contracts in its own name. This distinction simplifies management, boosts credibility with customers and suppliers, and streamlines selling or transferring ownership.",
-        },
-        {
-          imageUrl: "",
-          heading: "Credibility and Professionalism ",
-          details:
-            "A limited or private company boosts your credibility and professionalism. Registered with Companies House, these companies are seen as more prestigious, making a strong impression on clients, suppliers, and investors. This perception of stability can lead to better business opportunities, easier credit access, and favorable supplier terms. \n\n Many established organizations prefer to work only with limited companies or contractors rather than sole traders.",
-        },
-        {
-          imageUrl: "",
-          heading: "Easier Access to Capital ",
-          details:
-            "Raising capital is typically easier for private limited companies. Directors can issue shares to attract investors, providing essential funds for expansion. This financing flexibility is especially beneficial for startups and growing businesses needing significant investment to scale operations.",
-        },
-        {
-          imageUrl: "",
-          heading: "Better Professional Status ",
-          details:
-            "As a sole trader, your business name isn't protected unless trademarked, allowing anyone to use it. In contrast, a registered limited company automatically protects its name, preventing unauthorized use.\n\n A unique name is essential for online visibility, making it a key reason to form a limited company. Additionally, limited companies often seem larger and more professional, enhancing their image and fostering trust. This can lead to stronger relationships, more opportunities, and better chances of attracting clients and investors, even influencing bank loan approvals due to perceived stability.",
-        },
-        {
-          imageUrl: "",
-          heading: "Confidentiality and Privacy ",
-          details:
-            "This advantage protects business information, including trade secrets, by allowing private limited companies to maintain confidentiality with fewer disclosure requirements. Once registered with Companies House, your company name is legally protected, preventing other private limited companies from using it and safeguarding your bra",
-        },
-        {
-          imageUrl: "",
-          heading: "Flexibility in Ownership ",
-          details:
-            "Transferring ownership is easier for private limited companies than for sole traders or public companies.In cases where you wish to sell your shares, cease trading, or if you pass away, you or your executor can easily transfer ownership due to the share structure of limited companies.If you're the sole director, you likely own all the shares. In companies with multiple shareholders, ownership is divided among them. Regardless of whether you own all or part of the shares, changing ownership is a straightforward process.",
-        },
-        {
-          imageUrl: "",
-          heading: "Dual Relationship",
-          details:
-            "In the company form of organization it is possible for a company to make a valid and effective contract with any of tis members. It is also possible for a person to be in control of a company and at the same time be in its employment. Thus, a person can at the same time be a shareholder, creditor, director and also an employee of the company",
-        },
-        {
-          imageUrl: "",
-          heading: "Better Income Splits ",
-          details:
-            "If you have incorporated a limited company in India, you can easily distribute income among your spouse or family members. By issuing dividends to them, you can leverage their tax-free income up to the basic exemption limit and benefit from the ₹1 lakh tax-free dividend allowance. This strategy helps in dividing your business profits, thereby reducing your personal tax liabilities.",
-        },
-      ],
+        "",
+      advantages: [],
     },
     eligibilityCriteria: [
       {
@@ -574,12 +478,11 @@ const Pvt_Ltd_Incorporation_Registration = () => {
         },
         heading: {
           start: "",
-          blueText: "Eligibilty Criteria ",
-          end: "for private limited company registration",
+          blueText: "Requirements ",
+          end: "for Nidhi Company Incorporation",
         },
         subHeading: "",
-        startingDescription:
-          "According to MCA guidelines, a private limited company must have a minimum of two directors and shareholders. While shareholders can be individuals or corporate entities, directors must be individuals. Additionally, a registered office address in India is required. The following criteria must be fulfilled for private limited company registration:",
+        startingDescription:"",
         endingDescription: "",
         requiredSteps: [
           {
@@ -589,22 +492,44 @@ const Pvt_Ltd_Incorporation_Registration = () => {
               {
                 heading: "",
                 description:
-                  "The applicant must be at least eighteen years old",
+                  "A minimum of seven members are required for registration.",
               },
               {
                 heading: "",
                 description:
-                  "The applicant must be a citizen or resident of India",
+                  "The company must have at least 3 directors",
               },
               {
                 heading: "",
                 description:
-                  "The company must have between 200 and 300 members",
+                  "It can accommodate up to 200 members",
               },
               {
                 heading: "",
                 description:
-                  "There must be a minimum of 2 directors or shareholders",
+                  "The minimum paid-up equity share capital must be ₹5 lakhs.",
+              },
+              {
+                heading: "",
+                description:
+                  "Within a year of incorporation, Net Owned Funds (NOF) must increase to ₹10 lakhs.",
+              },
+              {
+                heading: "Additional conditions",
+                description:
+                  "",
+              },
+              {
+                heading: "",
+                description:"At least 10% of the company's total deposits must be in unencumbered term deposits.",
+              },
+              {
+                heading: "",
+                description:"The NOF to deposit ratio should be 1:20, excluding accumulated losses and intangible assets.",
+              },
+              {
+                heading: "",
+                description:"At least 10% of total deposits must be maintained in a fixed deposit account with a nationalised bank.",
               },
             ],
           },
@@ -618,9 +543,9 @@ const Pvt_Ltd_Incorporation_Registration = () => {
         heading: {
           start: "",
           blueText: "Document",
-          end: "  for private limited company registration  ",
+          end: "for Nidhi Company Incorporation",
         },
-        subHeading: "",
+        subHeading: "The following documents must be submitted by all directors:",
         startingDescription: "",
         endingDescription: "",
         requiredSteps: [
@@ -630,43 +555,23 @@ const Pvt_Ltd_Incorporation_Registration = () => {
             steps: [
               {
                 heading: "",
-                description: "Passport-sized photographs of directors",
+                description: "Self-attested copy of PAN card",
               },
               {
                 heading: "",
-                description: "Proof of residential address for directors",
+                description: "Self-attested copy of driver's license, voter ID, Aadhaar card, or passport",
               },
               {
                 heading: "",
-                description: "Photo identification for directors",
+                description: "Self-attested copy of a bank statement, telephone bill, mobile bill, or electricity bill",
               },
-              { heading: "", description: "Sample signatures" },
-              {
-                heading: "",
-                description:
-                  "A self-declaration regarding directorships in other companies",
-              },
+              { heading: "", description: "Passport-size photograph" },
               {
                 heading: "",
                 description:
-                  "Lease or rent agreement for the registered office",
+                  "Specimen signature certificate",
               },
-              {
-                heading: "",
-                description: "No objection letter from the property owner",
-              },
-              { heading: "", description: "Aadhaar card" },
-              { heading: "", description: "PAN card" },
-              {
-                heading: "",
-                description: "Director Identification Number (DIN)",
-              },
-              {
-                heading: "",
-                description: "Digital Signature Certificate (DSC)",
-              },
-              { heading: "", description: "Memorandum of Association (MoA)" },
-              { heading: "", description: "Articles of Association (AoA)" },
+              
             ],
           },
         ],
@@ -677,46 +582,41 @@ const Pvt_Ltd_Incorporation_Registration = () => {
           imageDirection: "right",
         },
         heading: {
-          start: "",
-          blueText: "Checklist",
-          end: " for private limited Company Registration ",
+          start: " ",
+          blueText: "Key Facts ",
+          end: "About Nidhi Companies:",
         },
         subHeading: "",
-        startingDescription:
-          "As per the MCA, a checklist has to be met for registering your company. Here is a clear outline of a checklist for private limited company registration to follow:",
+        startingDescription:"",
         endingDescription: "",
         requiredSteps: [
           {
             heading: "",
             description: "",
             steps: [
-              { heading: "", description: "At least 2 Directors" },
+              { heading: "", description: "Nidhi companies can be set up without the approval of the RBI" },
               {
                 heading: "",
                 description:
-                  "Directors and shareholders can be the same person",
+                  "They are incorporated as public limited companies.",
               },
               {
                 heading: "",
-                description: "All the Directors should have DIN and DSC",
+                description: 'The name must include "Nidhi Limited."',
               },
               {
                 heading: "",
-                description: "Have the minimum Authorised share capital",
+                description: "While Nidhi companies are regulated like NBFCs, their operations focus on internal borrowing and lending among members.",
               },
               {
                 heading: "",
-                description: "Have the minimum Paid up share capital",
-              },
-              { heading: "", description: "Draft and MoA and AoA" },
-              {
-                heading: "",
-                description: "Need details of the company working address",
+                description: "Under the Nidhi Rules of 2014, they are allowed to offer locker facilities to members.",
               },
               {
                 heading: "",
-                description: "NOC and Rental Agreement from the landlord",
+                description: "Income from locker rentals should not exceed 20% of the company's total revenue for the financial year.",
               },
+             
             ],
           },
         ],
@@ -730,47 +630,71 @@ const Pvt_Ltd_Incorporation_Registration = () => {
     FAQs: [
       {
         question:
-          "Can a private limited company take a loan from an individual?",
+          "Who oversees the regulation of Nidhi Companies?",
         answer:
-          "Yes, a private limited company can take a loan from an individual, subject to compliance with the provisions of the companies act, 2013 and other regulatory requirements. however, there are certain restrictions and procedures that must be followed",
-      },
-      {
-        question: "Are private limited companies listed on the stock exchange?",
-        answer:
-          "No, private limited companies are not listed on the stock exchange. they cannot issue shares to the public and are restricted in terms of transferring shares, unlike public companies.",
-      },
-      {
-        question: "How do private limited companies raise funds?",
-        answer:
-          "Private limited companies raise funds through equity investments from shareholders, venture capitalists, private equity, or by taking loans from banks and financial institutions.",
-      },
-      {
-        question: "What is a private limited company?",
-        answer:
-          "A private limited company is a business entity privately held by shareholders, where ownership is limited to a small group of investors. the shares are not available for public trading, and there are restrictions on the transfer of shares.",
+          "NA",
       },
       {
         question:
-          "What are the benefits of registering a private limited company in india?",
+          "Is my in-person presence required for the incorporation of a Nidhi Company?",
         answer:
-          "Registering a private limited company in india offers benefits like limited liability for shareholders, ease of raising funds, perpetual succession, separate legal entity, and credibility with financial institutions and investors.",
+          "NA",
       },
       {
-        question: "Why choose a private limited company structure?",
+        question:
+          "What does Rule 10 of the Nidhi Regulations state?",
         answer:
-          "Choosing a private limited company structure provides advantages like limited liability protection, ease of raising capital, tax benefits, and the flexibility to grow the business without extensive compliance requirements faced by public companies.",
+          "NA",
       },
       {
-        question: "Is a private limited company a corporation?",
+        question:
+          "Is it possible for a Nidhi Company to provide vehicle loans?",
         answer:
-          "Yes, a private limited company is a type of corporation, but it is privately held and not traded on public stock exchanges. it's a separate legal entity from its owners and has limited liability.",
+          "NA",
       },
-      // Add more FAQ items similarly
+      {
+        question:
+          "What is outlined in Rule 12 of the Nidhi Regulations?",
+        answer:
+          "NA",
+      },
+      {
+        question:
+          "Can a non-member apply for a loan from a Nidhi Company?",
+        answer:
+          "NA",
+      },
+      {
+        question:
+          "What is the minimum face value of shares in a Nidhi Company?",
+        answer:
+          "NA",
+      },
+      {
+        question:
+          "What is the maximum dividend that a company is allowed to distribute?",
+        answer:
+          "NA",
+      },
+      {
+        question:
+          "Are preference shares issued by a Nidhi Company?",
+        answer:
+          "NA",
+      },
+      {
+        question:
+          "How can I expand my Nidhi Company's operations into new regions?",
+        answer:
+          "NA",
+      },
+     
+     
     ],
     imageUrl: faq_illus,
   };
   const WhyEnsurekar = {
-    heading: "Why to choose Ensurekar for Private Limited Registration ",
+    heading: "Why to choose Ensurekar for Nidhi Company Registration",
     description: "",
     elements: [
       {
@@ -988,11 +912,12 @@ const Pvt_Ltd_Incorporation_Registration = () => {
       },
     ],
   };
+
   return (
     <div>
       <BreadcrumbSection BreadcrumbData={BreadcrumbData} />
       <ServiceAdvantages AdvantagesData={AdvantagesData} />
-      <PlansSection planData={planData} />
+      {/* <PlansSection planData={planData} /> */}
       <All_In_One_ServiceSection AllInOneData={AllInOneData} />
       <ServiceOverview OverviewData={OverviewData} />
       <RegisterSteps RegisterSteps={RegisterStepsData} />
@@ -1003,4 +928,4 @@ const Pvt_Ltd_Incorporation_Registration = () => {
   );
 };
 
-export default Pvt_Ltd_Incorporation_Registration;
+export default NidhiCompanyRegistration;

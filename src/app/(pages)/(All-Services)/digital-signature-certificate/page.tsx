@@ -2,16 +2,22 @@
 
 import React from "react";
 import BreadcrumbSection from "@/app/components/Breadcrump-Sections/All-Services";
-import CompaniesAct from "@/app/components/Section/Companies-Act";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import dentist_section_img from "../../../images/dentist_section_img.png";
 import save_time_money_section from "../../../images/save_time_money_section.png";
 import RegisterSteps from "@/app/components/Section/Register-Steps";
 import faq_illus from "../../../images/faq_illus.png";
-import TestimonialSection from "@/app/components/Section/Testimonial-Section";
 import ServiceOverview from "@/app/components/Section/Service-Overview";
 import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
 import ServiceAdvantages from "@/app/components/Section/Advantages-All-Services";
+import All_In_One_ServiceSection from "@/app/components/Section/All-in-One-All-Services";
+import FAQsServicesSection from "@/app/components/Section/FAQs-All-Services";
+import TestimonialSectionAllServices from "@/app/components/Section/Testimonial-Section-All-Services";
+import testimonial10 from "../../../images/testimonial10.png";
+import testimonial9 from "../../../images/testimonial9.png";
+import testimonial7 from "../../../images/testimonial7.png";
+import testimonial8 from "../../../images/testimonial8.png";
+import testimonial6 from "../../../images/testimonial6.png";
 
 interface OverviewData {
   heading: string;
@@ -59,14 +65,7 @@ interface WhyEnsurekar {
   elements: { heading: string; description: string; imageUrl: string }[];
 }
 
-import All_In_One_ServiceSection from "@/app/components/Section/All-in-One-All-Services";
-import FAQsServicesSection from "@/app/components/Section/FAQs-All-Services";
-import TestimonialSectionAllServices from "@/app/components/Section/Testimonial-Section-All-Services";
-import testimonial10 from "../../../images/testimonial10.png";
-import testimonial9 from "../../../images/testimonial9.png";
-import testimonial7 from "../../../images/testimonial7.png";
-import testimonial8 from "../../../images/testimonial8.png";
-import testimonial6 from "../../../images/testimonial6.png";
+
 
 interface AdvantagesData {
   title: string;
@@ -82,11 +81,12 @@ const DigitalSignature = () => {
   };
   const BreadcrumbData = {
     title: "Digital Signature",
-    heading: "Digital Signature Certificate",
-    subHeading: "EnsureKar is the best digital signature provider",
+    heading: "Digital Signature Certificate (DSC)",
+    subHeading: "Want to buy a DSC quickly and online?",
     description:
-      "and we can provide a DSC and digital signature certificate online registration in just three simple steps!",
+      "EnsureKar is the best digital signature provider,and we can provide a DSC and digital signature certificate online registration in just three simple steps!",
     image: "",
+    bottomHeading: "Complete Online Process Expert Support Simple and Cost-Effective",
   };
 
   const RegisterStepsData = {
@@ -95,45 +95,36 @@ const DigitalSignature = () => {
     meta: "Digital Signature Certificate",
     description: "",
     steps: [
-      {title: "Reach out to our expert",description:""},
-      {title: "Complete Online documentation",description:""},
-      {title: "Digital Signature Registration",description:""},
+      {title: "Create you're account and submit details",description:""},
+      {title: "Consult with our experts",description:""},
+      {title: "Get Your Certificate",description:""},
     ],
     aboutSteps: [
       {
-        title: "Reach out to our expert",
+        title: "Submit Your Details",
         description:
-          "When you first contact our experts, we'll collect essential details from you. This includes your name, gender, address, nationality, country, email, mobile number, and the specific purpose you need a Digital Signature Certificate (DSC) for (e.g., personal use, foreign trade, e-tenders, tax filing, company registration, GST filing, or other). We'll also assist you in selecting the right type of DSC and guide you through the application process",
+          "Fill in your basic information and business details on our platform to kick-start the registration process.",
       },
       {
-        title: "Complete Online documentation",
+        title: "Expert Assistance & Documentation",
         description:
-          "To process your application, we'll need to gather and verify several documents, including your PAN card, proof of address, and passport. These documents will need to be properly attested",
+          "Our team will assist you ",
       },
       {
-        title: "Digital Signature Registration",
+        title: "Get Your Certificate",
         description:
-          "We'll verify your identity with a video call and SMS. After that, we'll send your digital signature on a USB token",
+          "Get your Digital Signature in Just a day",
       },
     ],
     footerMessage:"Simple, quick, and hassle-free!"
   };
 
-  const OverviewData: OverviewData = {
-    heading: "Digital Signature",
-    meta: "Overview",
+  const OverviewData = {
+    heading: "",
+    meta: "",
     introduction: {
-      heading: "What Is a Digital Signature Certificate Online?",
-      description: [
-        "A DSC or ID is another name for a digital signature certificate. To digitally sign official documents, the authority must have an active digital certificate.",
-        "A digital certificate will be issued by a certificate authority. A DSC can be purchased or applied for online from third-party certificate authorities.",
-        "Furthermore, many organizations, governments, and businesses can issue their own certifications.",
-        "A digital certificate is required in order to use a digital signature.",
-        "Digital certificates enable the use of digital signatures.",
-        "The digital signature registration certificate is used to identify and validate the identity of those who hold and use this signature. It can also be used as a secure digital key.",
-        "To generate the signatures, public key encryptions are used in digital signatures.",
-        "Along with the user's name, the digital signature certificate will include other information such as the pin code email address, the date the certificate was issued, and the name of the certifying authority.",
-      ],
+      heading: "",
+      description: [],
     },
     advantagesInfo: {
       heading: "Advantages",
@@ -142,39 +133,24 @@ const DigitalSignature = () => {
       advantages: [
         {
           imageUrl: "",
-          heading: "Security",
+          heading: "Enhanced Security",
           details:
-            "Security capabilities are embedded in digital signatures to ensure a legal document isn't altered and signatures are legitimate.",
+            "Digital signatures use encryption to secure documents, ensuring their integrity and verifying the signer's identity.",
         },
         {
           imageUrl: "",
-          heading: "Timestamping",
-          details: "",
+          heading: "Legal Validity",
+          details: "Recognized under the Information Technology Act, 2000, digital signatures are legally equivalent to handwritten signatures.",
         },
         {
           imageUrl: "",
-          heading: "Globally accepted and legally compliant",
-          details: "",
+          heading: "Time and Cost Efficiency",
+          details: "They eliminate the need for physical paperwork, speeding up the signing process and reducing costs associated with printing and mailing.",
         },
         {
           imageUrl: "",
-          heading: "Time savings",
-          details: "",
-        },
-        {
-          imageUrl: "",
-          heading: "Cost Savings",
-          details: "",
-        },
-        {
-          imageUrl: "",
-          heading: "Positive environmental effects",
-          details: "",
-        },
-        {
-          imageUrl: "",
-          heading: "Traceability",
-          details: "",
+          heading: "Improved Traceability",
+          details: "Digital signatures provide an audit trail, making it easy to track document signers and enhance accountability in transactions.",
         },
       ],
     },
@@ -186,54 +162,32 @@ const DigitalSignature = () => {
         },
         heading: {
           start: "",
-          blueText: "Documents",
-          end: "for Online Digital Signature Certificate (DSC)",
+          blueText: "Purpose  ",
+          end: "of Digital Signature",
         },
-        meta: "for Online Digital Signature Certificate (DSC)",
-
-        subHeading: "Documents Required for DSC Class 3 Registration",
+        subHeading: "",
         startingDescription: "",
         endingDescription: "",
         requiredSteps: [
           {
-            heading:
-              "Indians who wish to apply for a digital signature online must provide the following information:",
+            heading:"",
             description: "",
             steps: [
               {
-                heading: "",
-                description:
-                  "PAN Card Identity Proof, similar to a driver's license.",
+                heading: "Enhanced Security",
+                description:"DSC registration ensures heightened security for online transactions by minimizing fraud risks and safeguarding data with an added protection layer.",
               },
               {
-                heading: "Address confirmation",
+                heading: "Identity Verification",
                 description:
-                  "Aadhaar card, voter identification card, driver's license, or registration document.",
+                  "It allows for verifying the identity of individuals or organizations in a transaction, fostering trust between the involved parties.",
               },
-              { heading: "", description: "An official attestation." },
+              { heading: "Legally Recognized", description: "A DSC holds the same legal validity as a handwritten signature, ensuring the authenticity of electronic documents and their acceptance as evidence in legal proceedings." },
+              { heading: "Time and Cost Efficiency", description: "With DSC registration, documents can be signed electronically, saving time and cutting costs linked to traditional paper-based processes." },
+              { heading: "Business Efficiency", description: "DSC registration helps businesses streamline operations, speeding up document signing, reducing paperwork, and enhancing overall productivity." },
             ],
           },
-          {
-            heading:
-              "Indian organizations that want to apply for an online DSC must do the following:",
-            description: "",
-            steps: [
-              {
-                heading: "",
-                description: "PAN within the organization",
-              },
-              {
-                heading: "",
-                description:
-                  "The partnership agreement, if applicable Concerned persons authorized to sign documents, Proof of an authorized signatory GST registration",
-              },
-              {
-                heading: "",
-                description:
-                  "The papers for Indian firms differ depending on the type of entity—partnership, sole proprietorship, LLP, and so on.",
-              },
-            ],
-          },
+       
         ],
       },
       {
@@ -242,9 +196,9 @@ const DigitalSignature = () => {
           imageDirection: "left",
         },
         heading: {
-          start: "",
-          blueText: "Types",
-          end: "of Digital Signature Registration Certificate",
+          start: "Who  ",
+          blueText: "Requires",
+          end: "a Digital Signature?",
         },
         meta: "of Digital Signature Registration Certificate",
         subHeading: "",
@@ -252,23 +206,49 @@ const DigitalSignature = () => {
         endingDescription: "",
         requiredSteps: [
           {
-            heading: "",
+            heading: "In the following situations, acquiring a Class 3 digital signature is mandatory",
             description: "",
             steps: [
               {
-                heading: "Sign DSC",
+                heading: "",
                 description:
-                  "Only signing documents are permitted with sign DSC. The most common application is for websites such as tax returns, MCA, and others to sign PDF files. When you sign using DSC, the data and the signer's integrity are both guaranteed. It serves as evidence of intact and unaltered data.",
+                  "All registered trusts, partnership firms, businesses, and individuals subject to a tax audit under the Income Tax Act must electronically file their income tax returns.",
               },
               {
-                heading: "Encrypt DSC",
+                heading: "",
                 description:
-                  "This type of dsc registration is widely used to protect a document. It is used to encrypt a document and is used in tender portals to help businesses that focus on uploading their papers. \n The certificate might potentially be used to deliver encrypted, sensitive information. Legal documents, e-commerce documents, and distributing documents containing highly confidential information are appropriate uses for encrypting DSC. The encrypt certificate is a standalone certificate.",
+                  "Entities filing documents with MCA21 (Ministry of Corporate Affairs) are required to use digital signatures.",
+              },
+            ],
+          },
+          {
+            heading: "As per MCA regulations, the following individuals must use digital signatures",
+            description: "",
+            steps: [
+              {
+                heading: "",
+                description:
+                  "Directors",
               },
               {
-                heading: "Encrypt and Sign",
+                heading: "",
                 description:
-                  "Both signing and encrypting may be done using the Sign & Encrypt DSC. It is apt for users who wish to uphold the privacy of shared information and authenticate the same. It is used for submitting applications and forms to the government.",
+                  "Auditors",
+              },
+              {
+                heading: "",
+                description:
+                  "Company secretaries",
+              },
+              {
+                heading: "",
+                description:
+                  "Bank officials",
+              },
+              {
+                heading: "",
+                description:
+                  "Other authorized signatories.",
               },
             ],
           },
@@ -281,8 +261,8 @@ const DigitalSignature = () => {
         },
         heading: {
           start: "",
-          blueText: "Benefits",
-          end: "of Digital Signature",
+          blueText: "Documents Required ",
+          end: "for DSC Registration",
         },
         meta: "of Digital Signature",
         subHeading: "",
@@ -290,35 +270,81 @@ const DigitalSignature = () => {
         endingDescription: "",
         requiredSteps: [
           {
-            heading: "Safety Priority",
+            heading: "For Indian Individuals: ",
             description: "",
-            steps: [],
+            steps: [
+                {
+                    heading: "",
+                    description: "PAN card",
+                },
+                {
+                    heading: "",
+                    description: "Proof of Identity (e.g., Driver's License)",
+                },
+                {
+                    heading: "",
+                    description: "Address Proof: Aadhaar Card, Voter ID, Driver's License, or Registration Document",
+                },
+                {
+                    heading: "",
+                    description: "Attestation by an official",
+                },
+               
+            ],
           },
           {
-            heading: "Legal Standing",
+            heading: "For Indian Organizations:",
             description: "",
-            steps: [],
+            steps: [
+                {
+                    heading: "",
+                    description: "Company PAN Card",
+                },
+                {
+                    heading: "",
+                    description: "Partnership deed (if applicable)",
+                },
+                {
+                    heading: "",
+                    description: "Authorization for the person signing documents",
+                },
+                {
+                    heading: "",
+                    description: "Proof of the authorized signatory",
+                },
+                {
+                    heading: "",
+                    description: "GST registration",
+                },
+                {
+                    heading: "",
+                    description: "Documents may vary based on entity type (e.g., partnership, proprietorship, LLP).",
+                },
+            ],
           },
           {
-            heading: "Time-saving Tool",
+            heading: "For Foreign Individuals and Organizations:",
             description: "",
-            steps: [],
+            steps: [
+                {
+                    heading: "",
+                    description: "Attested passport of the applicant",
+                },
+                {
+                    heading: "",
+                    description: "If abroad, attested copy of visa",
+                },
+                {
+                    heading: "",
+                    description: "If in India, attested residence permit certificate",
+                },
+                {
+                    heading: "",
+                    description: "Government-issued address proof with attested copy",
+                },
+            ],
           },
-          {
-            heading: "Streamlined Processes",
-            description: "",
-            steps: [],
-          },
-          {
-            heading: "Business Efficiency",
-            description: "",
-            steps: [],
-          },
-          {
-            heading: "Cost-effectiveness",
-            description: "",
-            steps: [],
-          },
+          
         ],
       },
     ],
@@ -329,38 +355,44 @@ const DigitalSignature = () => {
     description: "",
     elements: [
       {
-        heading: "Easy simple,  and quick procedure",
-        description: "",
+        heading: "Expert Assistance",
+        description: "EnsureKar offers professional guidance throughout the entire registration process, ensuring compliance with legal requirements.",
         imageUrl: "",
       },
-      { heading: "100% data privacy", description: "", imageUrl: "" },
-      { heading: "24*7 Professional Support", description: "", imageUrl: "" },
+      { heading: "Hassle-Free & Fast Service: ", description: "We handle everything from name approval to incorporation documents, ensuring a smooth and quick registration process.", imageUrl: "" },
+      { heading: "Transparent & Affordable", description: "We provide clear, upfront pricing with no hidden fees, making the entire process cost-effective and stress-free.", imageUrl: "" },
     ],
   };
 
   const AdvantagesData: AdvantagesData = {
-    title: "Digital Signature Certificate",
-    heading: "Advantages of Digital Signature Certificate",
+    title: "Benefits",
+    heading: "Fastest Digital Signature Certificate (DSC) Registration In India | Same-Day Process",
     description:
-      "Ensurekar is dedicated to supporting the financial health of your dental practice. From payroll solutions for dental professionals to compliance management,",
+      "A DSC or ID is another name for a digital signature certificate. To digitally sign official documents, the authority must have an active digital certificate. \n\n A digital certificate will be issued by a certificate authority. A DSC can be purchased or applied for online from third-party certificate authorities.",
     image: dentist_section_img,
     advantages: [
       {
         title: "Authenticity",
         description:
-          "When conducting online business, authentication is useful for verifying the accuracy of an individual's personal information, and DSC provides greater authenticity.",
+          "A Digital Signature Certificate (DSC) enhances the credibility of personal information, ensuring greater authenticity.",
         icon: <svg>...</svg>,
       },
       {
-        title: "Cost and time savings",
+        title: "Cost and Time Savings",
         description:
-          "You can digitally sign PDF files and send them much faster than you can physically sign paper copies of documents and scan them to send via email. It is not necessary for a digital signature certificate online holder to be physically present to conduct or authorize business.",
+          "Digitally signing and sending PDF files is much faster and more efficient than physically signing, scanning, and distributing documents. A DSC holder does not need to be physically present to authorize transactions or conduct business.",
         icon: <svg>...</svg>,
       },
       {
-        title: "Document authenticity is improved",
+        title: "Data Integrity",
         description:
-          "In most cases, a digitally signed document provides the recipient with greater assurance that the signer is genuine.",
+          "Once digitally signed, documents cannot be altered, ensuring data security. Government agencies often request DSCs to verify and authenticate business transactions.",
+        icon: <svg>...</svg>,
+      },
+      {
+        title: "Enhanced Document Assurance",
+        description:
+          "Digitally signed documents provide recipients with greater confidence that the signature is genuine.",
         icon: <svg>...</svg>,
       },
     ],
@@ -369,25 +401,26 @@ const DigitalSignature = () => {
     title: "",
     heading: "Digital Signature Certificate",
     image: save_time_money_section,
-    description:
-      ["  Hire effortlessly with automation-assisted job listings, applicant tracking, and popular job board integrations. Then, give your new hires a delightfully smooth and paperless onboarding. Ensurekar will send forms, training modules,"],
+    description:["The digital signature registration certificate is used to identify and validate the identity of those who hold and use this signature. It can also be used as a secure digital key.","To generate the signatures, public key encryptions are used in digital signatures.","Along with the user's name, the digital signature certificate will include other information such as the pin code email address, the date the certificate was issued, and the name of the certifying authority."],
   };
   const FAQsData = {
     title: "FAQs",
-    heading: "What Ensurekar offer you?",
+    heading: "DSC Registration FAQs",
     description: "",
     FAQs: [
       {
-        question: "What services does Ensurekar offer?",
-        answer:
-          "Ensurekar offers a comprehensive suite of services, including accounting, payroll processing, tax preparation, financial advisory, and global payroll solutions.",
+        question: "How can I obtain a Digital Signature Certificate (DSC) online?",
+        answer:"",
       },
-      {
-        question: "How does the accounting process work?",
-        answer:
-          "Ensurekar’s accounting process starts with gathering financial data, processing it for accuracy, and generating detailed reports for decision-making.",
-      },
-      // Add more FAQ items similarly
+      {question: "How does a Digital Signature Certificate (DSC) work for signing documents online?",answer:"NA",},
+      {question: "Who is authorized to issue a digital signature certificate online?",answer:"NA",},
+      {question: "Can I get a DSC registration for free?",answer:"NA",},
+      {question: "What is the cost of obtaining a digital signature certificate online?",answer:"NA",},
+      {question: "Is there a limit to how many DSC registrations one can hold?",answer:"NA",},
+      {question: "What is the difference between a digital certificate and a digital signature?",answer:"NA",},
+      {question: "How long is a Digital Signature Certificate (DSC) valid for online signing?",answer:"NA",},
+      {question: "Why is DSC registration necessary?",answer:"NA",},
+      {question: "Who issues the Digital Signature Certificate online?",answer:"NA",},
     ],
     imageUrl: faq_illus,
   };
@@ -396,7 +429,7 @@ const DigitalSignature = () => {
     title: "Testimonials",
     heading: "Ensurekar Customer Stories",
     description:
-      "Startups thrive with Ensurekar. Their flexible payroll solutions have been instrumental in our journey, providing the support.",
+      "Discover the journey behind EnsureKar's success and how we've helped countless businesses thrive. Explore our stories of innovation, growth, and dedication.",
     testimonials: [
       {
         image: testimonial10,

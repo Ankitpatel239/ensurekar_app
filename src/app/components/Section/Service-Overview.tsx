@@ -2,6 +2,7 @@
 
 import Image, { StaticImageData } from "next/image";
 import logo1 from "../../images/logo1.png";
+import { h1 } from "framer-motion/client";
 
 interface OverviewData {
   heading: string;
@@ -12,7 +13,7 @@ interface OverviewData {
   };
   advantagesInfo: {
     heading: string;
-    meta: string;
+    meta?: string;
     description: string;
     advantages: {
       imageUrl: string;
@@ -49,22 +50,34 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
   return (
     <div className="container stp-30 sbp-10">
       <div className="flex flex-col items-center">
-        <h3 className="heading-3 text-center">
+      { (heading || meta) &&(
+          <h3 className="heading-3 text-center">
           {heading}
-          <span className="text-blue-600"> - {meta}</span>
+          <span className="text-blue-600"> {meta ?" - ":""} {meta}</span>
         </h3>
-
-        <div className="border my-8 p-4 shadow-inner shadow-cyan max-w-[1000px]">
+        )}
+       
+        {/* Introduction */}
+        {(introduction.heading || introduction.description.length !== 0) && (
+          <div className="border my-8 p-4 shadow-inner shadow-cyan max-w-[1000px]">
           <h4 className="heading-4 my-5 text-center">
-            <span className="text-blue-600">{'"'}</span> {introduction?.heading}{" "}
-            <span className="text-blue-600 text-semibold">{'"'}</span>
+            {introduction?.heading && (
+              <span className="text-blue-600">{'"'}</span>
+            )}{" "}
+            {introduction?.heading}{" "}
+            {introduction?.heading && (
+              <span className="text-blue-600">{'"'}</span>
+            )}
           </h4>
+            
           {introduction?.description.map((answer: any, index) => (
             <p key={index} className="text-bodyText text-start mb-2">
               {answer}
             </p>
           ))}
         </div>
+        )}
+        
 
         <div className="my-5 text-center">
           <h3 className="heading-3 my-4">

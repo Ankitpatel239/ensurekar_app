@@ -18,7 +18,6 @@ import testimonial9 from "../../../images/testimonial9.png";
 import testimonial7 from "../../../images/testimonial7.png";
 import testimonial8 from "../../../images/testimonial8.png";
 import testimonial6 from "../../../images/testimonial6.png";
-import { title } from "process";
 
 const PartnershipRegistration = () => {
   const BreadcrumbData = {
@@ -455,8 +454,7 @@ const PartnershipRegistration = () => {
     title: "",
     heading: "Partnership Registration",
     image: save_time_money_section,
-    description:
-      "A partnership firm is one of the most important forms of a business organization. It is a popular form of business structure in India. A minimum of two persons are required to establish a partnership firm. A partnership firm is where two or more persons come together to establish a business and divide its profits amongst themselves in the agreed ratio. The partnership business includes any kind of trade, occupation and profession.",
+    description:[],
   };
 
   const OverviewData = {

@@ -16,6 +16,7 @@ const BreadcrumbSection = ({
     subHeading: string;
     description: string;
     image: string;
+    bottomHeading?: string;
   };
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,6 +71,9 @@ const BreadcrumbSection = ({
               {BreadcrumbData.subHeading}
             </div>
             <p className="text-bodyText pt-2">{BreadcrumbData.description}</p>
+            <div className="mt-10">
+              <h3 className="heading-6 font-semibold text-mainText">{BreadcrumbData.bottomHeading}</h3>
+            </div>
           </div>
           <div className="col-span-12 md:col-span-6 flex justify-center flex-col items-center">
             <div className="col-span-12 md:col-span-6 mt-5 md:mt-10 flex justify-center items-center">

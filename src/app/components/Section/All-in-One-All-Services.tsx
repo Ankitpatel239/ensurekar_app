@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 interface AllInOneData {
   title: string;
   heading: string;
-  description: string;
+  description: string[];
   image: StaticImageData;
 }
 const All_In_One_ServiceSection = ({
@@ -29,10 +29,14 @@ const All_In_One_ServiceSection = ({
           <h2 className="display-4 pt-4 pb-6">
           {heading}
           </h2>
-
-          <p className="text-bodyText">
-           {description}
-          </p>
+{/* Description */}
+{description && (
+  description.map((answer: any, index) => (
+    <p key={index} className="text-bodyText text-start mb-2">
+      {answer}
+    </p>
+  ))
+)}
         </div>
       </div>
     </section>

@@ -1,139 +1,274 @@
-"use client"
+"use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
-import { X,CaretRight } from "phosphor-react";
+import React, { useState, useEffect, useRef } from "react";
+import { X, CaretRight } from "phosphor-react";
 import Image from "next/image";
 import Logo from "../images/ensure_logo.png";
 
-const MobileNavbar = ({ Sidebar, setOpenSidebar }: { Sidebar: boolean, setOpenSidebar: React.Dispatch<React.SetStateAction<boolean>> }) => {
-  // const options = [
-  //   {
-  //     title: "Home",
-  //     link: "/",
-  //   },
-  //   {
-  //     title: "About",
-  //     link: "/about",
-  //   },
-  //   {
-  //     title: "Services",
-  //     link: "",
-  //     subOptions: [
-  //       { title: "Payroll Processing", link: "/" },
-  //       { title: "Accounting Services", link: "/" },
-  //       { title: "Taxation Services", link: "/" },
-  //       { title: "Real Estate Services", link: "/" },
-  //       { title: "Healthcare Services", link: "/" },
-  //       { title: "Dentist Services", link: "/" },
-  //     ],
-  //   },
-  //   {
-  //     title: "Shop",
-  //     link: "",
-  //     subOptions: [
-  //       { title: "Shop Page", link: "/" },
-  //       { title: "Shop Details", link: "/" },
-  //       { title: "Cart", link: "/" },
-  //       { title: "Checkout", link: "/" },
-  //     ],
-  //   },
-  //   { title: "Blog", link: "", subOptions: [{ title: "Blog Page", link: "/" }, { title: "Blog Details", link: "/" }] },
-  //   { title: "Contact", link: "/contact" },
-  //   {
-  //     title: "Pages",
-  //     link: "",
-  //     subOptions: [
-  //       { title: "Appointment", link: "/" },
-  //       { title: "Case Study", link: "/" },
-  //       { title: "Our Team", link: "/" },
-  //       { title: "Pricing", link: "/" },
-  //       { title: "Login", link: "/" },
-  //       { title: "Privacy Policy", link: "/" },
-  //       { title: "404 Page", link: "/" },
-  //     ],
-  //   },
-  // ];
+interface Option {
+  title: string;
+  link?: string;
+  subMenu?: Option[];
+  options?: Option[];
+  mircoOptions?: Option[];
+}
 
-  const options: any[] =[
-    {title:'Business Steup',
-      link:'/'
+const MobileNavbar = ({
+  Sidebar,
+  setOpenSidebar,
+}: {
+  Sidebar: boolean;
+  setOpenSidebar: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const options: Option[] = [
+    {
+      title: "Business Setup",
+      subMenu: [
+        {
+          title: "Business Registration",
+          options: [
+            {
+              title: "Private Limited Company",
+              link: "/private-limited-company",
+            },
+            {
+              title: "Limited Liability Partnership",
+              link: "/limited-liability-partnership",
+            },
+            { title: "One Person Company", link: "/one-person-company" },
+            { title: "Sole Proprietorship", link: "/sole-proprietorship" },
+            { title: "Nidhi Company", link: "/nidhi-company" },
+            { title: "Producer Company", link: "/producer-company" },
+            { title: "Partnership Firm", link: "/partnership-firm" },
+          ],
+        },
+        {
+          title: "Licenses & Registration",
+          options: [
+            {
+              title: "Digital Signature Certificate",
+              link: "/digital-signature",
+            },
+            { title: "Udyam Registration", link: "/udyam-registration" },
+            { title: "MSME Registration", link: "/msme-registration" },
+            { title: "ISO Certification", link: "/iso-certification" },
+            { title: "FSSAI [Food License]", link: "/fssai-registration" },
+            { title: "IEC [Import/Export Code]", link: "/iec-registration" },
+          ],
+        },
+      ],
     },
-    {title:'Talk to Expert',
-      link:'/'
+    {
+      title: "Talk to Expert",
+      link: "/",
     },
-    {title:'Tax Compliances',
-      link:'/'
+    {
+      title: "Tax Compliances",
+      mircoOptions: [
+        { title: "Income tax filings", link: "/" },
+        { title: "GST Filings", link: "/" },
+        { title: "Accounting", link: "/" },
+        { title: "MCA Compliance", link: "/" },
+        { title: "Labour Law Compliance", link: "/" },
+        { title: "TDS/TCS E-Filing", link: "/" },
+      ],
     },
-    {title:'Trade Mark and IP',
-      link:'/'
+    {
+      title: "Trade Mark and IP",
+      mircoOptions: [
+        { title: "Trade Mark Name Search", link: "/" },
+        { title: "Trademark Registrations", link: "/" },
+        { title: "Trademark Renewal", link: "/" },
+        { title: "Trademark Objection Response", link: "/" },
+        { title: "Copyright Registration", link: "/" },
+        { title: "Patent Registration", link: "/" },
+      ],
     },
-    {title:'Documentation',
-      link:'/'
+    { title: "Documentation", link: "/" },
+    {
+      title: "Others",
+      mircoOptions: [
+        { title: "Private Limited Incorporation", link: "/" },
+        { title: "Virtual CFO", link: "/" },
+        { title: "Digital Signature", link: "/digital-signature" },
+        { title: "Udyam Registration", link: "/udyam-registration" },
+        { title: "MSME Registration", link: "/msme-registration" },
+        { title: "PVT LTD Incorporation", link: "/pvt-ltd-incorporation" },
+        { title: "Partnership Registration", link: "/partnership-registration" },
+        { title: "Limited Liability Partnership Registration", link: "/limited-liability-partnership-registration" },
+        { title: "Sole Proprietorship Registration", link: "/sole-proprietorship-registration" },
+        { title: "Nidhi Company Registration", link: "/nidhi-company-registration" },
+        { title: "Digital Signature Certificate", link: "/digital-signature-certificate" },
+        { title: "ISO Certification", link: "/iso-certification" },
+      ],
     },
-    {title:'Others',
-      link:'/'
-    },
+  ];
 
-]
   const [openSubMenu, setOpenSubMenu] = useState<number | null>(null);
+  const [openSubOptions, setOpenSubOptions] = useState<number | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const toggleSubMenu = (index: number) => {
     setOpenSubMenu(openSubMenu === index ? null : index);
+    setOpenSubOptions(null); // Reset suboptions when opening a new menu
   };
 
+  const toggleSubOptions = (index: number) => {
+    setOpenSubOptions(openSubOptions === index ? null : index);
+  };
+
+  // Handle click outside the menu to close it
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setOpenSidebar(false);
+      }
+    };
+
+    if (Sidebar) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [Sidebar, setOpenSidebar]);
+
   return (
-    <nav className={`fixed top-0 left-0 h-full w-3/4 bg-s2 overflow-y-auto z-[999] transition-transform duration-500 transform ${Sidebar ? "translate-x-0" : "-translate-x-full"}`}>
-      <div className="flex justify-between items-center w-full p-4 sm:p-8">
-        <Link href="/">
-          <Image src={Logo} alt="logo" />
-        </Link>
-        <i
-          className="text-3xl cursor-pointer"
-          onClick={() => setOpenSidebar(false)}
-        >
-          <X />
-        </i>
-      </div>
-        <ul className="text-lg sm:text-xl flex gap-6 lg:gap-10 items-start flex-col pl-8">
+    <div
+      className={`fixed inset-0 z-[999]  flex justify-start items-start bg-black bg-opacity-50 transition-opacity duration-300 ${
+        Sidebar ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      <nav
+        ref={menuRef}
+        className={`h-full bg-s2 p-5 overflow-y-auto z-[999] transition-transform transform ease-in-out duration-300 ${
+          Sidebar ? "translate-x-0 scale-100" : "-translate-x-full scale-75"
+        }`}
+        style={{ width: Sidebar ? "fit-content" : "0px" }}
+      >
+        <div className="flex justify-between  items-center w-full py-4 sm:p-8">
+          <Link href="/">
+            <Image src={Logo} alt="logo" className="w-50 mr-5" />
+          </Link>
+          <i
+            className="text-3xl cursor-pointer"
+            onClick={() => setOpenSidebar(false)}
+          >
+            <X weight="bold" />
+          </i>
+        </div>
+
+        <ul className="text-lg sm:text-xl mt-5 flex gap-2 lg:gap-10 items-start flex-col pl-3">
           {options.map((option, index) => (
             <li key={index}>
-              {option.subOptions ? (
-                <div className="flex flex-col justify-start items-start">
+              {option.subMenu ? (
+                <div className="flex flex-col">
+                  {/* Title with submenu */}
                   <div
-                    className="flex justify-start items-center cursor-pointer"
-                    onClick={() => toggleSubMenu(index)} // Toggle submenu
+                    className="flex justify-between items-center cursor-pointer transition-all ease-in duration-300"
+                    onClick={() => toggleSubMenu(index)}
                   >
-                    <span>{option.title}</span>
-                    <i className="!text-xl pl-1 pt-1 duration-500">
-                    <CaretRight/>
-                    </i>
+                    <span className="font-medium text-xl">{option.title}</span>
+                    <CaretRight
+                      weight="bold"
+                      className={`!text-xl pl-1 transform transition-transform duration-500 ${
+                        openSubMenu === index ? "rotate-90" : ""
+                      }`}
+                    />
                   </div>
 
-                  {/* Conditionally render subOptions based on state */}
+                  {/* Submenu options */}
                   {openSubMenu === index && (
-                    <div className="pl-4 flex justify-start items-start flex-col gap-2 pt-2">
-                      <ul>
-                        {option.subOptions.map((subOption:any, subIndex:any) => (
-                          <li key={subIndex}>
-                            <Link href={subOption.link}  onClick={() => setOpenSidebar(false)} className="text-base">
-                              <span>-</span> {subOption.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="pl-4 transition-all ease-in duration-300">
+                      {option.subMenu.map((subOption, subIndex) => (
+                        <div key={subIndex} className="flex flex-col mt-2">
+                          <div
+                            className="cursor-pointer flex justify-between items-center transition-all ease-in duration-300"
+                            onClick={() => toggleSubOptions(subIndex)}
+                          >
+                            <span className="">{subOption.title}</span>
+                            {subOption.options && (
+                              <CaretRight
+                                weight="bold"
+                                className={`!text-xl pl-1 transform transition-transform duration-500 ${
+                                  openSubOptions === subIndex ? "rotate-90" : ""
+                                }`}
+                              />
+                            )}
+                          </div>
+
+                          {/* Sub-options under the submenu */}
+                          {openSubOptions === subIndex && subOption.options && (
+                            <ul className="pl-4 flex flex-col mt-2">
+                              {subOption.options.map((opt, optIndex) => (
+                                <li
+                                  key={optIndex}
+                                  className="relative pl-6 before:content-['\00BB'] before:absolute before:left-0 before:text-lg before:font-bold before:text-gray-500"
+                                >
+                                  <Link
+                                    href={opt.link || "#"}
+                                    className="text-base"
+                                    onClick={() => setOpenSidebar(false)}
+                                  >
+                                    {opt.title}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   )}
                 </div>
+              ) : option.mircoOptions ? (
+                <div className="flex flex-col">
+                  {/* Title with micro-options */}
+                  <div
+                    className="flex justify-between items-center cursor-pointer transition-all ease-in duration-300"
+                    onClick={() => toggleSubMenu(index)}
+                  >
+                    <span className="font-medium text-xl">{option.title}</span>
+                    <CaretRight weight="bold"
+                      className={`!text-xl pl-1  transform transition-transform duration-500 ${
+                        openSubMenu === index ? "rotate-90" : ""
+                      }`}
+                    />
+                  </div>
+
+                  {/* Micro-options */}
+                  {openSubMenu === index && (
+                    <ul className="pl-4 flex flex-col mt-2 transition-all ease-in duration-300">
+                      {option.mircoOptions.map((opt, optIndex) => (
+                        <li key={optIndex} className="relative pl-6 before:content-['\00BB'] before:absolute before:left-0 before:text-lg before:font-bold before:text-gray-500">
+                          <Link
+                            href={opt.link || "#"}
+                            className="text-base"
+                            onClick={() => setOpenSidebar(false)}
+                          >
+                            {opt.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               ) : (
-                <Link href={option.link} className="menu-hover hover:after:border-p1">
+                <Link
+                  href={option.link || "#"}
+                  className="cursor-pointer"
+                  onClick={() => setOpenSidebar(false)}
+                >
                   {option.title}
                 </Link>
               )}
             </li>
           ))}
         </ul>
-    </nav>
+      </nav>
+    </div>
   );
 };
 

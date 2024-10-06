@@ -147,7 +147,7 @@ const UdyamRegistration = () => {
     heading: "Udyam Registration Certificate",
     image: save_time_money_section,
     description:
-      "Udyam Registration is an online registration process for micro, small, and medium enterprises (MSMEs) in India. It is a mandatory process for MSMEs that want to avail of government benefits and subsidies.",
+      ["Udyam Registration is an online registration process for micro, small, and medium enterprises (MSMEs) in India."," It is a mandatory process for MSMEs that want to avail of government benefits and subsidies."],
   };
   const OverviewData: OverviewData = {
     heading: "Udyam Registration",

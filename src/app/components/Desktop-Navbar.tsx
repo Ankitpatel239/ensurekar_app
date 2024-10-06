@@ -84,6 +84,11 @@ const DesktopNavbar: React.FC = () => {
         { title: "MSME Registration", link: "/msme-registration" },
         { title: "PVT LTD Incorporation", link: "/pvt-ltd-incorporation" },
         { title: "Partnership Registration", link: "/partnership-registration" },
+        { title: "Limited Liability Partnership Registration", link: "/limited-liability-partnership-registration" },
+        { title: "Sole Proprietorship Registration", link: "/sole-proprietorship-registration" },
+        { title: "Nidhi Company Registration", link: "/nidhi-company-registration" },
+        { title: "Digital Signature Certificate", link: "/digital-signature-certificate" },
+        { title: "ISO Certification", link: "/iso-certification" },
       ],
     },
   ];
