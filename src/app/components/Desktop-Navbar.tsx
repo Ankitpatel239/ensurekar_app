@@ -89,6 +89,7 @@ const DesktopNavbar: React.FC = () => {
         { title: "Nidhi Company Registration", link: "/nidhi-company-registration" },
         { title: "Digital Signature Certificate", link: "/digital-signature-certificate" },
         { title: "ISO Certification", link: "/iso-certification" },
+        { title: "Accounting and tax Bookkeeping", link: "/accounting-and-tax-bookkeeping" },
       ],
     },
   ];

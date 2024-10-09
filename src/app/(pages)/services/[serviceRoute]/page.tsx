@@ -27,84 +27,84 @@ const ServicePage = async ({
   return (
     <div className="">
       <BreadcrumbSection BreadcrumbData={data.BreadcrumbSectionInfo} />
-      <section className="stp-30 sbp-30">
-        <div className="container grid grid-cols-12 gap-6">
-          <div className="col-span-12 lg:col-span-6 xxl:col-span-5 flex justify-start items-start flex-col">
-            <p className="bg-p1 py-3 px-5 rounded-full text-white">
-              {data.title}
-            </p>
-            <h2 className="display-4 pt-4 pb-6">
-              Tailored Solutions for {data.heading}
-            </h2>
-            <p className="text-bodyText pb-6 lg:pb-10">
-              Ensurekar is dedicated to supporting the financial health of your
-              dental practice. From payroll solutions for dental professionals
-              to compliance management,
-            </p>
-            <div className="flex justify-center items-center w-full overflow-hidden">
-              <Image
-                src={dentist_section_img}
-                alt="image"
-                className="hover:scale-110 duration-500 w-full h-full"
-              />
+        <section className="stp-30 sbp-30">
+          <div className="container grid grid-cols-12 gap-6">
+            <div className="col-span-12 lg:col-span-6 xxl:col-span-5 flex justify-start items-start flex-col">
+              <p className="bg-p1 py-3 px-5 rounded-full text-white">
+                {data.title}
+              </p>
+              <h2 className="display-4 pt-4 pb-6">
+                Tailored Solutions for {data.heading}
+              </h2>
+              <p className="text-bodyText pb-6 lg:pb-10">
+                Ensurekar is dedicated to supporting the financial health of your
+                dental practice. From payroll solutions for dental professionals
+                to compliance management,
+              </p>
+              <div className="flex justify-center items-center w-full overflow-hidden">
+                <Image
+                  src={dentist_section_img}
+                  alt="image"
+                  className="hover:scale-110 duration-500 w-full h-full"
+                />
+              </div>
+            </div>
+            <div className="col-span-12 lg:col-span-6 xxl:col-start-7 flex flex-col gap-6 xl:gap-10 justify-center items-center pb-6 xl:pb-12">
+              <div className="flex justify-start items-start gap-4">
+                <div className="text-s1 text-2xl sm:text-3xl p-3 sm:p-4 rounded-full bg-softBg1 !leading-[0]">
+                  <i className="ph-fill ph-tooth"></i>
+                </div>
+                <div className="">
+                  <h4 className="heading-4">Payroll for Dental Professionals</h4>
+                  <p className="text-bodyText pt-3">
+                    Accurate and efficient payroll processing tailored to meet the
+                    unique needs of dental professionals. Ensure your dedicated
+                    team
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-start items-start gap-4">
+                <div className="text-s1 text-2xl sm:text-3xl p-3 sm:p-4 rounded-full bg-softBg1 !leading-[0]">
+                  <i className="ph-fill ph-users-three"></i>
+                </div>
+                <div className="">
+                  <h4 className="heading-4">Compliance Management</h4>
+                  <p className="text-bodyText pt-3">
+                    Stay compliant with the ever-evolving regulations in the
+                    dental industry. Our services include compliance management
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-start items-start gap-4">
+                <div className="text-s1 text-2xl sm:text-3xl p-3 sm:p-4 rounded-full bg-softBg1 !leading-[0]">
+                  <i className="ph-fill ph-user"></i>
+                </div>
+                <div className="">
+                  <h4 className="heading-4">
+                    Financial Advisory for Dental Practices
+                  </h4>
+                  <p className="text-bodyText pt-3">
+                    Navigate the financial landscape of dental care with our
+                    expert advisory services. From budgeting to strategic
+                    planning,
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-start items-start gap-4">
+                <div className="text-s1 text-2xl sm:text-3xl p-3 sm:p-4 rounded-full bg-softBg1 !leading-[0]">
+                  <i className="ph-fill ph-users-three"></i>
+                </div>
+                <div className="">
+                  <h4 className="heading-4">Dental Consulting</h4>
+                  <p className="text-bodyText pt-3">
+                    Receive personalized consulting services to address the unique
+                    challenges of your dental practice.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-6 xxl:col-start-7 flex flex-col gap-6 xl:gap-10 justify-center items-center pb-6 xl:pb-12">
-            <div className="flex justify-start items-start gap-4">
-              <div className="text-s1 text-2xl sm:text-3xl p-3 sm:p-4 rounded-full bg-softBg1 !leading-[0]">
-                <i className="ph-fill ph-tooth"></i>
-              </div>
-              <div className="">
-                <h4 className="heading-4">Payroll for Dental Professionals</h4>
-                <p className="text-bodyText pt-3">
-                  Accurate and efficient payroll processing tailored to meet the
-                  unique needs of dental professionals. Ensure your dedicated
-                  team
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-start items-start gap-4">
-              <div className="text-s1 text-2xl sm:text-3xl p-3 sm:p-4 rounded-full bg-softBg1 !leading-[0]">
-                <i className="ph-fill ph-users-three"></i>
-              </div>
-              <div className="">
-                <h4 className="heading-4">Compliance Management</h4>
-                <p className="text-bodyText pt-3">
-                  Stay compliant with the ever-evolving regulations in the
-                  dental industry. Our services include compliance management
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-start items-start gap-4">
-              <div className="text-s1 text-2xl sm:text-3xl p-3 sm:p-4 rounded-full bg-softBg1 !leading-[0]">
-                <i className="ph-fill ph-user"></i>
-              </div>
-              <div className="">
-                <h4 className="heading-4">
-                  Financial Advisory for Dental Practices
-                </h4>
-                <p className="text-bodyText pt-3">
-                  Navigate the financial landscape of dental care with our
-                  expert advisory services. From budgeting to strategic
-                  planning,
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-start items-start gap-4">
-              <div className="text-s1 text-2xl sm:text-3xl p-3 sm:p-4 rounded-full bg-softBg1 !leading-[0]">
-                <i className="ph-fill ph-users-three"></i>
-              </div>
-              <div className="">
-                <h4 className="heading-4">Dental Consulting</h4>
-                <p className="text-bodyText pt-3">
-                  Receive personalized consulting services to address the unique
-                  challenges of your dental practice.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
       <section className="stp-30 sbp-30 bg-softBg1 overflow-hidden">
         <div className="xxl:ml-[calc((100%-1296px)/2)] max-xxl:container grid grid-cols-12 lg:gap-6 xxl:gap-32">
           <div className="col-span-12 lg:col-span-6 flex justify-start items-start self-stretch order-2">
@@ -128,7 +128,7 @@ const ServicePage = async ({
         </div>
       </section>
       <CompaniesAct  />
-      <RegisterSteps RegisterSteps={data.BreadcrumbSectionInfo}/>
+      {/* <RegisterSteps RegisterSteps={data.BreadcrumbSectionInfo}/> */}
       <FAQsSection />
       <section className="sbp-30 stp-30">
         <div className="container">
