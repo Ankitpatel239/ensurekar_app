@@ -1,9 +1,11 @@
+"use client"
 import { Check } from "phosphor-react";
 import React, { useEffect, useState } from "react";
 import { PiSealPercent, PiSealWarningBold } from "react-icons/pi";
 import Select from "react-select";
 import Link from "next/link";
 import Image from "next/image";
+import { div } from "framer-motion/client";
 
 interface planData {
   heading: {
@@ -20,12 +22,16 @@ interface planData {
       planName: string;
       description: string;
       isActive: boolean;
-      suggestionText: string;
-      happyText: string;
+      suggestionText?: string;
+      happyText?: string;
+      note?: {
+        heading:string,
+        description:string,
+      },
       plan: {
         id: string;
-        price: string;
-        discount: string;
+        price?: string;
+        discount?: string;
         afterDiscount: string;
         laterPaid: {
           ammount: string;
@@ -551,6 +557,7 @@ const PlansSection = ({ planData }: { planData: planData }) => {
     defaultState,
     defaultPlan,
     statesOptions,
+    
   } = planData;
 
   const [selectedState, setSelectedState] = useState(defaultState);
@@ -724,9 +731,7 @@ const PlansSection = ({ planData }: { planData: planData }) => {
                       {splitPaymentStates[Number(plan.plan.id)]
                         ? `₹${(
                             parseFloat(
-                              plan.plan.afterDiscount
-                                .replace("₹", "")
-                                .replace(",", "")
+                              plan.plan.afterDiscount.replace("₹", "").replace(",", "")
                             ) / plan.plan.splitPayment.instalments
                           ).toFixed(2)} x ${
                             plan.plan.splitPayment.instalments
@@ -827,8 +832,25 @@ const PlansSection = ({ planData }: { planData: planData }) => {
                   </div>
                 ))}
               </div>
+            
             </div>
-            {}
+            {plan.happyText && (
+              <div className="my-5">
+                <h5 className="heading-7 font-bold group-hover:text-black-800 text-bodyText">
+                  {plan.happyText}
+                </h5>
+              </div>
+            )}
+            {plan.note && (
+              <div className="my-5">
+                <h5 className="heading-7 inline font-bold group-hover:text-black-800 text-bodyText">
+                  {plan.note.heading}
+                </h5>
+                <p className="inline">{plan.note.description}</p>
+              </div>
+            )}
+            
+        
           </div>
         ))}
       </div>

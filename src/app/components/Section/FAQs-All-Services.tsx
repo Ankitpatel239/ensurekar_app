@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import sliceIcon from "../../images/sliceIcon.png";
 
-import { Minus, Plus } from "phosphor-react";
+import { ArrowLeft, ArrowRight, Minus, Plus } from "phosphor-react";
 
 interface FAQsData {
   title: string;
@@ -17,6 +17,12 @@ const FAQsServicesSection = ({ FAQsData }: { FAQsData: FAQsData }) => {
   const { title, heading, description, FAQs, imageUrl } = FAQsData;
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
+  // State to track the current page of FAQs
+  const [currentPage, setCurrentPage] = useState(0);
+
+  // Calculate the number of pages
+  const numPages = Math.ceil(FAQs.length / 5);
+
   // Function to toggle the FAQ item
   const toggleFAQ = (index: number) => {
     if (openFAQ === index) {
@@ -26,7 +32,17 @@ const FAQsServicesSection = ({ FAQsData }: { FAQsData: FAQsData }) => {
     }
   };
 
-  const [faqs, setFaqs] = useState(FAQs);
+  // Function to handle pagination
+  const handlePagination = (direction: "left" | "right") => {
+    if (direction === "left" && currentPage > 0) {
+      setCurrentPage(currentPage - 1);
+    } else if (direction === "right" && currentPage < numPages - 1) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  // Slice the FAQs array to display only 5 items at a time
+  const displayedFAQs = FAQs.slice(currentPage * 5, (currentPage + 1) * 5);
 
   return (
     <div>
@@ -57,7 +73,7 @@ const FAQsServicesSection = ({ FAQsData }: { FAQsData: FAQsData }) => {
 
           <div className="grid grid-cols-12 stp-15 max-xl:gap-6">
             <div className="col-span-12 lg:col-span-6 xl:col-span-5 flex justify-center items-center overflow-hidden">
-            <Image
+              <Image
                 src={imageUrl}
                 alt="image"
                 className="hover:scale-110 duration-500 w-full"
@@ -65,7 +81,7 @@ const FAQsServicesSection = ({ FAQsData }: { FAQsData: FAQsData }) => {
             </div>
 
             <div className="col-span-12 lg:col-span-6 xl:col-start-7 flex flex-col gap-4 md:gap-6">
-              {faqs.map((QA, index) => {
+              {displayedFAQs?.map((QA: any, index: any) => {
                 return (
                   <div
                     key={index}
@@ -102,6 +118,34 @@ const FAQsServicesSection = ({ FAQsData }: { FAQsData: FAQsData }) => {
                   </div>
                 );
               })}
+              <div className="flex mt-5 justify-between">
+                <div
+                  className={`cursor-pointer text-nowrap group  max-sm:text-sm  gap-3 py-2 md:py-3 px-3 md:px-6 bg-amber-300 border border-gray-600 text-mainTextColor group font-medium min-w-[150px]  flex  items-center justify-center ${ currentPage === 0 ? "opacity-50" : ""}`}
+                  onClick={() => handlePagination("left")}
+                >
+                  <button className="font-bold flex  items-center justify-center">
+                    {" "}
+                    <ArrowLeft
+                      weight="bold"
+                      className="transition-transform inline mr-2 group-hover:-translate-x-1"
+                    />
+                    Pre
+                  </button>
+                </div>
+                <div
+                  className={`cursor-pointer text-nowrap group  max-sm:text-sm  gap-3 py-2 md:py-3 px-3 md:px-6 bg-amber-300 border border-gray-600 text-mainTextColor group font-medium min-w-[150px]  flex  items-center justify-center ${ currentPage === numPages - 1 ? "opacity-50" : ""}`}
+                  onClick={() => handlePagination("right")}
+                >
+                  <button className="font-bold flex  items-center justify-center">
+                    {" "}
+                    Next
+                    <ArrowRight
+                      weight="bold"
+                      className="ml-2 transition-transform group-hover:translate-x-1"
+                    />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

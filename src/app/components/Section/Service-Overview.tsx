@@ -19,7 +19,12 @@ interface OverviewData {
       imageUrl: string;
       heading: string;
       details: string;
+      note?: {
+        heading?: string;
+        description?: string;
+      };
     }[];
+    bottomText?:string;
   };
   eligibilityCriteria: {
     imageData: {
@@ -50,34 +55,36 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
   return (
     <div className="container stp-30 sbp-10">
       <div className="flex flex-col items-center">
-      { (heading || meta) &&(
+        {(heading || meta) && (
           <h3 className="heading-3 text-center">
-          {heading}
-          <span className="text-blue-600"> {meta ?" - ":""} {meta}</span>
-        </h3>
+            {heading}
+            <span className="text-blue-600">
+              {" "}
+              {meta ? " - " : ""} {meta}
+            </span>
+          </h3>
         )}
-       
+
         {/* Introduction */}
         {(introduction.heading || introduction.description.length !== 0) && (
           <div className="border my-8 p-4 shadow-inner shadow-cyan max-w-[1000px]">
-          <h4 className="heading-4 my-5 text-center">
-            {introduction?.heading && (
-              <span className="text-blue-600">{'"'}</span>
-            )}{" "}
-            {introduction?.heading}{" "}
-            {introduction?.heading && (
-              <span className="text-blue-600">{'"'}</span>
-            )}
-          </h4>
-            
-          {introduction?.description.map((answer: any, index) => (
-            <p key={index} className="text-bodyText text-start mb-2">
-              {answer}
-            </p>
-          ))}
-        </div>
+            <h4 className="heading-4 my-5 text-center">
+              {introduction?.heading && (
+                <span className="text-blue-600">{'"'}</span>
+              )}{" "}
+              {introduction?.heading}{" "}
+              {introduction?.heading && (
+                <span className="text-blue-600">{'"'}</span>
+              )}
+            </h4>
+
+            {introduction?.description.map((answer: any, index) => (
+              <p key={index} className="text-bodyText text-start mb-2">
+                {answer}
+              </p>
+            ))}
+          </div>
         )}
-        
 
         <div className="my-5 text-center">
           <h3 className="heading-3 my-4">
@@ -98,9 +105,27 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
                   <Image src={advantage.imageUrl} alt="img" />
                 </div>
                 <h5 className="text-center heading-5">{advantage.heading}</h5>
-                <p className="text-center px-5 mb-5">{advantage.details}</p>
+                <p className="text-center px-5 mb-2">{advantage.details}</p>
+                {advantage.note && (
+                  <div>
+                    <h6 className="text-start mr-2 font-bold inline mt-1">
+                      {advantage.note?.heading}
+                    </h6>
+                    <p className="inline mb-5">
+                      {advantage.note?.description}
+                    </p>
+                  </div>
+                )}
               </div>
             ))}
+
+            {advantagesInfo.bottomText && (
+              <div className="my-10">
+                <span className="font-bold heading-4 text-bodyText ">
+                {advantagesInfo.bottomText}
+                </span>
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col items-center my-5 text-center">
@@ -132,30 +157,30 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
                     {criteria.heading.end}
                   </h3>
 
-                  <h3 className="font-semibold mt-4">
-                    {criteria.subHeading}
-                  </h3>
-             
-                          <ul
-                          className={`text-start ml-5  ${
-                            (criteria.requiredSteps ?? []).length > 1
-                              ? "list-disc"
-                              : "disc-none"
-                          }`}
-                        >
+                  <h3 className="font-semibold mt-4">{criteria.subHeading}</h3>
+
+                  <ul
+                    className={`text-start ml-5  ${
+                      (criteria.requiredSteps ?? []).length > 1
+                        ? "list-disc"
+                        : "disc-none"
+                    }`}
+                  >
                     <p className="my-3">{criteria.startingDescription}</p>
                     {criteria.requiredSteps?.map((step) => (
                       <li key={step.heading} className="my-6">
-                        <h4 className="heading-5 md:text-2xl font-bold">{step.heading}</h4>
+                        <h4 className="heading-5 md:text-2xl font-bold">
+                          {step.heading}
+                        </h4>
                         <p>{step.description}</p>
                         <ul className="pl-5 list-disc">
                           {step.steps.map((subStep) => (
                             <li key={subStep.heading} className="my-2">
-                               {subStep.heading && (
-                                    <h5 className="font-bold inline">
-                                      {subStep.heading}:{" "}
-                                    </h5>
-                                  )}
+                              {subStep.heading && (
+                                <h5 className="font-bold inline">
+                                  {subStep.heading}:{" "}
+                                </h5>
+                              )}
                               <p className="inline">{subStep.description}</p>
                             </li>
                           ))}

@@ -76,7 +76,7 @@ const OurServices = () => {
               "&more",
             ],
             plan_type: "month",
-            know_more: "/partnership-firm",
+            know_more: "/one-person-company",
           },
         ],
       },

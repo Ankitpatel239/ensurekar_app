@@ -30,17 +30,23 @@ const MobileNavbar = ({
           options: [
             {
               title: "Private Limited Company",
-              link: "/private-limited-company",
+              link: "/pvt-ltd-incorporation",
             },
             {
               title: "Limited Liability Partnership",
-              link: "/limited-liability-partnership",
+              link: "/limited-liability-partnership-registration",
             },
             { title: "One Person Company", link: "/one-person-company" },
-            { title: "Sole Proprietorship", link: "/sole-proprietorship" },
-            { title: "Nidhi Company", link: "/nidhi-company" },
+            {
+              title: "Sole Proprietorship",
+              link: "/sole-proprietorship-registration",
+            },
+            { title: "Nidhi Company", link: "/nidhi-company-registration" },
             { title: "Producer Company", link: "/producer-company" },
-            { title: "Partnership Firm", link: "/partnership-firm" },
+            {
+              title: "Partnership Firm Registration",
+              link: "/partnership-registration",
+            },
           ],
         },
         {
@@ -48,13 +54,13 @@ const MobileNavbar = ({
           options: [
             {
               title: "Digital Signature Certificate",
-              link: "/digital-signature",
+              link: "/digital-signature-certificate",
             },
             { title: "Udyam Registration", link: "/udyam-registration" },
             { title: "MSME Registration", link: "/msme-registration" },
             { title: "ISO Certification", link: "/iso-certification" },
-            { title: "FSSAI [Food License]", link: "/fssai-registration" },
-            { title: "IEC [Import/Export Code]", link: "/iec-registration" },
+            { title: "FSSAI [Food License]", link: "/fssai-food-license" },
+            { title: "IEC [Import/Export Code]", link: "/import-export-code" },
           ],
         },
       ],
@@ -65,22 +71,46 @@ const MobileNavbar = ({
     },
     {
       title: "Tax Compliances",
-      mircoOptions: [
-        { title: "Income tax filings", link: "/" },
-        { title: "GST Filings", link: "/" },
-        { title: "Accounting", link: "/" },
-        { title: "MCA Compliance", link: "/" },
-        { title: "Labour Law Compliance", link: "/" },
-        { title: "TDS/TCS E-Filing", link: "/" },
+      link: "",
+      subMenu: [
+        {
+          title: "GST and Other Indirect Tax",
+          options: [
+            { title: "GST Registration", link: "/" },
+            { title: "GST Filling", link: "/" },
+          ],
+        },
+        {
+          title: "Annual Filing",
+          options: [{ title: "MCA compliance", link: "/mca-compliances" }],
+        },
+        {
+          title: "Labour compliances",
+          options: [
+            { title: "Provident Fund (PF)", link: "/labour-compliance/pf-registration" },
+            { title: "ESI Registration", link: "" },
+            { title: "Professional tax", link: "" },
+            { title: "Shops and Establishment lice", link: "" },
+          ],
+        },
+        {
+          title: "Accounting and tax ",
+          options: [
+            { title: "Accounting", link: "/accounting-and-tax-bookkeeping" },
+            { title: "TDS return filing ", link: "" },
+            { title: "Virtual CFO", link: "" },
+          ],
+        },
       ],
     },
     {
       title: "Trade Mark and IP",
+      link: "",
       mircoOptions: [
         { title: "Trade Mark Name Search", link: "/" },
         { title: "Trademark Registrations", link: "/" },
         { title: "Trademark Renewal", link: "/" },
-        { title: "Trademark Objection Response", link: "/" },
+        { title: "Trademark objection response", link: "" },
         { title: "Copyright Registration", link: "/" },
         { title: "Patent Registration", link: "/" },
       ],
@@ -88,21 +118,21 @@ const MobileNavbar = ({
     { title: "Documentation", link: "/" },
     {
       title: "Others",
+      link: "",
       mircoOptions: [
         { title: "Private Limited Incorporation", link: "/" },
         { title: "Virtual CFO", link: "/" },
-        { title: "Digital Signature", link: "/digital-signature" },
-        { title: "Udyam Registration", link: "/udyam-registration" },
-        { title: "MSME Registration", link: "/msme-registration" },
-        { title: "PVT LTD Incorporation", link: "/pvt-ltd-incorporation" },
-        { title: "Partnership Registration", link: "/partnership-registration" },
-        { title: "Limited Liability Partnership Registration", link: "/limited-liability-partnership-registration" },
-        { title: "Sole Proprietorship Registration", link: "/sole-proprietorship-registration" },
-        { title: "Nidhi Company Registration", link: "/nidhi-company-registration" },
-        { title: "Digital Signature Certificate", link: "/digital-signature-certificate" },
-        { title: "ISO Certification", link: "/iso-certification" },
-        { title: "Accounting and tax Bookkeeping", link: "/accounting-and-tax-bookkeeping" },
-
+      ],
+      subMenu: [
+        {
+          title: "New pages",
+          options: [
+            {
+              title: "Digital Signature Certificate",
+              link: "/digital-signature-certificate",
+            },
+          ],
+        },
       ],
     },
   ];
