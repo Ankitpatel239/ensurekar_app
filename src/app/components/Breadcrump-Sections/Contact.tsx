@@ -3,12 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import {
-  ArrowUpRight,
   CaretRight,
-  Headphones,
-  House,
-  User,
-  UsersThree,
+   House,
 } from "phosphor-react";
 import breadcrump_icon from "../../images/breadcrump_icon.png";
 import breadcrumb_img_21 from "../../images/breadcrumb_img_21.png";

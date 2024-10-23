@@ -65,17 +65,22 @@ const Header = () => {
                   color="#fad000"
                 />
               </div>
-              <Link href="tel:+123456789" className="max-xl:hidden text-nowrap font-semibold">
+              <Link
+                href="tel:+123456789"
+                className="max-xl:hidden text-nowrap font-semibold"
+              >
                 + 1234 567 865
               </Link>
             </div>
             <Link
-              href="/"
+              href="/contact"
               className="flex text-nowrap justify-center max-sm:text-sm items-center gap-3 py-2 md:py-3 px-3 md:px-6 rounded-full bg-amber-300 border border-gray-600 text-mainTextColor group font-medim"
             >
               Get Started
-              <ArrowUpRight weight="bold" className="group-hover:rotate-[45deg] duration-500 text-base sm:text-xl lg:text-2xl !leading-[0]"/>
-              
+              <ArrowUpRight
+                weight="bold"
+                className="group-hover:rotate-[45deg] duration-500 text-base sm:text-xl lg:text-2xl !leading-[0]"
+              />
             </Link>
           </div>
         </div>

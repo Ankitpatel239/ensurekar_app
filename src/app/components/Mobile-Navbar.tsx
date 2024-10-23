@@ -67,7 +67,7 @@ const MobileNavbar = ({
     },
     {
       title: "Talk to Expert",
-      link: "/",
+      link: "/contact",
     },
     {
       title: "Tax Compliances",
@@ -87,17 +87,35 @@ const MobileNavbar = ({
         {
           title: "Labour compliances",
           options: [
-            { title: "Provident Fund (PF)", link: "/labour-compliance/pf-registration" },
-            { title: "ESI Registration", link: "" },
-            { title: "Professional tax", link: "" },
-            { title: "Shops and Establishment lice", link: "" },
+            {
+              title: "Provident Fund (PF)",
+              link: "/labour-compliance/pf-registration",
+            },
+            {
+              title: "ESI Registration",
+              link: "/labour-compliance/esi-registration",
+            },
+            {
+              title: "Professional tax",
+              link: "/labour-compliance/professional-tax-registration",
+            },
+            {
+              title: "Shops and Establishment lice",
+              link: "/labour-compliance/shop-and-establishment-registration",
+            },
           ],
         },
         {
           title: "Accounting and tax ",
           options: [
-            { title: "Accounting", link: "/accounting-and-tax-bookkeeping" },
-            { title: "TDS return filing ", link: "" },
+            {
+              title: "Accounting & Tax Book-keeping",
+              link: "/accounting/accounting-and-tax-bookkeeping",
+            },
+            {
+              title: "TDS return filing ",
+              link: "/accounting/tds-return-filing",
+            },
             { title: "Virtual CFO", link: "" },
           ],
         },
@@ -107,11 +125,26 @@ const MobileNavbar = ({
       title: "Trade Mark and IP",
       link: "",
       mircoOptions: [
-        { title: "Trade Mark Name Search", link: "/" },
-        { title: "Trademark Registrations", link: "/" },
-        { title: "Trademark Renewal", link: "/" },
-        { title: "Trademark objection response", link: "" },
-        { title: "Copyright Registration", link: "/" },
+        {
+          title: "Trade Mark Name Search",
+          link: "/trade-mark-ip/trademark-search",
+        },
+        {
+          title: "Trademark Registrations",
+          link: "/trade-mark-ip/trademark-registration",
+        },
+        {
+          title: "Trademark Renewal",
+          link: "/trade-mark-ip/trademark-renewal",
+        },
+        {
+          title: "Trademark objection response",
+          link: "/trade-mark-ip/trademark-objection-response",
+        },
+        {
+          title: "Copyright Registration",
+          link: "/trade-mark-ip/copyright-registration",
+        },
         { title: "Patent Registration", link: "/" },
       ],
     },
@@ -120,18 +153,25 @@ const MobileNavbar = ({
       title: "Others",
       link: "",
       mircoOptions: [
-        { title: "Private Limited Incorporation", link: "/" },
+        {
+          title: "Shareholder's Agreement",
+          link: "/others/shareholder-agreement",
+        },
+        {
+          title: "Non-Disclosure Agreement ",
+          link: "/others/non-disclosure-agreement",
+        },
+
+        {
+          title: "Digital Signature Certificate Test",
+          link: "/digital-signature-certificate",
+        },
         { title: "Virtual CFO", link: "/" },
       ],
       subMenu: [
         {
           title: "New pages",
-          options: [
-            {
-              title: "Digital Signature Certificate",
-              link: "/digital-signature-certificate",
-            },
-          ],
+          options: [],
         },
       ],
     },
@@ -263,7 +303,8 @@ const MobileNavbar = ({
                     onClick={() => toggleSubMenu(index)}
                   >
                     <span className="font-medium text-xl">{option.title}</span>
-                    <CaretRight weight="bold"
+                    <CaretRight
+                      weight="bold"
                       className={`!text-xl pl-1  transform transition-transform duration-500 ${
                         openSubMenu === index ? "rotate-90" : ""
                       }`}
@@ -274,7 +315,10 @@ const MobileNavbar = ({
                   {openSubMenu === index && (
                     <ul className="pl-4 flex flex-col mt-2 transition-all ease-in duration-300">
                       {option.mircoOptions.map((opt, optIndex) => (
-                        <li key={optIndex} className="relative pl-6 before:content-['\00BB'] before:absolute before:left-0 before:text-lg before:font-bold before:text-gray-500">
+                        <li
+                          key={optIndex}
+                          className="relative pl-6 before:content-['\00BB'] before:absolute before:left-0 before:text-lg before:font-bold before:text-gray-500"
+                        >
                           <Link
                             href={opt.link || "#"}
                             className="text-base"

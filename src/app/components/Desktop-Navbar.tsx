@@ -106,7 +106,10 @@ const DesktopNavbar: React.FC = () => {
               title: "Accounting & Tax Book-keeping",
               link: "/accounting/accounting-and-tax-bookkeeping",
             },
-            { title: "TDS return filing ", link: "/accounting/tds-return-filing" },
+            {
+              title: "TDS return filing ",
+              link: "/accounting/tds-return-filing",
+            },
             { title: "Virtual CFO", link: "" },
           ],
         },
@@ -116,11 +119,26 @@ const DesktopNavbar: React.FC = () => {
       title: "Trade Mark and IP",
       link: "",
       mircoOptions: [
-        { title: "Trade Mark Name Search", link: "/trade-mark-ip/trademark-search" },
-        { title: "Trademark Registrations", link: "/trade-mark-ip/trademark-registration" },
-        { title: "Trademark Renewal", link: "/trade-mark-ip/trademark-renewal" },
-        { title: "Trademark objection response", link: "/trade-mark-ip/trademark-objection-response" },
-        { title: "Copyright Registration", link: "/trade-mark-ip/copyright-registration" },
+        {
+          title: "Trade Mark Name Search",
+          link: "/trade-mark-ip/trademark-search",
+        },
+        {
+          title: "Trademark Registrations",
+          link: "/trade-mark-ip/trademark-registration",
+        },
+        {
+          title: "Trademark Renewal",
+          link: "/trade-mark-ip/trademark-renewal",
+        },
+        {
+          title: "Trademark objection response",
+          link: "/trade-mark-ip/trademark-objection-response",
+        },
+        {
+          title: "Copyright Registration",
+          link: "/trade-mark-ip/copyright-registration",
+        },
         { title: "Patent Registration", link: "/" },
       ],
     },
@@ -129,19 +147,25 @@ const DesktopNavbar: React.FC = () => {
       title: "Others",
       link: "",
       mircoOptions: [
-        { title: "Shareholder's Agreement", link: "/others/shareholder-agreement" },
-        { title: "Non-Disclosure Agreement ", link: "/others/non-disclosure-agreement" },
-        { title: "Private Limited Incorporation", link: "/" },
-        { title: "Private Limited Incorporation", link: "/" },
+        {
+          title: "Shareholder's Agreement",
+          link: "/others/shareholder-agreement",
+        },
+        {
+          title: "Non-Disclosure Agreement ",
+          link: "/others/non-disclosure-agreement",
+        },
+
+        {
+          title: "Digital Signature Certificate Test",
+          link: "/digital-signature-certificate",
+        },
         { title: "Virtual CFO", link: "/" },
-        {title: "Digital Signature Certificate Test",link: "/digital-signature-certificate",},
       ],
       subMenu: [
         {
           title: "New pages",
-          options: [
-           
-          ],
+          options: [],
         },
       ],
     },

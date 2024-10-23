@@ -21,7 +21,6 @@ import CounterSection from "@/app/components/Section/Counter-Section";
 import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-Section";
 import TestimonialSection from "@/app/components/Section/Testimonial-Section";
 import PricingSection from "@/app/components/Section/Pricing-Section";
-import { DesktopNavbar } from "@/app/components/Desktop-Navbar";
 const About = () => {
   const CounterSectionData = [
     { number: 5000, text: "Client Served" },
