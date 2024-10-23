@@ -44,11 +44,11 @@ const WhoConsidered = ({WhoConsideredData}:{WhoConsideredData:WhoConsideredData}
               className="hover:scale-110 duration-500 w-full h-full"
             />
           </div>
-          <div className="col-span-12 lg:col-span-6 xxl:col-start-7 flex flex-col gap-6 xl:gap-10 justify-center items-center">
+          <div className="col-span-12 lg:col-span-6 xxl:col-start-7 flex flex-col gap-6 xl:gap-10 justify-start items-start">
             {consideretion?.map((consider, index: number) => (
               <div className="flex justify-start items-start gap-4" key={index}>
                 <div className="text-s1 text-2xl sm:text-3xl p-3 sm:p-4 rounded-full bg-softBg1 !leading-[0]">
-                  <i className="ph-fill ph-hand-coins"></i>
+                  {/* <i className="ph-fill ph-hand-coins"></i> */}
                   {consider.icon}
                 </div>
                 <div className="">

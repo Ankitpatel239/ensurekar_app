@@ -2,13 +2,12 @@ import BreadcrumbSection from "@/app/components/Breadcrump-Sections/All-Services
 import WhoConsidered from "@/app/components/Section/Who-Considered";
 import React from "react";
 import healthcare_section_img from "../../../../images/healthcare_section_img.png";
-import WhoShouldBuy from "@/app/components/Section/Service/Who-Should-Buy";
 import BenefitSection from "@/app/components/Section/Benefit-Section";
 import DocumentsRequired from "@/app/components/Section/Documents-Required";
 import OnlineProcessforEmployers from "@/app/components/Section/Online-Process-for-Employers";
+import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
 import FAQsServicesSection from "@/app/components/Section/FAQs-All-Services";
 import faq_illus from "../../../../images/faq_illus.png";
-import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
 import TestimonialSectionAllServices from "@/app/components/Section/Testimonial-Section-All-Services";
 import testimonial10 from "../../../../images/testimonial10.png";
 import testimonial9 from "../../../../images/testimonial9.png";
@@ -16,51 +15,46 @@ import testimonial7 from "../../../../images/testimonial7.png";
 import testimonial8 from "../../../../images/testimonial8.png";
 import testimonial6 from "../../../../images/testimonial6.png";
 
-const pfRegistration = () => {
+const ProfessionalTaxRegistration = () => {
   const BreadcrumbData = {
-    title: "Provident Fund (PF)",
-    heading: "Provident Fund (PF)",
+    title: "Professional Tax Registration",
+    heading: "Professional Tax Registration",
     subHeading: "",
-    description: "",
+    description: "Professional tax registration is mandatory within 30 days for both employers and professionals to fulfill tax duties.",
     image: "",
     bottomHeading: "",
   };
   const WhoConsideredData = {
-    title: "Consideretion",
-    heading:
-      "Who is considered an Employee under the Employee Provident Fund (EPF)?",
-    description: "",
+    title: "Professional Tax Registration",
+    heading: "Professional Tax Registration ",
+    description:
+      "Types of Professional Tax Registration :",
     imageurl: healthcare_section_img,
     consideretion: [
       {
         icon: "",
-        heading: "Full-Time and Part-Time Workers",
+        heading: "Professional Tax Registration Certificate",
         description:
-          "Full-time employees with consistent employment and part-time workers who work fewer hours per week are both eligible for EPF registration.",
+          "This certificate is essential for individuals and businesses to register for professional tax, demonstrating compliance with tax regulations.",
       },
       {
         icon: "",
-        heading: "Work-From-Home Employees",
+        heading: "Professional Tax Enrolment Certificate",
         description:
-          "Employees working remotely for a defined period can also register for EPF through the online process.",
+          "Employers may need this additional certificate to confirm their enrollment for professional tax, allowing them to deduct it from employee salaries.",
       },
       {
         icon: "",
-        heading: "Contractors and Consultants",
+        heading: "Professional Tax Exemption Certificate",
         description:
-          "Contractors hired for specific projects and consultants offering their expertise for a limited time must also be registered under EPF.",
+          "This certificate is for individuals or professionals eligible for tax exemptions, proving their status and relieving them from paying professional tax.",
       },
-      {
-        icon: "",
-        heading: "Freelancers",
-        description:
-          "As per the latest revision to the Social Security Code (2020), freelancers are now included under the EPF scheme, making them eligible for PF registration.",
-      },
+      
     ],
   };
   const BenefitData = {
     title: "",
-    heading: "Benefit of provident Fund (PF) ",
+    heading: "Benefits of Professional Tax Registration",
     subHeading: "",
     benefitsData: {
       heading: "",
@@ -68,126 +62,102 @@ const pfRegistration = () => {
       benefits: [
         {
           icon: "",
-          title: "Pension Coverage",
-          description: "",
+          title: "Legal Compliance",
+          description:
+            "Ensures compliance with state tax laws, avoiding penalties or legal issues.",
         },
         {
           icon: "",
-          title: "Cover of Risk",
-          description: "",
+          title: "Avoid Penalties",
+          description: "Proactive registration prevents fines and legal consequences for non-compliance.",
         },
         {
           icon: "",
-          title: "Single Account/one EPF Account",
-          description: "",
+          title: "Employee Deductions: ",
+          description:
+            "Allows employers to deduct tax from employees' salaries, ensuring timely payments.",
         },
         {
           icon: "",
-          title: "Emergency Fund",
-          description: "",
+          title: "Proof of Compliance: ",
+          description: "Provides a certificate proving adherence to tax regulations, useful for dealings with authorities or clients.",
         },
         {
           icon: "",
-          title: "Employee Deposit Linked Insurance Scheme",
-          description: "",
-        },
-        {
-          icon: "",
-          title: "Extended Goals",
-          description: "",
+          title: "Access to Government Benefits",
+          description:
+            "May qualify businesses or individuals for government schemes and incentives.",
         },
       ],
     },
   };
   const DocumentsRequiredData = {
     title: "Required Documents",
-    heading: "Documents Required for PF Registration Online",
-    description: "",
+    heading: "Professional Tax Registration",
+    description: "The documents required for professional tax registration vary depending on the state. However, the following are some of the common documents that may be required:",
     documentsRequired: [
-      { icon: "", text: "Establishment PAN Card" },
+      { icon: "", text: "PAN card of the professional" },
       {
         icon: "",
-        text: "Proof of Registration (such as Certificate of Incorporation)",
+        text: "Aadhaar card of the professional",
       },
       {
         icon: "",
-        text: "Address Verification (e.g., Rent agreement, Utility bills like Water, Electricity, Telephone)",
+        text: "Proof of address of the professional",
       },
       {
         icon: "",
-        text: "Specimen Signatures of Directors and Authorized Signatories",
+        text: "Proof of identity of the professional",
       },
       {
         icon: "",
-        text: "Digital Signature Certificate (DSC) Registration of the Authorized Applicant",
+        text: "Proof of registration of the business, if applicable",
       },
-      { icon: "", text: "Cross-Cancelled Cheque from the Establishment" },
+      { icon: "", 
+        text: "Proof of income, if applicable"
+     },
     ].map((doc) => ({ ...doc, map: () => null })),
   };
   const OnlineProcessData = {
-    title: "EPF Registration",
-    heading: "EPF Registration Online Process for Employers",
+    title: "Eligibility",
+    heading: "Eligibility for Online Professional tax Registration ",
     description: "",
     onlineProcesses: [
-      { icon: "", text: "Collect relevant employee data and documents" },
       {
         icon: "",
-        text: "Establishment Registered with EPFO online Registration",
+        text: "Individuals in professions, trades, or employment.",
       },
       {
         icon: "",
-        text: "Register DSC (digital signature certificate) of the employer",
+        text: "Employers making salary or wage payments.",
       },
-      { icon: "", text: "Fill the application with all employer details" },
-      { icon: "", text: "Submit verified form" },
       {
         icon: "",
-        text: "Get PF registration certificate & Universal Account Number [UAN]",
+        text: "Self-employed professionals, including freelancers and consultants.",
+      },
+      { icon: "", text: "Businesses in India, like partnerships and companies." },
+      { icon: "", text: "Non-resident individuals or foreign firms with employees in India (may be exempt)." },
+      {
+        icon: "",
+        text: "Criteria and exemptions vary by state and union territory.",
       },
     ],
   };
-  const FAQsData = {
+const FAQsData = {
     title: "FAQs",
-    heading: "What Ensurekar offer you?",
+    heading: "What service does ENSUREKAR offer",
     description: "",
     FAQs: [
-      { question: "What is ISO certification?", answer: "NA" },
-      { question: "What if the employee doesn't have PF?", answer: "NA" },
-      { question: "What happens if I don't have PF?", answer: "NA" },
-      {
-        question:
-          "Which PAN is to be entered to obtain Provident Fund registration?",
-        answer: "NA",
-      },
-      {
-        question: "What is the basic salary for EPF applicability?",
-        answer: "NA",
-      },
-      { question: "Where can I register a PF account?", answer: "NA" },
-      {
-        question: "What is the basic limit for PF registration?",
-        answer: "NA",
-      },
-      {
-        question: "How is the EPF registration process helpful in pension?",
-        answer: "NA",
-      },
-      {
-        question:
-          "Is PF registration compulsory for a Private Limited Company?",
-        answer: "NA",
-      },
-      { question: "Who must register with the PF department?", answer: "NA" },
-      {
-        question: "What is the time taken for employer EPF registration?",
-        answer: "NA",
-      },
-      { question: "Where can I get a PF account registration?", answer: "NA" },
+        { question: "What are the exemptions or deductions available in professional tax?", answer: "NA" },
+        { question: "Who is liable to pay professional tax?", answer: "NA" },
+        { question: "How often should professional tax be paid?", answer: "NA" },
+        { question: "How is professional tax calculated?", answer: "NA" },
+        { question: "What is professional tax?", answer: "NA" },
     ],
     imageUrl: faq_illus,
-  };
+};
   const WhyEnsurekar = {
-    heading: "Why to choose Ensurekar for EPF Registration ",
+    heading: "Why to choose Ensurekar for ESI Registration ",
     description: "",
     elements: [
       {
@@ -214,7 +184,7 @@ const pfRegistration = () => {
     title: "Testimonials",
     heading: "Ensurekar Customer Stories",
     description:
-      "Startups thrive with Ensurekar. Their flexible payroll solutions have been instrumental in our journey, providing the support.",
+      "Discover the journey behind EnsureKar's success and how we've helped countless businesses thrive. Explore our stories of innovation, growth, and dedication.",
     testimonials: [
       {
         image: testimonial10,
@@ -415,9 +385,8 @@ const pfRegistration = () => {
       <FAQsServicesSection FAQsData={FAQsData} />
       <WhyEnsurekarSection WhyEnsurekarData={WhyEnsurekar} />
       <TestimonialSectionAllServices TestimonialData={TestimonialData} />
-
     </>
   );
 };
 
-export default pfRegistration;
+export default ProfessionalTaxRegistration;

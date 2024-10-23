@@ -4,6 +4,7 @@ import { Headphones } from "phosphor-react";
 import { PiTooth } from "react-icons/pi";
 import Image from "next/image";
 interface WhyEnsurekar {
+  title?:string,
     heading: string;
     description: string;
     elements: { heading: string; description: string; imageUrl: string }[];
@@ -18,9 +19,9 @@ const WhyEnsurekarSection = ({WhyEnsurekarData }:{WhyEnsurekarData: WhyEnsurekar
           <div className="flex justify-center items-center">
             <div className="flex justify-center items-center max-xxl:overflow-hidden">
               <div className="max-w-[700px] text-center flex justify-center items-center flex-col">
-                <p className="bg-p1 py-2 sm:py-3 px-5 rounded-full text-white">
+                {/* <p className="bg-p1 py-2 sm:py-3 px-5 rounded-full text-white">
                   Why Choose Us
-                </p>
+                </p> */}
 
                 <h1 className="display-4 pt-4 pb-4 lg:pb-6">
                {heading}

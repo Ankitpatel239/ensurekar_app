@@ -7,9 +7,9 @@ import { Calculator, ChartLineUp, FileText, Money } from "phosphor-react";
 import WhoShouldBuy from "@/app/components/Section/Service/Who-Should-Buy";
 import Timeline from "@/app/components/Section/Service/Timeline";
 import WhatWeCharge from "@/app/components/Section/Service/What-We-Charge";
-import account_section_img from "../../../images/account_section_img.png";
+import account_section_img from "../../../../images/account_section_img.png";
 import FAQsServicesSection from "@/app/components/Section/FAQs-All-Services";
-import faq_illus from "../../../images/faq_illus.png";
+import faq_illus from "../../../../images/faq_illus.png";
 
 const accountingAndBookkeeping = () => {
   const BreadcrumbData = {

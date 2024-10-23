@@ -24,8 +24,8 @@ const Contact = () => {
             >
               <Envelope weight='fill'/>
             </div>
-            <h4 className="heading-4 pt-5 pb-2">Chat to Sales</h4>
-            <a href="mailto:Ensurekar@gmail.com">Ensurekar@gmail.com</a>
+            <h4 className="heading-4 pt-5 pb-2">Chat with Us</h4>
+            <a href="mailto:Infoensurekar@gmail.com">Infoensurekar@gmail.com</a>
           </div>
           <div
             className="flex flex-col justify-start items-start p-4 lg:p-8 bg-p1 text-white w-full col-span-12 sm:col-span-4 border border-p1 hover:bg-s2 hover:text-mainTextColor hover:border-mainTextColor duration-500 group"
@@ -35,8 +35,8 @@ const Contact = () => {
             >
               <PhoneCall weight='fill'/>
             </div>
-            <h4 className="heading-4 pt-5 pb-2">Contact Us</h4>
-            <a href="tel:Ensurekar@gmail.com">+9190-8687-3345-120</a>
+            <h4 className="heading-4 pt-5 pb-2">Contact us </h4>
+            <a href="tel:Ensurekar@gmail.com">7470756060, 8878440844</a>
           </div>
           <div
             className="flex flex-col justify-start items-start p-4 lg:p-8 bg-p1 text-white w-full col-span-12 sm:col-span-4 border border-p1 hover:bg-s2 hover:text-mainTextColor hover:border-mainTextColor duration-500 group"
@@ -47,7 +47,7 @@ const Contact = () => {
               <MapPin weight='fill'/>
             </div>
             <h4 className="heading-4 pt-5 pb-2">Visit Our Office</h4>
-            <p>London 2HX, United Kingdom</p>
+            <p>2360 Tiwari Sadan , Wright Town , Jabalpur</p>
           </div>
         </div>
 
@@ -142,34 +142,14 @@ const Contact = () => {
                 <MapPin weight='fill'/>
               </div>
               <div className="">
-                <h4 className="heading-4 pb-1">New York, USA:</h4>
-                <p>29 Park Avenue New York, New York 172</p>
+                <h4 className="heading-4 pb-1">Jabalpur, Madhya Pradesh
+
+</h4>
+                <p>2360 Tiwari Sadan, Jabalpur, Madhya Pradesh</p>
               </div>
             </li>
 
-            <li className="flex justify-start items-start gap-3">
-              <div
-                className="bg-mainTextColor text-white text-3xl p-3 rounded-full !leading-[0]"
-              >
-                <MapPin weight='fill'/>
-              </div>
-              <div className="">
-                <h4 className="heading-4 pb-1">Switzerland, Bern:</h4>
-                <p>30 Stamford Street,London SE1 9LQ</p>
-              </div>
-            </li>
-
-            <li className="flex justify-start items-start gap-3">
-              <div
-                className="bg-mainTextColor text-white text-3xl p-3 rounded-full !leading-[0]"
-              >
-                <MapPin weight='fill'/>
-              </div>
-              <div className="">
-                <h4 className="heading-4 pb-1">New York, USA:</h4>
-                <p>891 Daudkandi, Chattogram 58201</p>
-              </div>
-            </li>
+           
           </ul>
         </div>
 

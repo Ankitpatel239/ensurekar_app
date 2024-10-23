@@ -2,12 +2,11 @@
 
 import Image, { StaticImageData } from "next/image";
 import logo1 from "../../images/logo1.png";
-import { h1 } from "framer-motion/client";
 
 interface OverviewData {
-  heading: string;
-  meta: string;
-  introduction: {
+  heading?: string;
+  meta?: string;
+  introduction?: {
     heading: string;
     description: string[];
   };
@@ -66,7 +65,7 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
         )}
 
         {/* Introduction */}
-        {(introduction.heading || introduction.description.length !== 0) && (
+        {(introduction?.heading || introduction?.description.length !== 0) && (
           <div className="border my-8 p-4 shadow-inner shadow-cyan max-w-[1000px]">
             <h4 className="heading-4 my-5 text-center">
               {introduction?.heading && (
@@ -119,7 +118,7 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
               </div>
             ))}
 
-            {advantagesInfo.bottomText && (
+            {advantagesInfo?.bottomText && (
               <div className="my-10">
                 <span className="font-bold heading-4 text-bodyText ">
                 {advantagesInfo.bottomText}
@@ -129,9 +128,9 @@ const ServiceOverview = ({ OverviewData }: { OverviewData: OverviewData }) => {
           </div>
 
           <div className="flex flex-col items-center my-5 text-center">
-            {eligibilityCriteria?.map((criteria) => (
+            { eligibilityCriteria && eligibilityCriteria?.map((criteria) => (
               <div
-                key={criteria.heading.start}
+                key={criteria.heading?.start}
                 className={`flex flex-col md:flex-row ${
                   criteria.imageData.imageDirection === "right"
                     ? "md:flex-row-reverse"

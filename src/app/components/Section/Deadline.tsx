@@ -3,38 +3,36 @@ import { Question } from 'phosphor-react';
 import React from 'react'
 
 
-interface BenefitData
+interface DeadlineData
     {
         title: string;
         heading: string;
         subHeading: string;
-        benefitsData: {
+        DeadlinesData: {
           heading: string;
           description: string;
           benefits: {
-            icon: string | JSX.Element;
             title: string;
             description: string;
           }[];
         };
+        bottomText: string;
       }
 
-const BenefitSection = ({BenefitData}:{BenefitData:BenefitData}) => {
-const {title,heading,subHeading,benefitsData} = BenefitData
+const Deadline = ({DeadlineData}:{DeadlineData:DeadlineData}) => {
+const {title,heading,subHeading,DeadlinesData,bottomText} = DeadlineData
   return (
-    <section className="bg-softBg1 stp-30 sbp-30">
+    <section className="stp-30 sbp-30">
    
     <h1 className="display-4 mb-5 lg:pb-6 text-center">{heading}</h1>
     <p className="text-bodyText text-center">{subHeading}</p>
 
     <div className="container mt-10 flex flex-wrap justify-center items-start ">
-        {benefitsData.benefits.map((benefits, index) => {
+        {DeadlinesData.benefits.map((benefits, index) => {
           return (
             <div className="max-w-[350px] m-4" key={index}>
               <div className="flex justify-start items-center flex-col">
-                <div className="text-5xl text-s1">
-                  {benefits.icon}
-                </div>
+              
                 <h4 className="heading-4 pt-6 pb-3 text-center">
                  {benefits.title}
                 </h4>
@@ -48,8 +46,10 @@ const {title,heading,subHeading,benefitsData} = BenefitData
     
       
     </div>
+
+    <h3 className='mt-10 font-bold md:text-xl  ml-5 text-start'>{bottomText}</h3>
   </section>
   )
 }
 
-export default BenefitSection
+export default Deadline

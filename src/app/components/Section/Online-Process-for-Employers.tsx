@@ -17,7 +17,7 @@ const OnlineProcessforEmployers = ({OnlineProcessData}:{OnlineProcessData:Online
   return (
     <section className="stp-30 sbp-30 bg-softBg1 overflow-hidden">
     <div
-      className="xxl:mr-[calc((100%-1296px)/2)] max-xxl:container grid grid-cols-12 lg:gap-6 xxl:gap-32"
+      className="xxl:mr-[calc((100%-6px)/2)] max-xxl:container grid grid-cols-12 lg:gap-6 xxl:gap-32"
     >
       <div
         className="col-span-12 lg:col-span-6 flex justify-start items-start self-stretch max-lg:order-2"
@@ -46,7 +46,7 @@ const OnlineProcessforEmployers = ({OnlineProcessData}:{OnlineProcessData:Online
         <ol className='my-5 flex flex-wrap items-start justify-between'>
                 {onlineProcesses.map((process, index: number) => {
                     return (
-                        <li className="max-w-[200px] mb-5  mr-2" key={index}>
+                        <li className="md:max-w-[200px] mb-5  mr-2" key={index}>
                             <div className="flex justify-start  items-start gap-2">
                                 <span className="block bg-white rounded-full p-3 text-s1 text-2xl">
                                     {/* <i className="ph-fill ph-device-mobile"></i> */}

@@ -18,13 +18,19 @@ const GotQuestionsSection = lazy(()=>import("./components/Section/Got-Questions-
 
 
 export default function Home() {
+
+  const CounterSectionData = [
+    { number: 5000, text: "Client Served" },
+    { number: 200, text: "Startup Guidance and Support" },
+    { number: 10, text: "Cities at Present" },
+  ];
   return (
     <>
       <HeroSection />
       <CompanySlider />
       <SolutionsSection />
       <FeaturesSection />
-      <CounterSection />
+      <CounterSection CounterSectionData={CounterSectionData} />
       <OurStorySection />
       {/* <StepGuideSection /> */}
       <WhyEnsurekarSection />

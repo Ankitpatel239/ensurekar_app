@@ -7,7 +7,7 @@ interface WhatWeChargeData {
     heading:string,
     description:string,
     charges:string[],
-    footerMessage:{
+    footerMessage?:{
         startText:string,
         middleText:string,
         endText:string,

@@ -23,6 +23,11 @@ import TestimonialSection from "@/app/components/Section/Testimonial-Section";
 import PricingSection from "@/app/components/Section/Pricing-Section";
 import { DesktopNavbar } from "@/app/components/Desktop-Navbar";
 const About = () => {
+  const CounterSectionData = [
+    { number: 5000, text: "Client Served" },
+    { number: 200, text: "Startup Guidance and Support" },
+    { number: 10, text: "Cities at Present" },
+  ];
   return (
     <>
       <BreadcrumbSection />
@@ -297,7 +302,8 @@ const About = () => {
         </div>
       </section>
 
-      <CounterSection />
+      <CounterSection CounterSectionData={CounterSectionData} />
+
       <WhyEnsurekarSection />
       <TestimonialSection />
       <PricingSection />

@@ -61,7 +61,7 @@ const DesktopNavbar: React.FC = () => {
     },
     {
       title: "Talk to Expert",
-      link: "/",
+      link: "/contact",
     },
     {
       title: "Tax Compliances",
@@ -81,17 +81,32 @@ const DesktopNavbar: React.FC = () => {
         {
           title: "Labour compliances",
           options: [
-            { title: "Provident Fund (PF)", link: "/labour-compliance/pf-registration" },
-            { title: "ESI Registration", link: "" },
-            { title: "Professional tax", link: "" },
-            { title: "Shops and Establishment lice", link: "" },
+            {
+              title: "Provident Fund (PF)",
+              link: "/labour-compliance/pf-registration",
+            },
+            {
+              title: "ESI Registration",
+              link: "/labour-compliance/esi-registration",
+            },
+            {
+              title: "Professional tax",
+              link: "/labour-compliance/professional-tax-registration",
+            },
+            {
+              title: "Shops and Establishment lice",
+              link: "/labour-compliance/shop-and-establishment-registration",
+            },
           ],
         },
         {
           title: "Accounting and tax ",
           options: [
-            { title: "Accounting", link: "/accounting-and-tax-bookkeeping" },
-            { title: "TDS return filing ", link: "" },
+            {
+              title: "Accounting & Tax Book-keeping",
+              link: "/accounting/accounting-and-tax-bookkeeping",
+            },
+            { title: "TDS return filing ", link: "/accounting/tds-return-filing" },
             { title: "Virtual CFO", link: "" },
           ],
         },
@@ -101,11 +116,11 @@ const DesktopNavbar: React.FC = () => {
       title: "Trade Mark and IP",
       link: "",
       mircoOptions: [
-        { title: "Trade Mark Name Search", link: "/" },
-        { title: "Trademark Registrations", link: "/" },
-        { title: "Trademark Renewal", link: "/" },
-        { title: "Trademark objection response", link: "" },
-        { title: "Copyright Registration", link: "/" },
+        { title: "Trade Mark Name Search", link: "/trade-mark-ip/trademark-search" },
+        { title: "Trademark Registrations", link: "/trade-mark-ip/trademark-registration" },
+        { title: "Trademark Renewal", link: "/trade-mark-ip/trademark-renewal" },
+        { title: "Trademark objection response", link: "/trade-mark-ip/trademark-objection-response" },
+        { title: "Copyright Registration", link: "/trade-mark-ip/copyright-registration" },
         { title: "Patent Registration", link: "/" },
       ],
     },
@@ -114,17 +129,18 @@ const DesktopNavbar: React.FC = () => {
       title: "Others",
       link: "",
       mircoOptions: [
+        { title: "Shareholder's Agreement", link: "/others/shareholder-agreement" },
+        { title: "Non-Disclosure Agreement ", link: "/others/non-disclosure-agreement" },
+        { title: "Private Limited Incorporation", link: "/" },
         { title: "Private Limited Incorporation", link: "/" },
         { title: "Virtual CFO", link: "/" },
+        {title: "Digital Signature Certificate Test",link: "/digital-signature-certificate",},
       ],
       subMenu: [
         {
           title: "New pages",
           options: [
-            {
-              title: "Digital Signature Certificate",
-              link: "/digital-signature-certificate",
-            },
+           
           ],
         },
       ],

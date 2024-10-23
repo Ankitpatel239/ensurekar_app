@@ -2,65 +2,76 @@ import BreadcrumbSection from "@/app/components/Breadcrump-Sections/All-Services
 import WhoConsidered from "@/app/components/Section/Who-Considered";
 import React from "react";
 import healthcare_section_img from "../../../../images/healthcare_section_img.png";
-import WhoShouldBuy from "@/app/components/Section/Service/Who-Should-Buy";
 import BenefitSection from "@/app/components/Section/Benefit-Section";
 import DocumentsRequired from "@/app/components/Section/Documents-Required";
 import OnlineProcessforEmployers from "@/app/components/Section/Online-Process-for-Employers";
+import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
 import FAQsServicesSection from "@/app/components/Section/FAQs-All-Services";
 import faq_illus from "../../../../images/faq_illus.png";
-import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
 import TestimonialSectionAllServices from "@/app/components/Section/Testimonial-Section-All-Services";
 import testimonial10 from "../../../../images/testimonial10.png";
 import testimonial9 from "../../../../images/testimonial9.png";
 import testimonial7 from "../../../../images/testimonial7.png";
 import testimonial8 from "../../../../images/testimonial8.png";
 import testimonial6 from "../../../../images/testimonial6.png";
+import ServiceOverview from "@/app/components/Section/Service-Overview";
 
-const pfRegistration = () => {
+const ShopandEstablishmentRegistration = () => {
   const BreadcrumbData = {
-    title: "Provident Fund (PF)",
-    heading: "Provident Fund (PF)",
+    title: "Shop and Establishment Registration",
+    heading: "Shop and Establishment Registration",
     subHeading: "",
-    description: "",
+    description:
+      "Unlock Business Growth with a Gumasta License Get Compliant Effortlessly with Ensurekar Online Registration",
     image: "",
     bottomHeading: "",
   };
   const WhoConsideredData = {
-    title: "Consideretion",
-    heading:
-      "Who is considered an Employee under the Employee Provident Fund (EPF)?",
+    title: "Shop and Establishment Registration",
+    heading: "Why Was the Shop Act License Introduced?",
     description: "",
     imageurl: healthcare_section_img,
     consideretion: [
       {
         icon: "",
-        heading: "Full-Time and Part-Time Workers",
+        heading: "Empower States",
         description:
-          "Full-time employees with consistent employment and part-time workers who work fewer hours per week are both eligible for EPF registration.",
+          "States can create labor regulations for commercial establishments.",
       },
       {
         icon: "",
-        heading: "Work-From-Home Employees",
+        heading: "Organize the Unorganized Sector",
         description:
-          "Employees working remotely for a defined period can also register for EPF through the online process.",
+          "Transforms unorganised sectors into organised industries through rules.",
       },
       {
         icon: "",
-        heading: "Contractors and Consultants",
+        heading: "Mandatory Registration",
         description:
-          "Contractors hired for specific projects and consultants offering their expertise for a limited time must also be registered under EPF.",
+          "Requires business registration under the Shop and Establishment Act for better government support.",
       },
       {
         icon: "",
-        heading: "Freelancers",
+        heading: "Wage Regulation",
         description:
-          "As per the latest revision to the Social Security Code (2020), freelancers are now included under the EPF scheme, making them eligible for PF registration.",
+          "Ensures fair wages, prohibits child labor, and promotes healthy working conditions.",
       },
     ],
   };
+  const OverviewData = {
+    heading: "Shop and Establishment Registration",
+    meta: "Overview",
+    introduction: {
+      heading: "",
+      description: [
+        "Each state has its own Shop and Establishment Act, regulated by the State Labour Departments, with licenses issued at the state level, resulting in slight variations. The Act covers all shops and commercial establishments within the state.A shop is defined as a place where goods are sold or services are provided, whether retail or wholesale. Commercial establishments include offices, godowns, warehouses, hotels, restaurants, cafes, and entertainment venues. However, factories and industries are governed by the Factories Act of 1948 and the Industries (Development and Regulation) Act of 1951.",
+      ],
+    },
+  };
+
   const BenefitData = {
     title: "",
-    heading: "Benefit of provident Fund (PF) ",
+    heading: "Benefits of Shop and Establishment Registration",
     subHeading: "",
     benefitsData: {
       heading: "",
@@ -68,126 +79,115 @@ const pfRegistration = () => {
       benefits: [
         {
           icon: "",
-          title: "Pension Coverage",
-          description: "",
+          title: "Legal Right to Operate:",
+          description:
+            " A shop and establishment license grants business owners the legal authority to operate without harassment from law enforcement.",
         },
         {
           icon: "",
-          title: "Cover of Risk",
-          description: "",
+          title: "Business Bank Account",
+          description:
+            "The license enables the creation of a separate business bank account, as required by RBI regulations.",
         },
         {
           icon: "",
-          title: "Single Account/one EPF Account",
-          description: "",
+          title: "Streamlined Inspection",
+          description:
+            "Registered businesses benefit from easier government inspections and access to promotional schemes.",
         },
         {
           icon: "",
-          title: "Emergency Fund",
-          description: "",
+          title: "Access to Government Benefits",
+          description:
+            "The license allows businesses to tap into government schemes, including low-interest loans and financial assistance.",
         },
         {
           icon: "",
-          title: "Employee Deposit Linked Insurance Scheme",
-          description: "",
-        },
-        {
-          icon: "",
-          title: "Extended Goals",
-          description: "",
+          title: "Support for Expansion",
+          description:
+            "Legal recognition helps businesses strengthen their market position and reach new customers while adhering to compliance requirements.",
         },
       ],
     },
   };
   const DocumentsRequiredData = {
     title: "Required Documents",
-    heading: "Documents Required for PF Registration Online",
-    description: "",
+    heading: "Documents For Shop and Establishment Registration",
+    description:
+      "Ensure a smooth and fully digital experience with our comprehensive online shop act registration services. Please gather the following documents promptly:",
     documentsRequired: [
-      { icon: "", text: "Establishment PAN Card" },
+      { icon: "", text: "Proof of shop or business address" },
       {
         icon: "",
-        text: "Proof of Registration (such as Certificate of Incorporation)",
+        text: "Identification proof",
       },
       {
         icon: "",
-        text: "Address Verification (e.g., Rent agreement, Utility bills like Water, Electricity, Telephone)",
+        text: "PAN card",
       },
       {
         icon: "",
-        text: "Specimen Signatures of Directors and Authorized Signatories",
+        text: "Payment challan",
       },
       {
         icon: "",
-        text: "Digital Signature Certificate (DSC) Registration of the Authorized Applicant",
+        text: "Any additional business licenses required for operation",
       },
-      { icon: "", text: "Cross-Cancelled Cheque from the Establishment" },
+      
     ].map((doc) => ({ ...doc, map: () => null })),
   };
   const OnlineProcessData = {
-    title: "EPF Registration",
-    heading: "EPF Registration Online Process for Employers",
+    title: "Eligibility",
+    heading: "Eligibility Criteria for Shop and Establishment Registration",
     description: "",
     onlineProcesses: [
-      { icon: "", text: "Collect relevant employee data and documents" },
       {
         icon: "",
-        text: "Establishment Registered with EPFO online Registration",
+        text: "The shop or establishment must be within Tamil Nadu's territorial limits.",
       },
       {
         icon: "",
-        text: "Register DSC (digital signature certificate) of the employer",
+        text: "It must not be governed by other laws like the Factories Act of 1948.",
       },
-      { icon: "", text: "Fill the application with all employer details" },
-      { icon: "", text: "Submit verified form" },
       {
         icon: "",
-        text: "Get PF registration certificate & Universal Account Number [UAN]",
+        text: "The business should engage in commercial activities such as trading, banking, insurance, or entertainment.",
+      },
+      {
+        icon: "",
+        text: "The establishment must have at least one employee, which can include the owner.",
+      },
+      {
+        icon: "",
+        text: "Non-resident individuals or foreign firms with employees in India (may be exempt).",
+      },
+      {
+        icon: "",
+        text: "Criteria and exemptions vary by state and union territory.",
       },
     ],
   };
   const FAQsData = {
     title: "FAQs",
-    heading: "What Ensurekar offer you?",
+    heading: "What service does ENSUREKAR offer",
     description: "",
     FAQs: [
-      { question: "What is ISO certification?", answer: "NA" },
-      { question: "What if the employee doesn't have PF?", answer: "NA" },
-      { question: "What happens if I don't have PF?", answer: "NA" },
-      {
-        question:
-          "Which PAN is to be entered to obtain Provident Fund registration?",
-        answer: "NA",
-      },
-      {
-        question: "What is the basic salary for EPF applicability?",
-        answer: "NA",
-      },
-      { question: "Where can I register a PF account?", answer: "NA" },
-      {
-        question: "What is the basic limit for PF registration?",
-        answer: "NA",
-      },
-      {
-        question: "How is the EPF registration process helpful in pension?",
-        answer: "NA",
-      },
-      {
-        question:
-          "Is PF registration compulsory for a Private Limited Company?",
-        answer: "NA",
-      },
-      { question: "Who must register with the PF department?", answer: "NA" },
-      {
-        question: "What is the time taken for employer EPF registration?",
-        answer: "NA",
-      },
-      { question: "Where can I get a PF account registration?", answer: "NA" },
-    ],
+ 
+    { question: "What is the Tamil Nadu Shops and Establishments Act?", answer: "NA" },
+    { question: "What is the validity of a shop act license?", answer: "NA" },
+    { question: "Which entities are required to obtain the shop act license?", answer: "NA" },
+    { question: "Is the shop act registration applicable for the establishments of the central and state government?", answer: "NA" },
+    { question: "Are the shop act registrations valid in all states/UTs across India?", answer: "NA" },
+    { question: "Does a factory owner need to register under the Shops and Establishments Registration Act?", answer: "NA" },
+    { question: "What details are to be filled in the Shop Act Registration form?", answer: "NA" },
+    { question: "Is it necessary for the establishment to get self-registered under the Shops and Establishments Registration Act?", answer: "NA" },
+    { question: "What is the fundamental objective of the Shops and Establishments Act?", answer: "NA" },
+    { question: "Is it necessary to take approval from the labor department?", answer: "NA" }
+      ],
     imageUrl: faq_illus,
   };
   const WhyEnsurekar = {
-    heading: "Why to choose Ensurekar for EPF Registration ",
+    heading: "Why to choose Ensurekar for Shop and Establishment Registration",
     description: "",
     elements: [
       {
@@ -214,7 +214,7 @@ const pfRegistration = () => {
     title: "Testimonials",
     heading: "Ensurekar Customer Stories",
     description:
-      "Startups thrive with Ensurekar. Their flexible payroll solutions have been instrumental in our journey, providing the support.",
+      "Discover the journey behind EnsureKar's success and how we've helped countless businesses thrive. Explore our stories of innovation, growth, and dedication.",
     testimonials: [
       {
         image: testimonial10,
@@ -405,19 +405,22 @@ const pfRegistration = () => {
       },
     ],
   };
+  
+
   return (
     <>
       <BreadcrumbSection BreadcrumbData={BreadcrumbData} />
       <WhoConsidered WhoConsideredData={WhoConsideredData} />
+      {/* <ServiceOverview OverviewData={OverviewData} /> */}
+ 
       <BenefitSection BenefitData={BenefitData} />
       <DocumentsRequired DocumentsRequiredData={DocumentsRequiredData} />
       <OnlineProcessforEmployers OnlineProcessData={OnlineProcessData} />
       <FAQsServicesSection FAQsData={FAQsData} />
       <WhyEnsurekarSection WhyEnsurekarData={WhyEnsurekar} />
       <TestimonialSectionAllServices TestimonialData={TestimonialData} />
-
     </>
   );
 };
 
-export default pfRegistration;
+export default ShopandEstablishmentRegistration;

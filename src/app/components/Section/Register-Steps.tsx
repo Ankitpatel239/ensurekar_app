@@ -11,8 +11,8 @@ interface RegisterSteps {
   heading: string;
   description: string;
   steps: { title: string; description: string }[];
-  aboutSteps: { title: string; description: string }[];
-  footerMessage:string;
+  aboutSteps: { title?: string; description?: string }[];
+  footerMessage?:string;
 }
 
 const RegisterSteps = ({RegisterSteps}:{RegisterSteps: RegisterSteps}) => {

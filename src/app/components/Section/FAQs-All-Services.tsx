@@ -2,6 +2,7 @@
 import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import sliceIcon from "../../images/sliceIcon.png";
+import faq_illus from "../../images/faq_illus.png";
 
 import { ArrowLeft, ArrowRight, Minus, Plus } from "phosphor-react";
 
@@ -9,7 +10,7 @@ interface FAQsData {
   title: string;
   heading: string;
   description: string;
-  imageUrl: StaticImageData;
+  imageUrl?: StaticImageData;
   FAQs: { question: string; answer: string }[];
 }
 const FAQsServicesSection = ({ FAQsData }: { FAQsData: FAQsData }) => {
@@ -74,7 +75,7 @@ const FAQsServicesSection = ({ FAQsData }: { FAQsData: FAQsData }) => {
           <div className="grid grid-cols-12 stp-15 max-xl:gap-6">
             <div className="col-span-12 lg:col-span-6 xl:col-span-5 flex justify-center items-center overflow-hidden">
               <Image
-                src={imageUrl}
+                src={faq_illus}
                 alt="image"
                 className="hover:scale-110 duration-500 w-full"
               />

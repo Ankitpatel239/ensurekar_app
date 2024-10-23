@@ -2,65 +2,69 @@ import BreadcrumbSection from "@/app/components/Breadcrump-Sections/All-Services
 import WhoConsidered from "@/app/components/Section/Who-Considered";
 import React from "react";
 import healthcare_section_img from "../../../../images/healthcare_section_img.png";
-import WhoShouldBuy from "@/app/components/Section/Service/Who-Should-Buy";
 import BenefitSection from "@/app/components/Section/Benefit-Section";
 import DocumentsRequired from "@/app/components/Section/Documents-Required";
 import OnlineProcessforEmployers from "@/app/components/Section/Online-Process-for-Employers";
+import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
 import FAQsServicesSection from "@/app/components/Section/FAQs-All-Services";
 import faq_illus from "../../../../images/faq_illus.png";
-import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
 import TestimonialSectionAllServices from "@/app/components/Section/Testimonial-Section-All-Services";
 import testimonial10 from "../../../../images/testimonial10.png";
 import testimonial9 from "../../../../images/testimonial9.png";
 import testimonial7 from "../../../../images/testimonial7.png";
 import testimonial8 from "../../../../images/testimonial8.png";
 import testimonial6 from "../../../../images/testimonial6.png";
-
-const pfRegistration = () => {
+const ESIRegistration = () => {
   const BreadcrumbData = {
-    title: "Provident Fund (PF)",
-    heading: "Provident Fund (PF)",
+    title: "ESI Registration",
+    heading: "ESI Registration",
     subHeading: "",
     description: "",
     image: "",
     bottomHeading: "",
   };
   const WhoConsideredData = {
-    title: "Consideretion",
-    heading:
-      "Who is considered an Employee under the Employee Provident Fund (EPF)?",
-    description: "",
+    title: "Employee State Insurance(ESI) Registration",
+    heading: "Employee State Insurance (ESI) Registration",
+    description:
+      "Employee State Insurance or ESI is a scheme commenced by the Government of India to offer medical, monetary, and other advantages to workers.",
     imageurl: healthcare_section_img,
     consideretion: [
       {
         icon: "",
-        heading: "Full-Time and Part-Time Workers",
+        heading: "Maternity Aid",
         description:
-          "Full-time employees with consistent employment and part-time workers who work fewer hours per week are both eligible for EPF registration.",
+          "Maternity benefits of up to 26 weeks, extendable by 30 days, with eligibility based on 70 days' wage contribution in the preceding two periods.",
       },
       {
         icon: "",
-        heading: "Work-From-Home Employees",
+        heading: "Sickness Benefits",
         description:
-          "Employees working remotely for a defined period can also register for EPF through the online process.",
+          "Employees can take up to 91 days of sick leave annually, receiving 70% of their monthly wages.",
       },
       {
         icon: "",
-        heading: "Contractors and Consultants",
+        heading: "Vocational Rehabilitation",
         description:
-          "Contractors hired for specific projects and consultants offering their expertise for a limited time must also be registered under EPF.",
+          "Permanently physically challenged employees can access vocational rehabilitation training.",
       },
       {
         icon: "",
-        heading: "Freelancers",
+        heading: "Extended Sickness Benefits",
         description:
-          "As per the latest revision to the Social Security Code (2020), freelancers are now included under the EPF scheme, making them eligible for PF registration.",
+          "Up to 2 years of extended sickness benefits for those with chronic diseases after exhausting the standard 91-day sick leave.",
+      },
+      {
+        icon: "",
+        heading: "Enhanced Sickness Benefit",
+        description:
+          "100% of daily wages for employees undergoing sterilisation, with a recuperation period of 7 days for vasectomy and 14 days for tubectomy.",
       },
     ],
   };
   const BenefitData = {
     title: "",
-    heading: "Benefit of provident Fund (PF) ",
+    heading: "Advantages of ESI Registration",
     subHeading: "",
     benefitsData: {
       heading: "",
@@ -68,126 +72,103 @@ const pfRegistration = () => {
       benefits: [
         {
           icon: "",
-          title: "Pension Coverage",
-          description: "",
+          title: "Medical Aid",
+          description:
+            "Complete medical care and insurance for ESI members and their families from the first day of employment.",
         },
         {
           icon: "",
-          title: "Cover of Risk",
-          description: "",
+          title: "Disablement Benefits",
+          description: "90% of the monthly salary for disabled employees.",
         },
         {
           icon: "",
-          title: "Single Account/one EPF Account",
-          description: "",
+          title: "Dependent Benefits",
+          description:
+            "Dependents receive 90% of the employee's monthly salary in the event of death during employment.",
         },
         {
           icon: "",
-          title: "Emergency Fund",
-          description: "",
+          title: "Funeral Expenses",
+          description: "₹10,000 provided to the family for funeral costs.",
         },
         {
           icon: "",
-          title: "Employee Deposit Linked Insurance Scheme",
-          description: "",
-        },
-        {
-          icon: "",
-          title: "Extended Goals",
-          description: "",
+          title: "Old Age Medical Care",
+          description:
+            "Medical care for retiring employees or those opting for VRS/ERS with an annual payment of ₹120.",
         },
       ],
     },
   };
   const DocumentsRequiredData = {
     title: "Required Documents",
-    heading: "Documents Required for PF Registration Online",
+    heading: "Documents Needed for ESI Registration",
     description: "",
     documentsRequired: [
-      { icon: "", text: "Establishment PAN Card" },
+      { icon: "", text: "Registration Certificate" },
       {
         icon: "",
-        text: "Proof of Registration (such as Certificate of Incorporation)",
+        text: "Address Proof with Rent Receipt",
       },
       {
         icon: "",
-        text: "Address Verification (e.g., Rent agreement, Utility bills like Water, Electricity, Telephone)",
+        text: "Copy of PAN Card and Bank Statement",
       },
       {
         icon: "",
-        text: "Specimen Signatures of Directors and Authorized Signatories",
+        text: "Memorandum/ Partnership/ Trust Deed (based on entity type)",
       },
       {
         icon: "",
-        text: "Digital Signature Certificate (DSC) Registration of the Authorized Applicant",
+        text: "Certificate of Commencement of Production",
       },
-      { icon: "", text: "Cross-Cancelled Cheque from the Establishment" },
+      { icon: "", text: "Registration Number of CST/ST/GST" },
     ].map((doc) => ({ ...doc, map: () => null })),
   };
   const OnlineProcessData = {
-    title: "EPF Registration",
-    heading: "EPF Registration Online Process for Employers",
+    title: "Eligibility",
+    heading: "Eligibility for ESI registration",
     description: "",
     onlineProcesses: [
-      { icon: "", text: "Collect relevant employee data and documents" },
+      { icon: "", text: "Applies to establishments with 10+ employees (20 in some regions)." },
       {
         icon: "",
-        text: "Establishment Registered with EPFO online Registration",
+        text: "Employees earning up to ₹21,000/month are eligible.",
       },
       {
         icon: "",
-        text: "Register DSC (digital signature certificate) of the employer",
+        text: "Must be registered with EPFO.",
       },
-      { icon: "", text: "Fill the application with all employer details" },
-      { icon: "", text: "Submit verified form" },
+      { icon: "", text: "Total ESI contribution is 6.5% of salary." },
+      { icon: "", text: "Employer pays 4.75%, employee pays 1.75%." },
       {
         icon: "",
-        text: "Get PF registration certificate & Universal Account Number [UAN]",
+        text: " Mandatory for industrial units with salary below ₹21,000.",
       },
     ],
   };
   const FAQsData = {
     title: "FAQs",
-    heading: "What Ensurekar offer you?",
+    heading: "What service does ENSUREKAR offer",
     description: "",
     FAQs: [
-      { question: "What is ISO certification?", answer: "NA" },
-      { question: "What if the employee doesn't have PF?", answer: "NA" },
-      { question: "What happens if I don't have PF?", answer: "NA" },
-      {
-        question:
-          "Which PAN is to be entered to obtain Provident Fund registration?",
-        answer: "NA",
-      },
-      {
-        question: "What is the basic salary for EPF applicability?",
-        answer: "NA",
-      },
-      { question: "Where can I register a PF account?", answer: "NA" },
-      {
-        question: "What is the basic limit for PF registration?",
-        answer: "NA",
-      },
-      {
-        question: "How is the EPF registration process helpful in pension?",
-        answer: "NA",
-      },
-      {
-        question:
-          "Is PF registration compulsory for a Private Limited Company?",
-        answer: "NA",
-      },
-      { question: "Who must register with the PF department?", answer: "NA" },
-      {
-        question: "What is the time taken for employer EPF registration?",
-        answer: "NA",
-      },
-      { question: "Where can I get a PF account registration?", answer: "NA" },
+      { question: "How many employees are required for ESI registration?", answer: "NA" },
+      { question: "How do you check the ESI registration of an employee online?", answer: "NA" },
+      { question: "What is the salary limit in ESI?", answer: "NA" },
+      { question: "How much does an employer contribute towards ESI?", answer: "NA" },
+      { question: "Is ESI calculated on basic salary?", answer: "NA" },
+      { question: "How do you download an ESI Pehchan card?", answer: "NA" },
+      { question: "Who is not eligible for ESI registration?", answer: "NA" },
+      { question: "Can a person have 2 ESI registrations?", answer: "NA" },
+      { question: "What is meant by an insurance number?", answer: "NA" },
+      { question: "Who mandatorily requires ESI registration?", answer: "NA" },
+      { question: "How much does an employee contribute towards ESI?", answer: "NA" },
     ],
     imageUrl: faq_illus,
   };
   const WhyEnsurekar = {
-    heading: "Why to choose Ensurekar for EPF Registration ",
+    heading: "Why to choose Ensurekar for ESI Registration ",
     description: "",
     elements: [
       {
@@ -413,6 +394,7 @@ const pfRegistration = () => {
       <DocumentsRequired DocumentsRequiredData={DocumentsRequiredData} />
       <OnlineProcessforEmployers OnlineProcessData={OnlineProcessData} />
       <FAQsServicesSection FAQsData={FAQsData} />
+
       <WhyEnsurekarSection WhyEnsurekarData={WhyEnsurekar} />
       <TestimonialSectionAllServices TestimonialData={TestimonialData} />
 
@@ -420,4 +402,4 @@ const pfRegistration = () => {
   );
 };
 
-export default pfRegistration;
+export default ESIRegistration;

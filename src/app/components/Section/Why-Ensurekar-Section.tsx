@@ -6,7 +6,9 @@ import whyAccoupayCard_3 from "../../images/whyAccoupayCard_3.png";
 import whyAccoupayCard_4 from "../../images/whyAccoupayCard_4.png";
 import whyAccoupayCard_5 from "../../images/whyAccoupayCard_5.png";
 import whyAccoupayCard_6 from "../../images/whyAccoupayCard_6.png";
+
 const WhyEnsurekarSection = () => {
+  
   return (
     <section className="bg-softBg1 stp-30 sbp-30 overflow-hidden">
       <div className="container">

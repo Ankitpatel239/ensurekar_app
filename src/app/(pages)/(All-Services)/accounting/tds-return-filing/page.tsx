@@ -1,11 +1,10 @@
 import BreadcrumbSection from "@/app/components/Breadcrump-Sections/All-Services";
+import ServiceCovered from "@/app/components/Section/Service/Service-Covered";
 import WhoConsidered from "@/app/components/Section/Who-Considered";
 import React from "react";
 import healthcare_section_img from "../../../../images/healthcare_section_img.png";
-import WhoShouldBuy from "@/app/components/Section/Service/Who-Should-Buy";
 import BenefitSection from "@/app/components/Section/Benefit-Section";
 import DocumentsRequired from "@/app/components/Section/Documents-Required";
-import OnlineProcessforEmployers from "@/app/components/Section/Online-Process-for-Employers";
 import FAQsServicesSection from "@/app/components/Section/FAQs-All-Services";
 import faq_illus from "../../../../images/faq_illus.png";
 import WhyEnsurekarSection from "@/app/components/Section/Why-Ensurekar-All-Services";
@@ -15,52 +14,55 @@ import testimonial9 from "../../../../images/testimonial9.png";
 import testimonial7 from "../../../../images/testimonial7.png";
 import testimonial8 from "../../../../images/testimonial8.png";
 import testimonial6 from "../../../../images/testimonial6.png";
+import Consequences from "@/app/components/Section/Consequences";
+import Deadline from "@/app/components/Section/Deadline";
+import FeaturesSection from "@/app/components/Section/Features-Section";
 
-const pfRegistration = () => {
+const TDSReturnFilings = () => {
   const BreadcrumbData = {
-    title: "Provident Fund (PF)",
-    heading: "Provident Fund (PF)",
+    title: "TDS Return Filings",
+    heading: "TDS Return Filings",
     subHeading: "",
-    description: "",
+    description:
+      "Ensure timely and accurate filing of your TDS/TCS returns with our expert services. Our top accountants and tax experts handle e-filing to help you avoid penalties and ensure compliance.",
     image: "",
-    bottomHeading: "",
   };
   const WhoConsideredData = {
-    title: "Consideretion",
-    heading:
-      "Who is considered an Employee under the Employee Provident Fund (EPF)?",
-    description: "",
+    title: "TDS and TCS Certificates",
+    heading: "Importance of TDS and TCS Certificates",
+    description:
+      "TDS and TCS certificates are essential for both the deductor/collector and taxpayer, playing a key role in ensuring tax compliance and reconciliation.",
     imageurl: healthcare_section_img,
     consideretion: [
       {
         icon: "",
-        heading: "Full-Time and Part-Time Workers",
+        heading: "Proof of Compliance",
         description:
-          "Full-time employees with consistent employment and part-time workers who work fewer hours per week are both eligible for EPF registration.",
+          "TDS/TCS certificates act as evidence that the deductor/collector has met their responsibility to deduct or collect tax at source, critical for audits and tax assessments.",
       },
       {
         icon: "",
-        heading: "Work-From-Home Employees",
+        heading: "Accurate Tax Records: ",
         description:
-          "Employees working remotely for a defined period can also register for EPF through the online process.",
+          "These certificates provide a clear record of the taxes deducted or collected, supporting accurate tax accounting and reconciliation.",
       },
       {
         icon: "",
-        heading: "Contractors and Consultants",
+        heading: "Avoidance of Penalties",
         description:
-          "Contractors hired for specific projects and consultants offering their expertise for a limited time must also be registered under EPF.",
+          "Issuing TDS/TCS certificates on time helps prevent penalties related to non-compliance or late tax payments.",
       },
       {
         icon: "",
-        heading: "Freelancers",
+        heading: "Facilitates Tax Deposits",
         description:
-          "As per the latest revision to the Social Security Code (2020), freelancers are now included under the EPF scheme, making them eligible for PF registration.",
+          "The certificates offer the necessary details for the deductor/collector to deposit the deducted or collected taxes with the government.",
       },
     ],
   };
   const BenefitData = {
     title: "",
-    heading: "Benefit of provident Fund (PF) ",
+    heading: "Benefits of TDS filing",
     subHeading: "",
     benefitsData: {
       heading: "",
@@ -68,126 +70,71 @@ const pfRegistration = () => {
       benefits: [
         {
           icon: "",
-          title: "Pension Coverage",
-          description: "",
+          title: "Prevents Penalties",
+          description:
+            "Filing on time helps you steer clear of late fees and interest charges.",
         },
         {
           icon: "",
-          title: "Cover of Risk",
-          description: "",
+          title: "Secures Timely Refunds",
+          description:
+            "Early filing ensures quicker processing of any refund claims.",
         },
         {
           icon: "",
-          title: "Single Account/one EPF Account",
-          description: "",
+          title: "Encourages Compliance",
+          description:
+            " Filing promptly shows adherence to tax laws, boosting the taxpayer's credibility.",
         },
         {
           icon: "",
-          title: "Emergency Fund",
-          description: "",
+          title: "Lowers Audit Risk",
+          description:
+            "Submitting taxes on time reduces the chances of facing audits or additional scrutiny.",
         },
         {
           icon: "",
-          title: "Employee Deposit Linked Insurance Scheme",
-          description: "",
-        },
-        {
-          icon: "",
-          title: "Extended Goals",
-          description: "",
+          title: "Old Age Medical Care",
+          description:
+            "Medical care for retiring employees or those opting for VRS/ERS with an annual payment of ₹120.",
         },
       ],
     },
   };
-  const DocumentsRequiredData = {
-    title: "Required Documents",
-    heading: "Documents Required for PF Registration Online",
-    description: "",
-    documentsRequired: [
-      { icon: "", text: "Establishment PAN Card" },
-      {
-        icon: "",
-        text: "Proof of Registration (such as Certificate of Incorporation)",
-      },
-      {
-        icon: "",
-        text: "Address Verification (e.g., Rent agreement, Utility bills like Water, Electricity, Telephone)",
-      },
-      {
-        icon: "",
-        text: "Specimen Signatures of Directors and Authorized Signatories",
-      },
-      {
-        icon: "",
-        text: "Digital Signature Certificate (DSC) Registration of the Authorized Applicant",
-      },
-      { icon: "", text: "Cross-Cancelled Cheque from the Establishment" },
-    ].map((doc) => ({ ...doc, map: () => null })),
-  };
-  const OnlineProcessData = {
-    title: "EPF Registration",
-    heading: "EPF Registration Online Process for Employers",
-    description: "",
-    onlineProcesses: [
-      { icon: "", text: "Collect relevant employee data and documents" },
-      {
-        icon: "",
-        text: "Establishment Registered with EPFO online Registration",
-      },
-      {
-        icon: "",
-        text: "Register DSC (digital signature certificate) of the employer",
-      },
-      { icon: "", text: "Fill the application with all employer details" },
-      { icon: "", text: "Submit verified form" },
-      {
-        icon: "",
-        text: "Get PF registration certificate & Universal Account Number [UAN]",
-      },
-    ],
-  };
+
   const FAQsData = {
     title: "FAQs",
-    heading: "What Ensurekar offer you?",
+    heading: "What service does ENSUREKAR offer",
     description: "",
     FAQs: [
-      { question: "What is ISO certification?", answer: "NA" },
-      { question: "What if the employee doesn't have PF?", answer: "NA" },
-      { question: "What happens if I don't have PF?", answer: "NA" },
+      { question: "What is TAN?", answer: "NA" },
+      { question: "What is TDS return filing?", answer: "NA" },
+      {
+        question: "What are the penalties for late TCS return filing?",
+        answer: "NA",
+      },
+      {
+        question: "What is the due date for filing TCS returns?",
+        answer: "NA",
+      },
+      { question: "What is TCS (Tax Collected at Source)?", answer: "NA" },
       {
         question:
-          "Which PAN is to be entered to obtain Provident Fund registration?",
+          "Where can I obtain a TCS certificate, and why is it important?",
         answer: "NA",
       },
+      { question: "How do I calculate TCS collection?", answer: "NA" },
+      { question: "What is the concept of TDS?", answer: "NA" },
       {
-        question: "What is the basic salary for EPF applicability?",
+        question: "What happens if TDS is not deducted on time?",
         answer: "NA",
       },
-      { question: "Where can I register a PF account?", answer: "NA" },
-      {
-        question: "What is the basic limit for PF registration?",
-        answer: "NA",
-      },
-      {
-        question: "How is the EPF registration process helpful in pension?",
-        answer: "NA",
-      },
-      {
-        question:
-          "Is PF registration compulsory for a Private Limited Company?",
-        answer: "NA",
-      },
-      { question: "Who must register with the PF department?", answer: "NA" },
-      {
-        question: "What is the time taken for employer EPF registration?",
-        answer: "NA",
-      },
-      { question: "Where can I get a PF account registration?", answer: "NA" },
+      { question: "How long does it take to get a TDS refund?", answer: "NA" },
     ],
     imageUrl: faq_illus,
   };
   const WhyEnsurekar = {
-    heading: "Why to choose Ensurekar for EPF Registration ",
+    heading: "Why to choose Ensurekar for TDS/TCS Registration ",
     description: "",
     elements: [
       {
@@ -405,19 +352,65 @@ const pfRegistration = () => {
       },
     ],
   };
+  const ConsequencesData = {
+    title: "Consequences",
+    heading: "Consequences of Missing Payment Deadlines",
+    description: "",
+    onlineProcesses: [
+      {
+        icon: "",
+        heading: "Penalty for Late payment",
+        description: "A penalty of 1% is levied on outstanding TDS/TCS amount for every delay",
+      },
+      {
+        icon: "",
+        heading: "Interest charges",
+        description: "Interest is charged on the outstanding TDS/TCS amount at 12% per annum from the due date of payment until the date of actual payment.",
+      },
+      {
+        icon: "",
+        heading: "Prosecution",
+        description: "In severe cases of non-compliance, legal action may be initiated against the deductor or collector of TDS/TCS. This could involve prosecution under the Income Tax Act, leading to fines or imprisonment.",
+      },
+    ],
+  };
+  const DeadlineData = {
+    title: "Deadline",
+    heading: "TDS and TCS Payment Deadlines",
+    subHeading: "The deadlines for payment of TDS/TCS are as follows:",
+    DeadlinesData: {
+      heading: "",
+      description: "",
+      benefits: [
+        {
+       
+          title: "Quarterly payments",
+          description:
+            "The deadline for TDS/TCS for each quarter is the 30 of the coming month  ",
+        },
+        {
+          title: "Annual payments",
+          description:
+            "The deadline for TDS/TCS for the financial year is the 31 of May of the next year",
+        },
+     
+      ],
+    },
+    bottomText:"Unable to pay TDS/TCS on the deadline results in a penalty of 2% of the outstanding amount every month.",
+  };
   return (
     <>
       <BreadcrumbSection BreadcrumbData={BreadcrumbData} />
       <WhoConsidered WhoConsideredData={WhoConsideredData} />
       <BenefitSection BenefitData={BenefitData} />
-      <DocumentsRequired DocumentsRequiredData={DocumentsRequiredData} />
-      <OnlineProcessforEmployers OnlineProcessData={OnlineProcessData} />
+     <Deadline DeadlineData={DeadlineData} />
+      
+      <Consequences ConsequencesData={ConsequencesData} />
       <FAQsServicesSection FAQsData={FAQsData} />
       <WhyEnsurekarSection WhyEnsurekarData={WhyEnsurekar} />
       <TestimonialSectionAllServices TestimonialData={TestimonialData} />
-
     </>
   );
 };
 
-export default pfRegistration;
+export default TDSReturnFilings;

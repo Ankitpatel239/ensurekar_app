@@ -30,11 +30,11 @@ const DocumentsRequired = ({
 
               <p className="text-bodyText pb-8">{description}</p>
 
-              <ul className="grid grid-cols-3 gap-4">
+              <ul className="flex items-start justify-between flex-wrap">
                 {documentsRequired?.map((documents:any, index: number) => {
                   return (
-                    <li className="col-span-1" key={index}>
-                      <div className="flex justify-start items-center gap-2">
+                    <li className="max-w-50 mb-5 mr-2" key={index}>
+                      <div className="flex justify-start items-start gap-2">
                         <span className="block bg-softBg1 rounded-full p-3 text-s1 text-2xl">
                           {/* <i className="ph-fill ph-device-mobile"></i> */}
                           {documents.icon}
