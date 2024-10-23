@@ -67,7 +67,7 @@ const MobileNavbar = ({
     },
     {
       title: "Talk to Expert",
-      link: "/contact",
+      link: "/Contact",
     },
     {
       title: "Tax Compliances",

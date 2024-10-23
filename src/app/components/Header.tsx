@@ -73,7 +73,7 @@ const Header = () => {
               </Link>
             </div>
             <Link
-              href="/contact"
+              href="/Contact"
               className="flex text-nowrap justify-center max-sm:text-sm items-center gap-3 py-2 md:py-3 px-3 md:px-6 rounded-full bg-amber-300 border border-gray-600 text-mainTextColor group font-medim"
             >
               Get Started
